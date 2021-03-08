@@ -68,3 +68,14 @@ Scenario: Clearing gate changes
 Given I am on the Code Challenge page  
 When I start clear the input field  
 Then no gate changes should be shown  
+
+
+### Angular Touchdown (Bonus)
+From the previous Angular challenge you should now be able to show a list of gate changes.
+
+Scenario: Hovering effect on gate changes list items  
+Given I am on the Code Challenge page, and have a list of gate changes.  
+When I hover uneven times (1st time, 3rd time etc...) on a gate change item  
+Then the background should have a yellow color  
+When I hover even times (2nd time, 4th time etc...) on the same item  
+Then the background should have a red color  
