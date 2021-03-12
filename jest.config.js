@@ -12,8 +12,6 @@ module.exports = {
     globals: {
         'ts-jest': {
             tsConfig: 'src/tsconfig.spec.json',
-            stringifyContentPathRegex: '\\.html$',
-            astTransformers: [require.resolve('jest-preset-angular/InlineHtmlStripStylesTransformer')],
         },
     },
 };
