@@ -23,9 +23,15 @@ The fourth challenge involves developing a small user story in Angular+.
 
 The assignment is to create an interface where you can search by flightNumber through gate changes. A gate change is when a flight is directed to a different gate than originally planned. The gate changes, arrival and departure times can change at any time, so API requests should not be cached.  
 
-
-If you clone this repository, install the node_modules and run `npm run start`.   
-You can see the application on http://localhost:4200
+### Getting started
+Install dependencies
+```
+npm install
+```
+Start dev server (http://localhost:4200)
+```
+npm start
+```
 
 You can find the API documentation for this challenge in the `swagger.json` in this repository.
 The API can be started with the command `npm run start:api`.  
@@ -66,12 +72,9 @@ And the list should be sorted based on arrival / departure time of the flight
 
 Scenario: Clearing gate changes  
 Given I am on the Code Challenge page  
-When I start clear the input field  
-Then no gate changes should be shown  
+When I clear the input field  
+Then no gate changes should be shown
 
-
-### Angular Touchdown (Bonus)
-From the previous Angular challenge you should now be able to show a list of gate changes.
 
 Scenario: Hovering effect on gate changes list items  
 Given I am on the Code Challenge page, and have a list of gate changes.  
