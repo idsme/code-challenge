@@ -11,7 +11,7 @@ module.exports = {
     watchPathIgnorePatterns: ['/node_modules/'],
     globals: {
         'ts-jest': {
-            tsConfig: 'src/tsconfig.spec.json',
+            tsconfig: 'src/tsconfig.spec.json',
         },
     },
 };
