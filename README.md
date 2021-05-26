@@ -1,6 +1,6 @@
 # Code Challenge
 
-This repository contains 4 challenges of which we would like you to solve three. **You may choose** between skipping either challenge-3 or challenge-4. See this as an opportunity to show us your way of working, with the same quality as you would deliver on the job.
+This repository contains 3 challenges of which we would like you to solve two. **You may choose** between skipping either challenge-2 or challenge-3. See this as an opportunity to show us your way of working, with the same quality as you would deliver on the job.
 
 ## How to send us your solution
 
@@ -10,16 +10,14 @@ We would prefer to receive a link to a private repository.
 
 ## Typescript
 
-The first three are plain typescript challenges that you can find here:  
-`src/app/challenge-1.ts`
-`src/app/challenge-2.ts`
-`src/app/challenge-3.ts` (or choose challenge-4 instead)
+The first challenge is a plain typescript challenge. For the second challenge you can either choose challenge-2 or challenge-3.  
+Based on profile we may specifically ask you e.g. to do the Angular challenge.
 
-You can run these challenges like this: `npm run challenge-1`, `npm run challenge-2`, `npm run challenge-3`
+`challenge-1` and `challenge-2` you can run like: `npm run challenge-1`, `npm run challenge-2`
 
-## Angular
+## Angular (Challenge-3)
 
-The fourth challenge involves developing a small user story in Angular+. 
+The third challenge involves developing a small user story in Angular+. 
 
 The assignment is to create an interface where you can search by flightNumber through gate changes. A gate change is when a flight is directed to a different gate than originally planned. The gate changes, arrival and departure times can change at any time, so API requests should not be cached.  
 

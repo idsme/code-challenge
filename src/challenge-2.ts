@@ -1,24 +1,61 @@
 /**
- * Challenge 2
+ * Challenge 3
  *
- * You start with a string consisting of uppercase and lowercase letters (example: dabAcCaCBAcCcaDA.)
- * We want you to write a function that takes a string and removes all characters that are followed by the same character of the
- * opposite case. The rules are:
+ * The goal of this challenge is to collect arrival and departure flight records and placing them into 4 buckets:
  *
- * For input: "aA", a and A are of the opposite case, returning an empty string.
- * For input: "abBA", bB are of the opposite case, leaving aA. As above, this is also removed, returning an empty string as well.
- * For input: "abAB", no two adjacent characters are of the same type, so the same string is returned.
- * For input: "aabAAB", even though aa and AA are the same character, their cases match, and so nothing happens.
- * Now, consider a larger example, dabAcCaCBAcCcaDA:
+ * - Early Arrivals
+ * - Late Arrivals
+ * - Early Departures
+ * - Late Departures
  *
- *   - dabAcCaCBAcCcaDA  The first 'cC' is removed.
- *   - dabAaCBAcCcaDA    This creates 'Aa', which is removed.
- *   - dabCBAcCcaDA      Either 'cC' or 'Cc' are removed (the result is the same).
- *   - dabCBAcaDA        No further actions can be taken.
+ * The flight data can be collected from the backend, which you can start up with "npm run start:api"
  *
- * What is the solution for: "VvbBfpPFrRyRrNpYyPDlLdVvNnMmnOCcosOoSoOfkKKkFJjyYjJWwHhnSstuBbdsSDqQUqQkKVvILlVvGgjJiVcCvvfBbvVoOGgFn"?
+ * You can get flight information by making a REST call to http://localhost:3000/arrivals and http://localhost:3000/departures
+ * You can get flight actual landing/take-off updates over WebSockets from ws://localhost:3000/flightUpdates
+ *
+ * Process the payload of the FLIGHT_UPDATE messages which are send over the websocket.
+ * When a PRINT message is received, a message should be printed to the console with the flights grouped into the buckets above,
+ * this can be determined by the delta between the departureTime vs takeOffTime and arrivalTime vs landingTime.
+ * For example; a flight with a takeOffTime that is before the departureTime is counted as an early departure.
+ *
+ * How many flights are there in each bucket?
+ *
+ * The output could look something like this:
+ *
+ * {
+ *     lateArrivals: 11,
+ *     earlyArrivals: 12,
+ *     lateDepartures: 10,
+ *     earlyDepartures: 15,
+ * }
+ * {
+ *     lateArrivals: 12,
+ *     earlyArrivals: 11,
+ *     lateDepartures: 18,
+ *     earlyDepartures: 26,
+ * }
+ * {
+ *     lateArrivals: 10,
+ *     earlyArrivals: 15,
+ *     lateDepartures: 20,
+ *     earlyDepartures: 25,
+ * }
+ *
+ * (Tip: the use of RxJS might be of big help but is not obligated)
  */
 
-export const removeOppositeChars = (input: string): string => {
-    return input;
-};
+import { MessageType } from './../api/ws';
+import { ArrivalFlight, ArrivalFlightUpdate } from '../api/arrivals';
+import { DepartureFlight, DepartureFlightUpdate } from '../api/departures';
+
+type Flight = ArrivalFlight | DepartureFlight;
+type FlightUpdate = ArrivalFlightUpdate | DepartureFlightUpdate;
+type WebsocketMessage =
+    | {
+          type: MessageType.FLIGHT_UPDATE;
+          payload: FlightUpdate;
+      }
+    | {
+          type: MessageType.PRINT;
+          payload: 'ArrivalTimeMap';
+      };
