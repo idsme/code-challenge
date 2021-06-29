@@ -9,7 +9,7 @@
     "test": "jest --config jest.config.js",
     "lint": "ng lint",
     "challenge-1": "ts-node ./src/challenge-1.ts",
-    "challenge-2": "ts-node ./src/challenge-2.ts"
+    "challenge-2": "ts-node ./src/challenge-2.simulation.ts"
   },
   "private": true,
   "dependencies": {

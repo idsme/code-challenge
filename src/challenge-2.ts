@@ -1,5 +1,5 @@
 /**
- * Challenge 3
+ * Challenge 2
  *
  * The goal of this challenge is to collect arrival and departure flight records and placing them into 4 buckets:
  *
@@ -8,54 +8,81 @@
  * - Early Departures
  * - Late Departures
  *
- * The flight data can be collected from the backend, which you can start up with "npm run start:api"
+ * Process the payload of the FLIGHT_UPDATE and FLIGHT_CANCELED messages which, in production, would be fetched from kafka.
+ * The flight object from the FLIGHT_UPDATE message should be put in the correct bucket, on a FLIGHT_CANCELED message the flight should be removed from the bucket.
+ * After each message the updated state needs be stored into the database.
+ * We've implemented an in-memory database but in production this can be a different database like Redis which means the stored data must be JSON-serializable.
+ * You are allowed to use any node_module to assist you with writing the code/logic.
  *
- * You can get flight information by making a REST call to http://localhost:3000/arrivals and http://localhost:3000/departures
- * You can get flight actual landing/take-off updates over WebSockets from ws://localhost:3000/flightUpdates
- *
- * Process the payload of the FLIGHT_UPDATE messages which are send over the websocket.
- * When a PRINT message is received, a message should be printed to the console with the flights grouped into the buckets above,
- * this can be determined by the delta between the departureTime vs takeOffTime and arrivalTime vs landingTime.
+ * The bucket a flight belongs to can be determined by the delta between the departureTime vs takeOffTime and arrivalTime vs landingTime.
  * For example; a flight with a takeOffTime that is before the departureTime is counted as an early departure.
  *
- * How many flights are there in each bucket?
- *
- * The output could look something like this:
- *
+ * The data in the store could look something like this but you are free use a different data structure
  * {
- *     lateArrivals: 11,
- *     earlyArrivals: 12,
- *     lateDepartures: 10,
- *     earlyDepartures: 15,
- * }
- * {
- *     lateArrivals: 12,
- *     earlyArrivals: 11,
- *     lateDepartures: 18,
- *     earlyDepartures: 26,
- * }
- * {
- *     lateArrivals: 10,
- *     earlyArrivals: 15,
- *     lateDepartures: 20,
- *     earlyDepartures: 25,
+ *     lateArrivals: [
+ *         { /* flight 1234AB / },
+ *         { /* flight 4645DF / },
+ *     ],
+ *     earlyArrivals: [],
+ *     lateDepartures: [
+ *         { /* flight 9001BI / },
+ *     ],
+ *     earlyDepartures: [],
  * }
  *
- * (Tip: the use of RxJS might be of big help but is not obligated)
+ * To validate your solution please amend the unit tests to cover edge cases handled by your implementation.
+ * You can run a simulation of a large set of sample messages by calling `npm run challenge-3` which runs the challenge-3.simulation.ts file
  */
 
-import { MessageType } from './../api/ws';
-import { ArrivalFlight, ArrivalFlightUpdate } from '../api/arrivals';
-import { DepartureFlight, DepartureFlightUpdate } from '../api/departures';
 
-type Flight = ArrivalFlight | DepartureFlight;
-type FlightUpdate = ArrivalFlightUpdate | DepartureFlightUpdate;
-type WebsocketMessage =
-    | {
-          type: MessageType.FLIGHT_UPDATE;
-          payload: FlightUpdate;
-      }
-    | {
-          type: MessageType.PRINT;
-          payload: 'ArrivalTimeMap';
-      };
+import { DictionaryProjection } from './challenge-2/projection';
+import { Message, StreamDefinition } from './challenge-2/stream';
+import {
+    ArrivalFlight,
+    DepartureFlight,
+    FlightCanceledMessage,
+} from './challenge-2/flight';
+import { Dictionary, DictionaryStore } from './challenge-2/dictionary-store';
+
+export enum FlightUpdateMessageTypes {
+    FLIGHT_UPDATED = 'FLIGHT_UPDATED',
+    FLIGHT_CANCELED = 'FLIGHT_CANCELED'
+}
+
+export interface FlightUpdateStream extends StreamDefinition<FlightUpdateMessageTypes> {
+    messages: {
+        [FlightUpdateMessageTypes.FLIGHT_UPDATED]: Message<FlightUpdateMessageTypes.FLIGHT_UPDATED, ArrivalFlight | DepartureFlight>;
+        [FlightUpdateMessageTypes.FLIGHT_CANCELED]: Message<FlightUpdateMessageTypes.FLIGHT_CANCELED, FlightCanceledMessage>;
+    };
+}
+
+export interface FlightByBlockTimeState extends Dictionary<ArrivalFlight[] | DepartureFlight[]> {
+    lateArrivals: ArrivalFlight[];
+    earlyArrivals: ArrivalFlight[];
+    lateDepartures: DepartureFlight[];
+    earlyDepartures: DepartureFlight[];
+}
+
+/**
+ * This function creates the logic for a projection. A projection translates one or more event types into a (aggregated) state.
+ * The caller of this function provides a datastore (e.g. Redis) and must make sure the `AbstractMessageHandler.handle` function is called on new events (e.g. from Kafka).
+ * You will need to implement the logic translating events into the aggregated state
+ */
+export function createProjection(flightByBlockTimeStore: DictionaryStore<FlightByBlockTimeState>) {
+    const projection = new DictionaryProjection<FlightUpdateStream, FlightByBlockTimeState>(flightByBlockTimeStore);
+
+    projection.when({
+        [FlightUpdateMessageTypes.FLIGHT_UPDATED]: async (store, { payload: flight }) => {
+            /**
+             * Put the flight from the event in the correct bucket of the store
+             */
+        },
+        [FlightUpdateMessageTypes.FLIGHT_CANCELED]: async (store, { payload: event }) => {
+            /**
+             * Remove the flight from the event from its bucket
+             */
+        },
+    });
+
+    return projection;
+}
