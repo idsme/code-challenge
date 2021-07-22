@@ -80,3 +80,5 @@ When I hover uneven times (1st time, 3rd time etc...) on a gate change item
 Then the background should have a yellow color  
 When I hover even times (2nd time, 4th time etc...) on the same item  
 Then the background should have a red color  
+
+![highlight example](highlight-example.gif)
