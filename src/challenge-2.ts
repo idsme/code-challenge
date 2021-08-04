@@ -10,14 +10,15 @@
  *
  * Process the payload of the FLIGHT_UPDATE and FLIGHT_CANCELED messages which, in production, would be fetched from kafka.
  * The flight object from the FLIGHT_UPDATE message should be put in the correct bucket, on a FLIGHT_CANCELED message the flight should be removed from the bucket.
- * After each message the updated state needs be stored into the database.
+ * After each message the updated state needs be stored into the database. Note that you can get multiple FLIGHT_UPDATE messages for the same flight in case of updates to the flight planning.
+ *
  * We've implemented an in-memory database but in production this can be a different database like Redis which means the stored data must be JSON-serializable.
  * You are allowed to use any node_module to assist you with writing the code/logic.
  *
- * The bucket a flight belongs to can be determined by the delta between the departureTime vs takeOffTime and arrivalTime vs landingTime.
+ * The bucket a flight belongs to can be determined by the delta between the plannedDepartureTime vs takeOffTime and plannedArrivalTime vs landingTime.
  * For example; a flight with a takeOffTime that is before the departureTime is counted as an early departure.
  *
- * The data in the store could look something like this but you are free use a different data structure
+ * The data in the store could look something like this but you are free use a different data structure if that is desired
  * {
  *     lateArrivals: [
  *         { /* flight 1234AB / },
@@ -30,8 +31,8 @@
  *     earlyDepartures: [],
  * }
  *
- * To validate your solution please amend the unit tests to cover edge cases handled by your implementation.
- * You can run a simulation of a large set of sample messages by calling `npm run challenge-3` which runs the challenge-3.simulation.ts file
+ * To validate your solution please amend the unit tests in challenge-2.spec.ts to cover edge cases handled by your implementation.
+ * You can run a simulation of a set of sample messages by calling `npm run challenge-3` which runs the challenge-3.simulation.ts file
  */
 
 
@@ -79,7 +80,7 @@ export function createProjection(flightByBlockTimeStore: DictionaryStore<FlightB
         },
         [FlightUpdateMessageTypes.FLIGHT_CANCELED]: async (store, { payload: event }) => {
             /**
-             * Remove the flight from the event from its bucket
+             * Remove the flight from the event from its bucket in the store
              */
         },
     });

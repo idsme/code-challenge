@@ -13,14 +13,14 @@ export interface CommonFlightProps {
 export interface ArrivalFlight extends CommonFlightProps {
     direction: FlightDirection.Arrival;
     origin: string;
-    arrivalTime: string;
+    plannedArrivalTime: string;
     landingTime?: string;
 }
 
 export interface DepartureFlight extends CommonFlightProps {
     direction: FlightDirection.Departure;
     destination: string;
-    departureTime: string;
+    plannedDepartureTime: string;
     takeOffTime?: string;
 }
 

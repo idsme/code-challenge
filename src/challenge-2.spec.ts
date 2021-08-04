@@ -25,7 +25,7 @@ describe('challenge 3', () => {
             origin: 'Paris de Gaulle',
             gate: 'A25',
             passengers: 131,
-            arrivalTime: '2019-06-15T13:50:00.000Z',
+            plannedArrivalTime: '2019-06-15T13:50:00.000Z',
             landingTime: '2019-06-15T14:03:00.000Z',
         };
 
@@ -50,7 +50,7 @@ describe('challenge 3', () => {
             origin: 'Paris de Gaulle',
             gate: 'A25',
             passengers: 131,
-            arrivalTime: '2019-06-15T13:50:00.000Z',
+            plannedArrivalTime: '2019-06-15T13:50:00.000Z',
             landingTime: '2019-06-15T14:03:00.000Z',
         };
         await flightByBlockTimeStore.setItem('lateArrivals', [flight]);
