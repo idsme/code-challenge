@@ -7,7 +7,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Portland',
         gate: 'B15',
         passengers: 249,
-        departureTime: '2019-06-15T12:58:15.000Z',
+        plannedDepartureTime: '2019-06-15T12:58:15.000Z',
         takeOffTime: '2019-06-15T13:01:03.000Z',
     },
     {
@@ -16,7 +16,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Corfu',
         gate: 'H15',
         passengers: 333,
-        departureTime: '2019-06-16T11:50:00.000Z',
+        plannedDepartureTime: '2019-06-16T11:50:00.000Z',
         takeOffTime: '2019-06-16T10:13:00.000Z',
     },
     {
@@ -25,7 +25,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Athens',
         gate: 'H12',
         passengers: 32,
-        departureTime: '2019-06-15T16:45:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:45:00.000Z',
         takeOffTime: '2019-06-15T14:21:00.000Z',
     },
     {
@@ -34,7 +34,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Brussels',
         gate: 'B15',
         passengers: 240,
-        departureTime: '2019-06-15T19:20:00.000Z',
+        plannedDepartureTime: '2019-06-15T19:20:00.000Z',
         takeOffTime: '2019-06-15T17:30:00.000Z',
     },
     {
@@ -43,7 +43,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Marsa Alam',
         gate: 'G8',
         passengers: 275,
-        departureTime: '2019-06-15T12:33:42.000Z',
+        plannedDepartureTime: '2019-06-15T12:33:42.000Z',
         takeOffTime: '2019-06-15T12:46:42.000Z',
     },
     {
@@ -52,7 +52,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Tel Aviv',
         gate: 'D18',
         passengers: 70,
-        departureTime: '2019-06-15T16:10:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:10:00.000Z',
         takeOffTime: '2019-06-15T14:09:00.000Z',
     },
     {
@@ -61,7 +61,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bremen',
         gate: 'D20',
         passengers: 78,
-        departureTime: '2019-06-15T13:12:00.000Z',
+        plannedDepartureTime: '2019-06-15T13:12:00.000Z',
         takeOffTime: '2019-06-15T11:28:00.000Z',
     },
     {
@@ -70,7 +70,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Newcastle',
         gate: 'F19',
         passengers: 41,
-        departureTime: '2019-06-15T16:55:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:55:00.000Z',
         takeOffTime: '2019-06-15T14:01:00.000Z',
     },
     {
@@ -79,7 +79,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Tel Aviv',
         gate: 'D18',
         passengers: 70,
-        departureTime: '2019-06-15T16:10:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:10:00.000Z',
         takeOffTime: '2019-06-15T13:54:00.000Z',
     },
     {
@@ -88,7 +88,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Naples',
         gate: 'G24',
         passengers: 132,
-        departureTime: '2019-06-16T06:30:00.000Z',
+        plannedDepartureTime: '2019-06-16T06:30:00.000Z',
         takeOffTime: '2019-06-16T04:53:00.000Z',
     },
     {
@@ -97,7 +97,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Los Angeles',
         gate: 'F16',
         passengers: 288,
-        departureTime: '2019-06-15T15:30:00.000Z',
+        plannedDepartureTime: '2019-06-15T15:30:00.000Z',
         takeOffTime: '2019-06-15T14:17:00.000Z',
     },
     {
@@ -106,7 +106,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Athens',
         gate: 'H12',
         passengers: 32,
-        departureTime: '2019-06-15T16:45:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:45:00.000Z',
         takeOffTime: '2019-06-15T14:19:00.000Z',
     },
     {
@@ -115,7 +115,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Stockholm',
         gate: 'D21',
         passengers: 364,
-        departureTime: '2019-06-15T18:50:00.000Z',
+        plannedDepartureTime: '2019-06-15T18:50:00.000Z',
         takeOffTime: '2019-06-15T17:50:00.000Z',
     },
     {
@@ -124,7 +124,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Aberdeen',
         gate: 'B15',
         passengers: 212,
-        departureTime: '2019-06-15T16:30:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:30:00.000Z',
         takeOffTime: '2019-06-15T16:42:00.000Z',
     },
     {
@@ -133,7 +133,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Split',
         gate: 'H10',
         passengers: 63,
-        departureTime: '2019-06-15T12:03:16.000Z',
+        plannedDepartureTime: '2019-06-15T12:03:16.000Z',
         takeOffTime: '2019-06-15T09:36:16.000Z',
     },
     {
@@ -142,7 +142,7 @@ export const departures: DepartureFlight[] = [
         destination: 'London Heathrow',
         gate: 'A20',
         passengers: 369,
-        departureTime: '2019-06-15T12:19:30.000Z',
+        plannedDepartureTime: '2019-06-15T12:19:30.000Z',
         takeOffTime: '2019-06-15T12:41:30.000Z',
     },
     {
@@ -151,7 +151,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Minsk National',
         gate: 'E22',
         passengers: 134,
-        departureTime: '2019-06-15T20:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T20:25:00.000Z',
         takeOffTime: '2019-06-15T17:33:00.000Z',
     },
     {
@@ -160,7 +160,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Graz',
         gate: 'G26',
         passengers: 230,
-        departureTime: '2019-06-16T08:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:10:00.000Z',
         takeOffTime: '2019-06-16T08:29:00.000Z',
     },
     {
@@ -169,7 +169,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Vancouver',
         gate: 'D24',
         passengers: 139,
-        departureTime: '2019-06-15T13:55:00.000Z',
+        plannedDepartureTime: '2019-06-15T13:55:00.000Z',
         takeOffTime: '2019-06-15T11:58:00.000Z',
     },
     {
@@ -178,7 +178,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Valencia',
         gate: 'G7',
         passengers: 322,
-        departureTime: '2019-06-16T11:00:00.000Z',
+        plannedDepartureTime: '2019-06-16T11:00:00.000Z',
         takeOffTime: '2019-06-16T08:06:00.000Z',
     },
     {
@@ -187,7 +187,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Clermont-Ferrand',
         gate: 'G15',
         passengers: 75,
-        departureTime: '2019-06-15T14:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T14:25:00.000Z',
         takeOffTime: '2019-06-15T12:02:00.000Z',
     },
     {
@@ -196,7 +196,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Amman',
         gate: 'A17',
         passengers: 321,
-        departureTime: '2019-06-15T17:55:00.000Z',
+        plannedDepartureTime: '2019-06-15T17:55:00.000Z',
         takeOffTime: '2019-06-15T18:49:00.000Z',
     },
     {
@@ -205,7 +205,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Athens',
         gate: 'H12',
         passengers: 32,
-        departureTime: '2019-06-15T16:45:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:45:00.000Z',
         takeOffTime: '2019-06-15T15:58:00.000Z',
     },
     {
@@ -214,7 +214,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Detroit',
         gate: 'F16',
         passengers: 278,
-        departureTime: '2019-06-16T08:40:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:40:00.000Z',
         takeOffTime: '2019-06-16T06:32:00.000Z',
     },
     {
@@ -223,7 +223,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Portland',
         gate: 'A4',
         passengers: 203,
-        departureTime: '2019-06-16T10:20:00.000Z',
+        plannedDepartureTime: '2019-06-16T10:20:00.000Z',
         takeOffTime: '2019-06-16T10:29:00.000Z',
     },
     {
@@ -232,7 +232,7 @@ export const departures: DepartureFlight[] = [
         destination: 'London Gatwick',
         gate: 'D6',
         passengers: 346,
-        departureTime: '2019-06-15T12:46:49.000Z',
+        plannedDepartureTime: '2019-06-15T12:46:49.000Z',
         takeOffTime: '2019-06-15T10:20:49.000Z',
     },
     {
@@ -241,7 +241,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Catania',
         gate: 'G10',
         passengers: 172,
-        departureTime: '2019-06-15T12:19:03.000Z',
+        plannedDepartureTime: '2019-06-15T12:19:03.000Z',
         takeOffTime: '2019-06-15T13:08:15.000Z',
     },
     {
@@ -250,7 +250,7 @@ export const departures: DepartureFlight[] = [
         destination: 'San Francisco',
         gate: 'G13',
         passengers: 219,
-        departureTime: '2019-06-15T16:50:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:50:00.000Z',
         takeOffTime: '2019-06-15T15:22:00.000Z',
     },
     {
@@ -259,7 +259,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Paris de Gaulle',
         gate: 'F0',
         passengers: 368,
-        departureTime: '2019-06-15T12:19:11.000Z',
+        plannedDepartureTime: '2019-06-15T12:19:11.000Z',
         takeOffTime: '2019-06-15T12:00:11.000Z',
     },
     {
@@ -268,7 +268,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Tokyo',
         gate: 'H26',
         passengers: 12,
-        departureTime: '2019-06-15T13:03:27.000Z',
+        plannedDepartureTime: '2019-06-15T13:03:27.000Z',
         takeOffTime: '2019-06-15T10:15:27.000Z',
     },
     {
@@ -277,7 +277,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Dresden',
         gate: 'G11',
         passengers: 378,
-        departureTime: '2019-06-15T12:25:02.000Z',
+        plannedDepartureTime: '2019-06-15T12:25:02.000Z',
         takeOffTime: '2019-06-15T11:16:02.000Z',
     },
     {
@@ -286,7 +286,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Izmir',
         gate: 'H24',
         passengers: 246,
-        departureTime: '2019-06-15T12:28:54.000Z',
+        plannedDepartureTime: '2019-06-15T12:28:54.000Z',
         takeOffTime: '2019-06-15T10:28:54.000Z',
     },
     {
@@ -295,7 +295,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Sandefjord',
         gate: 'E0',
         passengers: 329,
-        departureTime: '2019-06-15T13:13:47.000Z',
+        plannedDepartureTime: '2019-06-15T13:13:47.000Z',
         takeOffTime: '2019-06-15T10:53:47.000Z',
     },
     {
@@ -304,7 +304,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Stockholm',
         gate: 'G4',
         passengers: 10,
-        departureTime: '2019-06-15T13:04:56.000Z',
+        plannedDepartureTime: '2019-06-15T13:04:56.000Z',
         takeOffTime: '2019-06-15T13:25:56.000Z',
     },
     {
@@ -313,7 +313,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Lisbon',
         gate: 'H21',
         passengers: 22,
-        departureTime: '2019-06-15T12:22:41.000Z',
+        plannedDepartureTime: '2019-06-15T12:22:41.000Z',
         takeOffTime: '2019-06-15T11:24:41.000Z',
     },
     {
@@ -322,7 +322,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Cape Town',
         gate: 'A6',
         passengers: 186,
-        departureTime: '2019-06-15T16:50:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:50:00.000Z',
         takeOffTime: '2019-06-15T17:13:00.000Z',
     },
     {
@@ -331,7 +331,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Panama City',
         gate: 'C21',
         passengers: 179,
-        departureTime: '2019-06-15T14:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T14:25:00.000Z',
         takeOffTime: '2019-06-15T14:26:00.000Z',
     },
     {
@@ -340,7 +340,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Gran Canaria',
         gate: 'D3',
         passengers: 328,
-        departureTime: '2019-06-15T12:03:16.000Z',
+        plannedDepartureTime: '2019-06-15T12:03:16.000Z',
         takeOffTime: '2019-06-15T10:15:16.000Z',
     },
     {
@@ -349,7 +349,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Nairobi',
         gate: 'E25',
         passengers: 238,
-        departureTime: '2019-06-15T18:30:00.000Z',
+        plannedDepartureTime: '2019-06-15T18:30:00.000Z',
         takeOffTime: '2019-06-15T18:22:00.000Z',
     },
     {
@@ -358,7 +358,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Brussels',
         gate: 'A5',
         passengers: 283,
-        departureTime: '2019-06-16T09:00:00.000Z',
+        plannedDepartureTime: '2019-06-16T09:00:00.000Z',
         takeOffTime: '2019-06-16T06:14:00.000Z',
     },
     {
@@ -367,7 +367,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Moscow',
         gate: 'F2',
         passengers: 145,
-        departureTime: '2019-06-15T12:42:51.000Z',
+        plannedDepartureTime: '2019-06-15T12:42:51.000Z',
         takeOffTime: '2019-06-15T10:36:51.000Z',
     },
     {
@@ -376,7 +376,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Reykjavik',
         gate: 'H1',
         passengers: 138,
-        departureTime: '2019-06-15T20:15:00.000Z',
+        plannedDepartureTime: '2019-06-15T20:15:00.000Z',
         takeOffTime: '2019-06-15T19:04:00.000Z',
     },
     {
@@ -385,7 +385,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Chengdu',
         gate: 'F4',
         passengers: 360,
-        departureTime: '2019-06-15T12:47:23.000Z',
+        plannedDepartureTime: '2019-06-15T12:47:23.000Z',
         takeOffTime: '2019-06-15T09:56:23.000Z',
     },
     {
@@ -394,7 +394,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Madrid',
         gate: 'A4',
         passengers: 289,
-        departureTime: '2019-06-15T16:50:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:50:00.000Z',
         takeOffTime: '2019-06-15T14:59:00.000Z',
     },
     {
@@ -403,7 +403,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Naples',
         gate: 'G24',
         passengers: 132,
-        departureTime: '2019-06-16T06:30:00.000Z',
+        plannedDepartureTime: '2019-06-16T06:30:00.000Z',
         takeOffTime: '2019-06-16T07:28:00.000Z',
     },
     {
@@ -412,7 +412,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Moscow',
         gate: 'F2',
         passengers: 145,
-        departureTime: '2019-06-15T12:42:51.000Z',
+        plannedDepartureTime: '2019-06-15T12:42:51.000Z',
         takeOffTime: '2019-06-15T11:50:51.000Z',
     },
     {
@@ -421,7 +421,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Istanbul Airport',
         gate: 'G2',
         passengers: 129,
-        departureTime: '2019-06-16T05:05:00.000Z',
+        plannedDepartureTime: '2019-06-16T05:05:00.000Z',
         takeOffTime: '2019-06-16T02:24:00.000Z',
     },
     {
@@ -430,7 +430,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Minsk National',
         gate: 'F4',
         passengers: 151,
-        departureTime: '2019-06-15T15:00:00.000Z',
+        plannedDepartureTime: '2019-06-15T15:00:00.000Z',
         takeOffTime: '2019-06-15T13:02:00.000Z',
     },
     {
@@ -439,7 +439,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Corfu',
         gate: 'H15',
         passengers: 333,
-        departureTime: '2019-06-16T11:50:00.000Z',
+        plannedDepartureTime: '2019-06-16T11:50:00.000Z',
         takeOffTime: '2019-06-16T10:07:00.000Z',
     },
     {
@@ -448,7 +448,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Seattle',
         gate: 'D27',
         passengers: 213,
-        departureTime: '2019-06-15T12:58:32.000Z',
+        plannedDepartureTime: '2019-06-15T12:58:32.000Z',
         takeOffTime: '2019-06-15T11:38:32.000Z',
     },
     {
@@ -457,7 +457,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Tokyo',
         gate: 'H6',
         passengers: 275,
-        departureTime: '2019-06-16T08:40:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:40:00.000Z',
         takeOffTime: '2019-06-16T05:49:00.000Z',
     },
     {
@@ -466,7 +466,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Orlando',
         gate: 'C10',
         passengers: 372,
-        departureTime: '2019-06-16T11:25:00.000Z',
+        plannedDepartureTime: '2019-06-16T11:25:00.000Z',
         takeOffTime: '2019-06-16T10:34:00.000Z',
     },
     {
@@ -475,7 +475,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Dresden',
         gate: 'G11',
         passengers: 378,
-        departureTime: '2019-06-15T12:25:02.000Z',
+        plannedDepartureTime: '2019-06-15T12:25:02.000Z',
         takeOffTime: '2019-06-15T13:02:02.000Z',
     },
     {
@@ -484,7 +484,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Split',
         gate: 'H10',
         passengers: 63,
-        departureTime: '2019-06-15T12:03:16.000Z',
+        plannedDepartureTime: '2019-06-15T12:03:16.000Z',
         takeOffTime: '2019-06-15T10:56:16.000Z',
     },
     {
@@ -493,7 +493,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Tokyo',
         gate: 'H6',
         passengers: 275,
-        departureTime: '2019-06-16T08:40:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:40:00.000Z',
         takeOffTime: '2019-06-16T07:14:00.000Z',
     },
     {
@@ -502,7 +502,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Brussels',
         gate: 'A5',
         passengers: 283,
-        departureTime: '2019-06-16T09:00:00.000Z',
+        plannedDepartureTime: '2019-06-16T09:00:00.000Z',
         takeOffTime: '2019-06-16T09:36:00.000Z',
     },
     {
@@ -511,7 +511,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Gdansk',
         gate: 'E1',
         passengers: 340,
-        departureTime: '2019-06-15T13:01:58.000Z',
+        plannedDepartureTime: '2019-06-15T13:01:58.000Z',
         takeOffTime: '2019-06-15T10:46:58.000Z',
     },
     {
@@ -520,7 +520,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Newcastle',
         gate: 'F19',
         passengers: 41,
-        departureTime: '2019-06-15T16:55:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:55:00.000Z',
         takeOffTime: '2019-06-15T16:36:00.000Z',
     },
     {
@@ -529,7 +529,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Milan Linate',
         gate: 'G18',
         passengers: 149,
-        departureTime: '2019-06-15T17:10:00.000Z',
+        plannedDepartureTime: '2019-06-15T17:10:00.000Z',
         takeOffTime: '2019-06-15T16:25:00.000Z',
     },
     {
@@ -538,7 +538,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Lyon',
         gate: 'C7',
         passengers: 79,
-        departureTime: '2019-06-16T11:00:00.000Z',
+        plannedDepartureTime: '2019-06-16T11:00:00.000Z',
         takeOffTime: '2019-06-16T11:49:00.000Z',
     },
     {
@@ -547,7 +547,7 @@ export const departures: DepartureFlight[] = [
         destination: 'London Heathrow',
         gate: 'A20',
         passengers: 369,
-        departureTime: '2019-06-15T12:19:30.000Z',
+        plannedDepartureTime: '2019-06-15T12:19:30.000Z',
         takeOffTime: '2019-06-15T13:16:30.000Z',
     },
     {
@@ -556,7 +556,7 @@ export const departures: DepartureFlight[] = [
         destination: 'St.Petersburg',
         gate: 'B21',
         passengers: 303,
-        departureTime: '2019-06-15T12:37:45.000Z',
+        plannedDepartureTime: '2019-06-15T12:37:45.000Z',
         takeOffTime: '2019-06-15T10:56:45.000Z',
     },
     {
@@ -565,7 +565,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Marsa Alam',
         gate: 'G8',
         passengers: 275,
-        departureTime: '2019-06-15T12:33:42.000Z',
+        plannedDepartureTime: '2019-06-15T12:33:42.000Z',
         takeOffTime: '2019-06-15T11:10:42.000Z',
     },
     {
@@ -574,7 +574,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Tokyo',
         gate: 'H26',
         passengers: 12,
-        departureTime: '2019-06-15T13:03:27.000Z',
+        plannedDepartureTime: '2019-06-15T13:03:27.000Z',
         takeOffTime: '2019-06-15T11:51:27.000Z',
     },
     {
@@ -583,7 +583,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Wroclaw',
         gate: 'G15',
         passengers: 336,
-        departureTime: '2019-06-16T08:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:10:00.000Z',
         takeOffTime: '2019-06-16T05:50:00.000Z',
     },
     {
@@ -592,7 +592,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Tel Aviv',
         gate: 'D18',
         passengers: 70,
-        departureTime: '2019-06-15T16:10:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:10:00.000Z',
         takeOffTime: '2019-06-15T13:31:00.000Z',
     },
     {
@@ -601,7 +601,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Zakynthos',
         gate: 'G19',
         passengers: 79,
-        departureTime: '2019-06-15T12:14:58.000Z',
+        plannedDepartureTime: '2019-06-15T12:14:58.000Z',
         takeOffTime: '2019-06-15T12:15:58.000Z',
     },
     {
@@ -610,7 +610,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Aberdeen',
         gate: 'B15',
         passengers: 212,
-        departureTime: '2019-06-15T16:30:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:30:00.000Z',
         takeOffTime: '2019-06-15T14:38:00.000Z',
     },
     {
@@ -619,7 +619,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Olbia Italy',
         gate: 'C23',
         passengers: 259,
-        departureTime: '2019-06-16T06:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T06:10:00.000Z',
         takeOffTime: '2019-06-16T06:44:00.000Z',
     },
     {
@@ -628,7 +628,7 @@ export const departures: DepartureFlight[] = [
         destination: 'St.Petersburg',
         gate: 'B21',
         passengers: 303,
-        departureTime: '2019-06-15T12:37:45.000Z',
+        plannedDepartureTime: '2019-06-15T12:37:45.000Z',
         takeOffTime: '2019-06-15T11:34:45.000Z',
     },
     {
@@ -637,7 +637,7 @@ export const departures: DepartureFlight[] = [
         destination: 'St.Petersburg',
         gate: 'B21',
         passengers: 303,
-        departureTime: '2019-06-15T12:37:45.000Z',
+        plannedDepartureTime: '2019-06-15T12:37:45.000Z',
         takeOffTime: '2019-06-15T12:01:45.000Z',
     },
     {
@@ -646,7 +646,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Doncaster Sheffield',
         gate: 'E1',
         passengers: 79,
-        departureTime: '2019-06-15T12:09:48.000Z',
+        plannedDepartureTime: '2019-06-15T12:09:48.000Z',
         takeOffTime: '2019-06-15T10:15:48.000Z',
     },
     {
@@ -655,7 +655,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Hong Kong',
         gate: 'G26',
         passengers: 378,
-        departureTime: '2019-06-15T15:05:00.000Z',
+        plannedDepartureTime: '2019-06-15T15:05:00.000Z',
         takeOffTime: '2019-06-15T15:05:00.000Z',
     },
     {
@@ -664,7 +664,7 @@ export const departures: DepartureFlight[] = [
         destination: 'New York JFK',
         gate: 'F17',
         passengers: 124,
-        departureTime: '2019-06-16T06:55:00.000Z',
+        plannedDepartureTime: '2019-06-16T06:55:00.000Z',
         takeOffTime: '2019-06-16T04:28:00.000Z',
     },
     {
@@ -673,7 +673,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Minsk National',
         gate: 'F4',
         passengers: 151,
-        departureTime: '2019-06-15T15:00:00.000Z',
+        plannedDepartureTime: '2019-06-15T15:00:00.000Z',
         takeOffTime: '2019-06-15T15:46:00.000Z',
     },
     {
@@ -682,7 +682,7 @@ export const departures: DepartureFlight[] = [
         destination: 'London Gatwick',
         gate: 'C20',
         passengers: 127,
-        departureTime: '2019-06-16T07:00:00.000Z',
+        plannedDepartureTime: '2019-06-16T07:00:00.000Z',
         takeOffTime: '2019-06-16T07:20:00.000Z',
     },
     {
@@ -691,7 +691,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Nice',
         gate: 'C10',
         passengers: 66,
-        departureTime: '2019-06-16T09:00:00.000Z',
+        plannedDepartureTime: '2019-06-16T09:00:00.000Z',
         takeOffTime: '2019-06-16T06:33:00.000Z',
     },
     {
@@ -700,7 +700,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Seattle',
         gate: 'D27',
         passengers: 213,
-        departureTime: '2019-06-15T12:58:32.000Z',
+        plannedDepartureTime: '2019-06-15T12:58:32.000Z',
         takeOffTime: '2019-06-15T12:29:32.000Z',
     },
     {
@@ -709,7 +709,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Hong Kong',
         gate: 'G26',
         passengers: 378,
-        departureTime: '2019-06-15T15:05:00.000Z',
+        plannedDepartureTime: '2019-06-15T15:05:00.000Z',
         takeOffTime: '2019-06-15T14:15:00.000Z',
     },
     {
@@ -718,7 +718,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Lisbon',
         gate: 'H21',
         passengers: 22,
-        departureTime: '2019-06-15T12:22:41.000Z',
+        plannedDepartureTime: '2019-06-15T12:22:41.000Z',
         takeOffTime: '2019-06-15T10:26:41.000Z',
     },
     {
@@ -727,7 +727,7 @@ export const departures: DepartureFlight[] = [
         destination: 'London Heathrow',
         gate: 'A20',
         passengers: 369,
-        departureTime: '2019-06-15T12:19:30.000Z',
+        plannedDepartureTime: '2019-06-15T12:19:30.000Z',
         takeOffTime: '2019-06-15T09:27:30.000Z',
     },
     {
@@ -736,7 +736,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Wroclaw',
         gate: 'G15',
         passengers: 336,
-        departureTime: '2019-06-16T08:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:10:00.000Z',
         takeOffTime: '2019-06-16T06:00:00.000Z',
     },
     {
@@ -745,7 +745,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bremen',
         gate: 'B1',
         passengers: 286,
-        departureTime: '2019-06-15T17:05:00.000Z',
+        plannedDepartureTime: '2019-06-15T17:05:00.000Z',
         takeOffTime: '2019-06-15T16:39:00.000Z',
     },
     {
@@ -754,7 +754,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bristol',
         gate: 'F17',
         passengers: 311,
-        departureTime: '2019-06-16T11:00:00.000Z',
+        plannedDepartureTime: '2019-06-16T11:00:00.000Z',
         takeOffTime: '2019-06-16T09:57:00.000Z',
     },
     {
@@ -763,7 +763,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Seattle',
         gate: 'D27',
         passengers: 213,
-        departureTime: '2019-06-15T12:58:32.000Z',
+        plannedDepartureTime: '2019-06-15T12:58:32.000Z',
         takeOffTime: '2019-06-15T11:30:32.000Z',
     },
     {
@@ -772,7 +772,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Paris de Gaulle',
         gate: 'F0',
         passengers: 368,
-        departureTime: '2019-06-15T12:19:11.000Z',
+        plannedDepartureTime: '2019-06-15T12:19:11.000Z',
         takeOffTime: '2019-06-15T09:37:11.000Z',
     },
     {
@@ -781,7 +781,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bergen',
         gate: 'C6',
         passengers: 85,
-        departureTime: '2019-06-15T12:25:02.000Z',
+        plannedDepartureTime: '2019-06-15T12:25:02.000Z',
         takeOffTime: '2019-06-15T11:22:02.000Z',
     },
     {
@@ -790,7 +790,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Seattle',
         gate: 'D21',
         passengers: 89,
-        departureTime: '2019-06-15T20:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T20:25:00.000Z',
         takeOffTime: '2019-06-15T20:38:00.000Z',
     },
     {
@@ -799,7 +799,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Minsk National',
         gate: 'F4',
         passengers: 151,
-        departureTime: '2019-06-15T15:00:00.000Z',
+        plannedDepartureTime: '2019-06-15T15:00:00.000Z',
         takeOffTime: '2019-06-15T12:38:00.000Z',
     },
     {
@@ -808,7 +808,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Istanbul Airport',
         gate: 'B3',
         passengers: 230,
-        departureTime: '2019-06-16T12:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T12:10:00.000Z',
         takeOffTime: '2019-06-16T10:08:00.000Z',
     },
     {
@@ -817,7 +817,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bari',
         gate: 'E4',
         passengers: 106,
-        departureTime: '2019-06-15T12:53:49.000Z',
+        plannedDepartureTime: '2019-06-15T12:53:49.000Z',
         takeOffTime: '2019-06-15T13:51:49.000Z',
     },
     {
@@ -826,7 +826,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Panama City',
         gate: 'C21',
         passengers: 179,
-        departureTime: '2019-06-15T14:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T14:25:00.000Z',
         takeOffTime: '2019-06-15T13:27:00.000Z',
     },
     {
@@ -835,7 +835,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Amman',
         gate: 'E15',
         passengers: 253,
-        departureTime: '2019-06-15T14:45:00.000Z',
+        plannedDepartureTime: '2019-06-15T14:45:00.000Z',
         takeOffTime: '2019-06-15T11:52:00.000Z',
     },
     {
@@ -844,7 +844,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Valencia',
         gate: 'A24',
         passengers: 347,
-        departureTime: '2019-06-15T14:01:33.000Z',
+        plannedDepartureTime: '2019-06-15T14:01:33.000Z',
         takeOffTime: '2019-06-15T14:40:33.000Z',
     },
     {
@@ -853,7 +853,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Istanbul Airport',
         gate: 'B3',
         passengers: 230,
-        departureTime: '2019-06-16T12:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T12:10:00.000Z',
         takeOffTime: '2019-06-16T12:54:00.000Z',
     },
     {
@@ -862,7 +862,7 @@ export const departures: DepartureFlight[] = [
         destination: 'London Gatwick',
         gate: 'D6',
         passengers: 346,
-        departureTime: '2019-06-15T12:46:49.000Z',
+        plannedDepartureTime: '2019-06-15T12:46:49.000Z',
         takeOffTime: '2019-06-15T13:26:49.000Z',
     },
     {
@@ -871,7 +871,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bari',
         gate: 'E4',
         passengers: 106,
-        departureTime: '2019-06-15T12:53:49.000Z',
+        plannedDepartureTime: '2019-06-15T12:53:49.000Z',
         takeOffTime: '2019-06-15T10:42:49.000Z',
     },
     {
@@ -880,7 +880,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Turin',
         gate: 'E21',
         passengers: 193,
-        departureTime: '2019-06-16T05:15:00.000Z',
+        plannedDepartureTime: '2019-06-16T05:15:00.000Z',
         takeOffTime: '2019-06-16T03:14:00.000Z',
     },
     {
@@ -889,7 +889,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Seattle',
         gate: 'D21',
         passengers: 89,
-        departureTime: '2019-06-15T20:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T20:25:00.000Z',
         takeOffTime: '2019-06-15T19:30:00.000Z',
     },
     {
@@ -898,7 +898,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Izmir',
         gate: 'H24',
         passengers: 246,
-        departureTime: '2019-06-15T12:28:54.000Z',
+        plannedDepartureTime: '2019-06-15T12:28:54.000Z',
         takeOffTime: '2019-06-15T10:21:54.000Z',
     },
     {
@@ -907,7 +907,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Lyon',
         gate: 'C7',
         passengers: 79,
-        departureTime: '2019-06-16T11:00:00.000Z',
+        plannedDepartureTime: '2019-06-16T11:00:00.000Z',
         takeOffTime: '2019-06-16T11:34:00.000Z',
     },
     {
@@ -916,7 +916,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bremen',
         gate: 'B1',
         passengers: 286,
-        departureTime: '2019-06-15T17:05:00.000Z',
+        plannedDepartureTime: '2019-06-15T17:05:00.000Z',
         takeOffTime: '2019-06-15T17:09:00.000Z',
     },
     {
@@ -925,7 +925,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Olbia Italy',
         gate: 'C23',
         passengers: 259,
-        departureTime: '2019-06-16T06:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T06:10:00.000Z',
         takeOffTime: '2019-06-16T03:40:00.000Z',
     },
     {
@@ -934,7 +934,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Chengdu',
         gate: 'F4',
         passengers: 360,
-        departureTime: '2019-06-15T12:47:23.000Z',
+        plannedDepartureTime: '2019-06-15T12:47:23.000Z',
         takeOffTime: '2019-06-15T11:42:23.000Z',
     },
     {
@@ -943,7 +943,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Nairobi',
         gate: 'E25',
         passengers: 238,
-        departureTime: '2019-06-15T18:30:00.000Z',
+        plannedDepartureTime: '2019-06-15T18:30:00.000Z',
         takeOffTime: '2019-06-15T17:13:00.000Z',
     },
     {
@@ -952,7 +952,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Olbia Italy',
         gate: 'C23',
         passengers: 259,
-        departureTime: '2019-06-16T06:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T06:10:00.000Z',
         takeOffTime: '2019-06-16T05:07:00.000Z',
     },
     {
@@ -961,7 +961,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Zagreb',
         gate: 'G12',
         passengers: 17,
-        departureTime: '2019-06-15T13:50:00.000Z',
+        plannedDepartureTime: '2019-06-15T13:50:00.000Z',
         takeOffTime: '2019-06-15T13:14:00.000Z',
     },
     {
@@ -970,7 +970,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Zagreb',
         gate: 'G12',
         passengers: 17,
-        departureTime: '2019-06-15T13:50:00.000Z',
+        plannedDepartureTime: '2019-06-15T13:50:00.000Z',
         takeOffTime: '2019-06-15T12:29:00.000Z',
     },
     {
@@ -979,7 +979,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Zurich',
         gate: 'E10',
         passengers: 366,
-        departureTime: '2019-06-15T12:53:49.000Z',
+        plannedDepartureTime: '2019-06-15T12:53:49.000Z',
         takeOffTime: '2019-06-15T12:31:49.000Z',
     },
     {
@@ -988,7 +988,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Guangzhou',
         gate: 'E7',
         passengers: 327,
-        departureTime: '2019-06-16T10:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T10:10:00.000Z',
         takeOffTime: '2019-06-16T09:57:00.000Z',
     },
     {
@@ -997,7 +997,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bremen',
         gate: 'D20',
         passengers: 78,
-        departureTime: '2019-06-15T13:12:00.000Z',
+        plannedDepartureTime: '2019-06-15T13:12:00.000Z',
         takeOffTime: '2019-06-15T13:55:00.000Z',
     },
     {
@@ -1006,7 +1006,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bremen',
         gate: 'D20',
         passengers: 78,
-        departureTime: '2019-06-15T13:12:00.000Z',
+        plannedDepartureTime: '2019-06-15T13:12:00.000Z',
         takeOffTime: '2019-06-15T14:01:00.000Z',
     },
     {
@@ -1015,7 +1015,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Zurich',
         gate: 'H15',
         passengers: 235,
-        departureTime: '2019-06-16T08:40:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:40:00.000Z',
         takeOffTime: '2019-06-16T07:48:00.000Z',
     },
     {
@@ -1024,7 +1024,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Nice',
         gate: 'C10',
         passengers: 66,
-        departureTime: '2019-06-16T09:00:00.000Z',
+        plannedDepartureTime: '2019-06-16T09:00:00.000Z',
         takeOffTime: '2019-06-16T06:10:00.000Z',
     },
     {
@@ -1033,7 +1033,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Atlanta',
         gate: 'E2',
         passengers: 118,
-        departureTime: '2019-06-15T12:50:00.000Z',
+        plannedDepartureTime: '2019-06-15T12:50:00.000Z',
         takeOffTime: '2019-06-15T12:14:00.000Z',
     },
     {
@@ -1042,7 +1042,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Athens',
         gate: 'H24',
         passengers: 342,
-        departureTime: '2019-06-16T13:50:00.000Z',
+        plannedDepartureTime: '2019-06-16T13:50:00.000Z',
         takeOffTime: '2019-06-16T14:05:00.000Z',
     },
     {
@@ -1051,7 +1051,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Zurich',
         gate: 'H15',
         passengers: 235,
-        departureTime: '2019-06-16T08:40:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:40:00.000Z',
         takeOffTime: '2019-06-16T08:37:00.000Z',
     },
     {
@@ -1060,7 +1060,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Valencia',
         gate: 'A24',
         passengers: 347,
-        departureTime: '2019-06-15T14:01:33.000Z',
+        plannedDepartureTime: '2019-06-15T14:01:33.000Z',
         takeOffTime: '2019-06-15T11:11:33.000Z',
     },
     {
@@ -1069,7 +1069,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Moscow',
         gate: 'F2',
         passengers: 145,
-        departureTime: '2019-06-15T12:42:51.000Z',
+        plannedDepartureTime: '2019-06-15T12:42:51.000Z',
         takeOffTime: '2019-06-15T10:55:51.000Z',
     },
     {
@@ -1078,7 +1078,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Curacao',
         gate: 'D1',
         passengers: 141,
-        departureTime: '2019-06-15T17:10:00.000Z',
+        plannedDepartureTime: '2019-06-15T17:10:00.000Z',
         takeOffTime: '2019-06-15T14:40:00.000Z',
     },
     {
@@ -1087,7 +1087,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Doncaster Sheffield',
         gate: 'E1',
         passengers: 79,
-        departureTime: '2019-06-15T12:09:48.000Z',
+        plannedDepartureTime: '2019-06-15T12:09:48.000Z',
         takeOffTime: '2019-06-15T11:42:48.000Z',
     },
     {
@@ -1096,7 +1096,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Milan Linate',
         gate: 'G18',
         passengers: 149,
-        departureTime: '2019-06-15T17:10:00.000Z',
+        plannedDepartureTime: '2019-06-15T17:10:00.000Z',
         takeOffTime: '2019-06-15T15:10:00.000Z',
     },
     {
@@ -1105,7 +1105,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Madrid',
         gate: 'A4',
         passengers: 289,
-        departureTime: '2019-06-15T16:50:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:50:00.000Z',
         takeOffTime: '2019-06-15T14:49:00.000Z',
     },
     {
@@ -1114,7 +1114,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Graz',
         gate: 'G26',
         passengers: 230,
-        departureTime: '2019-06-16T08:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:10:00.000Z',
         takeOffTime: '2019-06-16T08:07:00.000Z',
     },
     {
@@ -1123,7 +1123,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Hong Kong',
         gate: 'G26',
         passengers: 378,
-        departureTime: '2019-06-15T15:05:00.000Z',
+        plannedDepartureTime: '2019-06-15T15:05:00.000Z',
         takeOffTime: '2019-06-15T15:46:00.000Z',
     },
     {
@@ -1132,7 +1132,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bologna',
         gate: 'B13',
         passengers: 372,
-        departureTime: '2019-06-16T08:15:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:15:00.000Z',
         takeOffTime: '2019-06-16T07:53:00.000Z',
     },
     {
@@ -1141,7 +1141,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bari',
         gate: 'E4',
         passengers: 106,
-        departureTime: '2019-06-15T12:53:49.000Z',
+        plannedDepartureTime: '2019-06-15T12:53:49.000Z',
         takeOffTime: '2019-06-15T11:43:49.000Z',
     },
     {
@@ -1150,7 +1150,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Zurich',
         gate: 'H15',
         passengers: 235,
-        departureTime: '2019-06-16T08:40:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:40:00.000Z',
         takeOffTime: '2019-06-16T06:48:00.000Z',
     },
     {
@@ -1159,7 +1159,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Istanbul Airport',
         gate: 'B3',
         passengers: 230,
-        departureTime: '2019-06-16T12:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T12:10:00.000Z',
         takeOffTime: '2019-06-16T10:26:00.000Z',
     },
     {
@@ -1168,7 +1168,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Houston',
         gate: 'G3',
         passengers: 330,
-        departureTime: '2019-06-16T10:05:00.000Z',
+        plannedDepartureTime: '2019-06-16T10:05:00.000Z',
         takeOffTime: '2019-06-16T09:26:00.000Z',
     },
     {
@@ -1177,7 +1177,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bergen',
         gate: 'C6',
         passengers: 85,
-        departureTime: '2019-06-15T12:25:02.000Z',
+        plannedDepartureTime: '2019-06-15T12:25:02.000Z',
         takeOffTime: '2019-06-15T13:09:02.000Z',
     },
     {
@@ -1186,7 +1186,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Ljubljana',
         gate: 'A20',
         passengers: 96,
-        departureTime: '2019-06-15T16:45:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:45:00.000Z',
         takeOffTime: '2019-06-15T14:14:00.000Z',
     },
     {
@@ -1195,7 +1195,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bergen',
         gate: 'C6',
         passengers: 85,
-        departureTime: '2019-06-15T12:25:02.000Z',
+        plannedDepartureTime: '2019-06-15T12:25:02.000Z',
         takeOffTime: '2019-06-15T10:45:02.000Z',
     },
     {
@@ -1204,7 +1204,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bristol',
         gate: 'C0',
         passengers: 243,
-        departureTime: '2019-06-15T13:16:00.000Z',
+        plannedDepartureTime: '2019-06-15T13:16:00.000Z',
         takeOffTime: '2019-06-15T10:31:00.000Z',
     },
     {
@@ -1213,7 +1213,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Split',
         gate: 'H10',
         passengers: 63,
-        departureTime: '2019-06-15T12:03:16.000Z',
+        plannedDepartureTime: '2019-06-15T12:03:16.000Z',
         takeOffTime: '2019-06-15T10:17:16.000Z',
     },
     {
@@ -1222,7 +1222,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bologna',
         gate: 'B13',
         passengers: 372,
-        departureTime: '2019-06-16T08:15:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:15:00.000Z',
         takeOffTime: '2019-06-16T08:33:00.000Z',
     },
     {
@@ -1231,7 +1231,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Lagos',
         gate: 'F23',
         passengers: 20,
-        departureTime: '2019-06-15T14:45:00.000Z',
+        plannedDepartureTime: '2019-06-15T14:45:00.000Z',
         takeOffTime: '2019-06-15T14:27:00.000Z',
     },
     {
@@ -1240,7 +1240,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bristol',
         gate: 'C0',
         passengers: 243,
-        departureTime: '2019-06-15T13:16:00.000Z',
+        plannedDepartureTime: '2019-06-15T13:16:00.000Z',
         takeOffTime: '2019-06-15T11:25:00.000Z',
     },
     {
@@ -1249,7 +1249,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Humberside',
         gate: 'E11',
         passengers: 282,
-        departureTime: '2019-06-16T11:45:00.000Z',
+        plannedDepartureTime: '2019-06-16T11:45:00.000Z',
         takeOffTime: '2019-06-16T10:35:00.000Z',
     },
     {
@@ -1258,7 +1258,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Gran Canaria',
         gate: 'H6',
         passengers: 0,
-        departureTime: '2019-06-15T13:22:00.000Z',
+        plannedDepartureTime: '2019-06-15T13:22:00.000Z',
         takeOffTime: '2019-06-15T12:58:00.000Z',
     },
     {
@@ -1267,7 +1267,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Thessaloniki',
         gate: 'H26',
         passengers: 85,
-        departureTime: '2019-06-16T10:25:00.000Z',
+        plannedDepartureTime: '2019-06-16T10:25:00.000Z',
         takeOffTime: '2019-06-16T10:48:00.000Z',
     },
     {
@@ -1276,7 +1276,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Reykjavik',
         gate: 'H1',
         passengers: 138,
-        departureTime: '2019-06-15T20:15:00.000Z',
+        plannedDepartureTime: '2019-06-15T20:15:00.000Z',
         takeOffTime: '2019-06-15T20:31:00.000Z',
     },
     {
@@ -1285,7 +1285,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Minsk National',
         gate: 'E22',
         passengers: 134,
-        departureTime: '2019-06-15T20:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T20:25:00.000Z',
         takeOffTime: '2019-06-15T20:52:00.000Z',
     },
     {
@@ -1294,7 +1294,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Brussels',
         gate: 'B15',
         passengers: 240,
-        departureTime: '2019-06-15T19:20:00.000Z',
+        plannedDepartureTime: '2019-06-15T19:20:00.000Z',
         takeOffTime: '2019-06-15T16:47:00.000Z',
     },
     {
@@ -1303,7 +1303,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Marsa Alam',
         gate: 'G8',
         passengers: 275,
-        departureTime: '2019-06-15T12:33:42.000Z',
+        plannedDepartureTime: '2019-06-15T12:33:42.000Z',
         takeOffTime: '2019-06-15T12:20:42.000Z',
     },
     {
@@ -1312,7 +1312,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Pula',
         gate: 'H18',
         passengers: 33,
-        departureTime: '2019-06-16T08:15:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:15:00.000Z',
         takeOffTime: '2019-06-16T07:30:00.000Z',
     },
     {
@@ -1321,7 +1321,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Amman',
         gate: 'E15',
         passengers: 253,
-        departureTime: '2019-06-15T14:45:00.000Z',
+        plannedDepartureTime: '2019-06-15T14:45:00.000Z',
         takeOffTime: '2019-06-15T12:31:00.000Z',
     },
     {
@@ -1330,7 +1330,7 @@ export const departures: DepartureFlight[] = [
         destination: 'San Francisco',
         gate: 'G13',
         passengers: 219,
-        departureTime: '2019-06-15T16:50:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:50:00.000Z',
         takeOffTime: '2019-06-15T16:49:00.000Z',
     },
     {
@@ -1339,7 +1339,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Marsa Alam',
         gate: 'G8',
         passengers: 275,
-        departureTime: '2019-06-15T12:33:42.000Z',
+        plannedDepartureTime: '2019-06-15T12:33:42.000Z',
         takeOffTime: '2019-06-15T11:42:42.000Z',
     },
     {
@@ -1348,7 +1348,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Wroclaw',
         gate: 'G15',
         passengers: 336,
-        departureTime: '2019-06-16T08:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:10:00.000Z',
         takeOffTime: '2019-06-16T08:04:00.000Z',
     },
     {
@@ -1357,7 +1357,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Zagreb',
         gate: 'D16',
         passengers: 61,
-        departureTime: '2019-06-15T18:55:00.000Z',
+        plannedDepartureTime: '2019-06-15T18:55:00.000Z',
         takeOffTime: '2019-06-15T18:40:00.000Z',
     },
     {
@@ -1366,7 +1366,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Cape Town',
         gate: 'A6',
         passengers: 186,
-        departureTime: '2019-06-15T16:50:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:50:00.000Z',
         takeOffTime: '2019-06-15T14:52:00.000Z',
     },
     {
@@ -1375,7 +1375,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Aberdeen',
         gate: 'B15',
         passengers: 212,
-        departureTime: '2019-06-15T16:30:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:30:00.000Z',
         takeOffTime: '2019-06-15T16:44:00.000Z',
     },
     {
@@ -1384,7 +1384,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Detroit',
         gate: 'H5',
         passengers: 354,
-        departureTime: '2019-06-15T13:09:12.000Z',
+        plannedDepartureTime: '2019-06-15T13:09:12.000Z',
         takeOffTime: '2019-06-15T11:35:12.000Z',
     },
     {
@@ -1393,7 +1393,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Los Angeles',
         gate: 'F16',
         passengers: 288,
-        departureTime: '2019-06-15T15:30:00.000Z',
+        plannedDepartureTime: '2019-06-15T15:30:00.000Z',
         takeOffTime: '2019-06-15T14:39:00.000Z',
     },
     {
@@ -1402,7 +1402,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Chania',
         gate: 'E12',
         passengers: 226,
-        departureTime: '2019-06-15T12:10:02.000Z',
+        plannedDepartureTime: '2019-06-15T12:10:02.000Z',
         takeOffTime: '2019-06-15T11:55:02.000Z',
     },
     {
@@ -1411,7 +1411,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Milan Linate',
         gate: 'D25',
         passengers: 56,
-        departureTime: '2019-06-15T12:34:15.000Z',
+        plannedDepartureTime: '2019-06-15T12:34:15.000Z',
         takeOffTime: '2019-06-15T12:47:15.000Z',
     },
     {
@@ -1420,7 +1420,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Houston',
         gate: 'G3',
         passengers: 330,
-        departureTime: '2019-06-16T10:05:00.000Z',
+        plannedDepartureTime: '2019-06-16T10:05:00.000Z',
         takeOffTime: '2019-06-16T07:48:00.000Z',
     },
     {
@@ -1429,7 +1429,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Clermont-Ferrand',
         gate: 'G15',
         passengers: 75,
-        departureTime: '2019-06-15T14:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T14:25:00.000Z',
         takeOffTime: '2019-06-15T14:04:00.000Z',
     },
     {
@@ -1438,7 +1438,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Paris de Gaulle',
         gate: 'F0',
         passengers: 368,
-        departureTime: '2019-06-15T12:19:11.000Z',
+        plannedDepartureTime: '2019-06-15T12:19:11.000Z',
         takeOffTime: '2019-06-15T12:32:11.000Z',
     },
     {
@@ -1447,7 +1447,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Madrid',
         gate: 'H14',
         passengers: 73,
-        departureTime: '2019-06-15T17:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T17:25:00.000Z',
         takeOffTime: '2019-06-15T18:18:00.000Z',
     },
     {
@@ -1456,7 +1456,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Istanbul Airport',
         gate: 'G2',
         passengers: 129,
-        departureTime: '2019-06-16T05:05:00.000Z',
+        plannedDepartureTime: '2019-06-16T05:05:00.000Z',
         takeOffTime: '2019-06-16T02:30:00.000Z',
     },
     {
@@ -1465,7 +1465,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Cape Town',
         gate: 'A6',
         passengers: 186,
-        departureTime: '2019-06-15T16:50:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:50:00.000Z',
         takeOffTime: '2019-06-15T17:18:00.000Z',
     },
     {
@@ -1474,7 +1474,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Portland',
         gate: 'A4',
         passengers: 203,
-        departureTime: '2019-06-16T10:20:00.000Z',
+        plannedDepartureTime: '2019-06-16T10:20:00.000Z',
         takeOffTime: '2019-06-16T08:38:00.000Z',
     },
     {
@@ -1483,7 +1483,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Pula',
         gate: 'H18',
         passengers: 33,
-        departureTime: '2019-06-16T08:15:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:15:00.000Z',
         takeOffTime: '2019-06-16T08:40:00.000Z',
     },
     {
@@ -1492,7 +1492,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bergen',
         gate: 'C6',
         passengers: 85,
-        departureTime: '2019-06-15T12:25:02.000Z',
+        plannedDepartureTime: '2019-06-15T12:25:02.000Z',
         takeOffTime: '2019-06-15T10:37:02.000Z',
     },
     {
@@ -1501,7 +1501,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Lagos',
         gate: 'F23',
         passengers: 20,
-        departureTime: '2019-06-15T14:45:00.000Z',
+        plannedDepartureTime: '2019-06-15T14:45:00.000Z',
         takeOffTime: '2019-06-15T12:47:00.000Z',
     },
     {
@@ -1510,7 +1510,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Guangzhou',
         gate: 'E20',
         passengers: 283,
-        departureTime: '2019-06-15T18:45:00.000Z',
+        plannedDepartureTime: '2019-06-15T18:45:00.000Z',
     },
     {
         flightNumber: 'BA565',
@@ -1518,7 +1518,7 @@ export const departures: DepartureFlight[] = [
         destination: 'New York JFK',
         gate: 'F17',
         passengers: 124,
-        departureTime: '2019-06-16T06:55:00.000Z',
+        plannedDepartureTime: '2019-06-16T06:55:00.000Z',
         takeOffTime: '2019-06-16T03:57:00.000Z',
     },
     {
@@ -1527,7 +1527,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Gran Canaria',
         gate: 'C8',
         passengers: 123,
-        departureTime: '2019-06-15T12:03:16.000Z',
+        plannedDepartureTime: '2019-06-15T12:03:16.000Z',
         takeOffTime: '2019-06-15T11:58:16.000Z',
     },
     {
@@ -1536,7 +1536,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Ljubljana',
         gate: 'A20',
         passengers: 96,
-        departureTime: '2019-06-15T16:45:00.000Z',
+        plannedDepartureTime: '2019-06-15T16:45:00.000Z',
         takeOffTime: '2019-06-15T17:16:00.000Z',
     },
     {
@@ -1545,7 +1545,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Reykjavik',
         gate: 'H1',
         passengers: 138,
-        departureTime: '2019-06-15T20:15:00.000Z',
+        plannedDepartureTime: '2019-06-15T20:15:00.000Z',
         takeOffTime: '2019-06-15T18:30:00.000Z',
     },
     {
@@ -1554,7 +1554,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bristol',
         gate: 'F17',
         passengers: 311,
-        departureTime: '2019-06-16T11:00:00.000Z',
+        plannedDepartureTime: '2019-06-16T11:00:00.000Z',
         takeOffTime: '2019-06-16T11:34:00.000Z',
     },
     {
@@ -1563,7 +1563,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bologna',
         gate: 'B13',
         passengers: 372,
-        departureTime: '2019-06-16T08:15:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:15:00.000Z',
         takeOffTime: '2019-06-16T09:10:00.000Z',
     },
     {
@@ -1572,7 +1572,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Chania',
         gate: 'E12',
         passengers: 226,
-        departureTime: '2019-06-15T12:10:02.000Z',
+        plannedDepartureTime: '2019-06-15T12:10:02.000Z',
         takeOffTime: '2019-06-15T11:32:02.000Z',
     },
     {
@@ -1581,7 +1581,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Milan Linate',
         gate: 'G18',
         passengers: 149,
-        departureTime: '2019-06-15T17:10:00.000Z',
+        plannedDepartureTime: '2019-06-15T17:10:00.000Z',
         takeOffTime: '2019-06-15T14:17:00.000Z',
     },
     {
@@ -1590,7 +1590,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Split',
         gate: 'H10',
         passengers: 63,
-        departureTime: '2019-06-15T12:03:16.000Z',
+        plannedDepartureTime: '2019-06-15T12:03:16.000Z',
         takeOffTime: '2019-06-15T12:56:16.000Z',
     },
     {
@@ -1599,7 +1599,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Cairo',
         gate: 'G21',
         passengers: 355,
-        departureTime: '2019-06-15T13:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T13:25:00.000Z',
         takeOffTime: '2019-06-15T13:38:00.000Z',
     },
     {
@@ -1608,7 +1608,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Reykjavik',
         gate: 'H1',
         passengers: 138,
-        departureTime: '2019-06-15T20:15:00.000Z',
+        plannedDepartureTime: '2019-06-15T20:15:00.000Z',
         takeOffTime: '2019-06-15T18:27:00.000Z',
     },
     {
@@ -1617,7 +1617,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Wroclaw',
         gate: 'G15',
         passengers: 336,
-        departureTime: '2019-06-16T08:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:10:00.000Z',
         takeOffTime: '2019-06-16T07:17:00.000Z',
     },
     {
@@ -1626,7 +1626,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Oporto',
         gate: 'D24',
         passengers: 35,
-        departureTime: '2019-06-16T12:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T12:10:00.000Z',
         takeOffTime: '2019-06-16T10:15:00.000Z',
     },
     {
@@ -1635,7 +1635,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Gran Canaria',
         gate: 'C8',
         passengers: 123,
-        departureTime: '2019-06-15T12:03:16.000Z',
+        plannedDepartureTime: '2019-06-15T12:03:16.000Z',
         takeOffTime: '2019-06-15T10:57:16.000Z',
     },
     {
@@ -1644,7 +1644,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Gran Canaria',
         gate: 'B4',
         passengers: 120,
-        departureTime: '2019-06-16T05:40:00.000Z',
+        plannedDepartureTime: '2019-06-16T05:40:00.000Z',
         takeOffTime: '2019-06-16T05:20:00.000Z',
     },
     {
@@ -1653,7 +1653,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Corfu',
         gate: 'F27',
         passengers: 80,
-        departureTime: '2019-06-16T06:30:00.000Z',
+        plannedDepartureTime: '2019-06-16T06:30:00.000Z',
         takeOffTime: '2019-06-16T04:11:00.000Z',
     },
     {
@@ -1662,7 +1662,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Naples',
         gate: 'G24',
         passengers: 132,
-        departureTime: '2019-06-16T06:30:00.000Z',
+        plannedDepartureTime: '2019-06-16T06:30:00.000Z',
         takeOffTime: '2019-06-16T05:31:00.000Z',
     },
     {
@@ -1671,7 +1671,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Cairo',
         gate: 'G21',
         passengers: 355,
-        departureTime: '2019-06-15T13:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T13:25:00.000Z',
         takeOffTime: '2019-06-15T13:51:00.000Z',
     },
     {
@@ -1680,7 +1680,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Orlando',
         gate: 'C10',
         passengers: 372,
-        departureTime: '2019-06-16T11:25:00.000Z',
+        plannedDepartureTime: '2019-06-16T11:25:00.000Z',
         takeOffTime: '2019-06-16T11:49:00.000Z',
     },
     {
@@ -1689,7 +1689,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Lagos',
         gate: 'F23',
         passengers: 20,
-        departureTime: '2019-06-15T14:45:00.000Z',
+        plannedDepartureTime: '2019-06-15T14:45:00.000Z',
         takeOffTime: '2019-06-15T12:48:00.000Z',
     },
     {
@@ -1698,7 +1698,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Madrid',
         gate: 'H14',
         passengers: 73,
-        departureTime: '2019-06-15T17:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T17:25:00.000Z',
         takeOffTime: '2019-06-15T15:59:00.000Z',
     },
     {
@@ -1707,7 +1707,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Panama City',
         gate: 'C21',
         passengers: 179,
-        departureTime: '2019-06-15T14:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T14:25:00.000Z',
         takeOffTime: '2019-06-15T14:01:00.000Z',
     },
     {
@@ -1716,7 +1716,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Nice',
         gate: 'C10',
         passengers: 66,
-        departureTime: '2019-06-16T09:00:00.000Z',
+        plannedDepartureTime: '2019-06-16T09:00:00.000Z',
         takeOffTime: '2019-06-16T09:38:00.000Z',
     },
     {
@@ -1725,7 +1725,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Zagreb',
         gate: 'D16',
         passengers: 61,
-        departureTime: '2019-06-15T18:55:00.000Z',
+        plannedDepartureTime: '2019-06-15T18:55:00.000Z',
         takeOffTime: '2019-06-15T19:03:00.000Z',
     },
     {
@@ -1734,7 +1734,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Oporto',
         gate: 'D24',
         passengers: 35,
-        departureTime: '2019-06-16T12:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T12:10:00.000Z',
         takeOffTime: '2019-06-16T10:03:00.000Z',
     },
     {
@@ -1743,7 +1743,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Zurich',
         gate: 'E10',
         passengers: 366,
-        departureTime: '2019-06-15T12:53:49.000Z',
+        plannedDepartureTime: '2019-06-15T12:53:49.000Z',
         takeOffTime: '2019-06-15T12:40:49.000Z',
     },
     {
@@ -1752,7 +1752,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Seattle',
         gate: 'D21',
         passengers: 89,
-        departureTime: '2019-06-15T20:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T20:25:00.000Z',
         takeOffTime: '2019-06-15T21:15:00.000Z',
     },
     {
@@ -1761,7 +1761,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Minsk National',
         gate: 'F4',
         passengers: 151,
-        departureTime: '2019-06-15T15:00:00.000Z',
+        plannedDepartureTime: '2019-06-15T15:00:00.000Z',
         takeOffTime: '2019-06-15T13:12:00.000Z',
     },
     {
@@ -1770,7 +1770,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Moscow',
         gate: 'F2',
         passengers: 145,
-        departureTime: '2019-06-15T12:42:51.000Z',
+        plannedDepartureTime: '2019-06-15T12:42:51.000Z',
         takeOffTime: '2019-06-15T11:47:51.000Z',
     },
     {
@@ -1779,7 +1779,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bremen',
         gate: 'B1',
         passengers: 286,
-        departureTime: '2019-06-15T17:05:00.000Z',
+        plannedDepartureTime: '2019-06-15T17:05:00.000Z',
         takeOffTime: '2019-06-15T14:30:00.000Z',
     },
     {
@@ -1788,7 +1788,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Zagreb',
         gate: 'D16',
         passengers: 61,
-        departureTime: '2019-06-15T18:55:00.000Z',
+        plannedDepartureTime: '2019-06-15T18:55:00.000Z',
         takeOffTime: '2019-06-15T17:54:00.000Z',
     },
     {
@@ -1797,7 +1797,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Nairobi',
         gate: 'E25',
         passengers: 238,
-        departureTime: '2019-06-15T18:30:00.000Z',
+        plannedDepartureTime: '2019-06-15T18:30:00.000Z',
         takeOffTime: '2019-06-15T17:51:00.000Z',
     },
     {
@@ -1806,7 +1806,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Bristol',
         gate: 'F17',
         passengers: 311,
-        departureTime: '2019-06-16T11:00:00.000Z',
+        plannedDepartureTime: '2019-06-16T11:00:00.000Z',
         takeOffTime: '2019-06-16T11:45:00.000Z',
     },
     {
@@ -1815,7 +1815,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Inverness',
         gate: 'E5',
         passengers: 245,
-        departureTime: '2019-06-15T14:15:35.000Z',
+        plannedDepartureTime: '2019-06-15T14:15:35.000Z',
         takeOffTime: '2019-06-15T13:07:35.000Z',
     },
     {
@@ -1824,7 +1824,7 @@ export const departures: DepartureFlight[] = [
         destination: 'London Gatwick',
         gate: 'D6',
         passengers: 346,
-        departureTime: '2019-06-15T12:46:49.000Z',
+        plannedDepartureTime: '2019-06-15T12:46:49.000Z',
         takeOffTime: '2019-06-15T10:49:49.000Z',
     },
     {
@@ -1833,7 +1833,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Lisbon',
         gate: 'D12',
         passengers: 66,
-        departureTime: '2019-06-15T12:22:41.000Z',
+        plannedDepartureTime: '2019-06-15T12:22:41.000Z',
         takeOffTime: '2019-06-15T10:06:41.000Z',
     },
     {
@@ -1842,7 +1842,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Curacao',
         gate: 'D1',
         passengers: 141,
-        departureTime: '2019-06-15T17:10:00.000Z',
+        plannedDepartureTime: '2019-06-15T17:10:00.000Z',
         takeOffTime: '2019-06-15T17:28:00.000Z',
     },
     {
@@ -1851,7 +1851,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Alicante',
         gate: 'D17',
         passengers: 14,
-        departureTime: '2019-06-16T12:40:00.000Z',
+        plannedDepartureTime: '2019-06-16T12:40:00.000Z',
     },
     {
         flightNumber: 'BA1288',
@@ -1859,7 +1859,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Alicante',
         gate: 'D17',
         passengers: 14,
-        departureTime: '2019-06-16T12:40:00.000Z',
+        plannedDepartureTime: '2019-06-16T12:40:00.000Z',
         takeOffTime: '2019-06-16T09:42:00.000Z',
     },
     {
@@ -1868,7 +1868,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Lisbon',
         gate: 'H21',
         passengers: 22,
-        departureTime: '2019-06-15T12:22:41.000Z',
+        plannedDepartureTime: '2019-06-15T12:22:41.000Z',
         takeOffTime: '2019-06-15T10:32:41.000Z',
     },
     {
@@ -1877,7 +1877,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Olbia Italy',
         gate: 'C23',
         passengers: 259,
-        departureTime: '2019-06-16T06:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T06:10:00.000Z',
         takeOffTime: '2019-06-16T04:23:00.000Z',
     },
     {
@@ -1886,7 +1886,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Helsinki',
         gate: 'B16',
         passengers: 133,
-        departureTime: '2019-06-15T12:53:49.000Z',
+        plannedDepartureTime: '2019-06-15T12:53:49.000Z',
         takeOffTime: '2019-06-15T12:43:49.000Z',
     },
     {
@@ -1895,7 +1895,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Corfu',
         gate: 'H15',
         passengers: 333,
-        departureTime: '2019-06-16T11:50:00.000Z',
+        plannedDepartureTime: '2019-06-16T11:50:00.000Z',
         takeOffTime: '2019-06-16T12:10:00.000Z',
     },
     {
@@ -1904,7 +1904,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Turin',
         gate: 'E21',
         passengers: 193,
-        departureTime: '2019-06-16T05:15:00.000Z',
+        plannedDepartureTime: '2019-06-16T05:15:00.000Z',
         takeOffTime: '2019-06-16T04:31:00.000Z',
     },
     {
@@ -1913,7 +1913,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Valencia',
         gate: 'A24',
         passengers: 347,
-        departureTime: '2019-06-15T14:01:33.000Z',
+        plannedDepartureTime: '2019-06-15T14:01:33.000Z',
         takeOffTime: '2019-06-15T13:08:33.000Z',
     },
     {
@@ -1922,7 +1922,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Aberdeen',
         gate: 'E24',
         passengers: 111,
-        departureTime: '2019-06-16T04:30:00.000Z',
+        plannedDepartureTime: '2019-06-16T04:30:00.000Z',
         takeOffTime: '2019-06-16T04:34:00.000Z',
     },
     {
@@ -1931,7 +1931,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Sandefjord',
         gate: 'E0',
         passengers: 329,
-        departureTime: '2019-06-15T13:13:47.000Z',
+        plannedDepartureTime: '2019-06-15T13:13:47.000Z',
         takeOffTime: '2019-06-15T13:25:47.000Z',
     },
     {
@@ -1940,7 +1940,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Minsk National',
         gate: 'E22',
         passengers: 134,
-        departureTime: '2019-06-15T20:25:00.000Z',
+        plannedDepartureTime: '2019-06-15T20:25:00.000Z',
         takeOffTime: '2019-06-15T20:27:00.000Z',
     },
     {
@@ -1949,7 +1949,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Detroit',
         gate: 'F16',
         passengers: 278,
-        departureTime: '2019-06-16T08:40:00.000Z',
+        plannedDepartureTime: '2019-06-16T08:40:00.000Z',
         takeOffTime: '2019-06-16T06:37:00.000Z',
     },
     {
@@ -1958,7 +1958,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Heraklion',
         gate: 'G7',
         passengers: 379,
-        departureTime: '2019-06-16T10:10:00.000Z',
+        plannedDepartureTime: '2019-06-16T10:10:00.000Z',
         takeOffTime: '2019-06-16T09:20:00.000Z',
     },
     {
@@ -1967,7 +1967,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Thessaloniki',
         gate: 'H26',
         passengers: 85,
-        departureTime: '2019-06-16T10:25:00.000Z',
+        plannedDepartureTime: '2019-06-16T10:25:00.000Z',
         takeOffTime: '2019-06-16T11:05:00.000Z',
     },
     {
@@ -1976,7 +1976,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Dresden',
         gate: 'G11',
         passengers: 378,
-        departureTime: '2019-06-15T12:25:02.000Z',
+        plannedDepartureTime: '2019-06-15T12:25:02.000Z',
         takeOffTime: '2019-06-15T13:06:02.000Z',
     },
     {
@@ -1985,7 +1985,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Lisbon',
         gate: 'H21',
         passengers: 22,
-        departureTime: '2019-06-15T12:22:41.000Z',
+        plannedDepartureTime: '2019-06-15T12:22:41.000Z',
         takeOffTime: '2019-06-15T11:51:41.000Z',
     },
     {
@@ -1994,7 +1994,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Turin',
         gate: 'E21',
         passengers: 193,
-        departureTime: '2019-06-16T05:15:00.000Z',
+        plannedDepartureTime: '2019-06-16T05:15:00.000Z',
         takeOffTime: '2019-06-16T05:42:00.000Z',
     },
     {
@@ -2003,7 +2003,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Portland',
         gate: 'B15',
         passengers: 249,
-        departureTime: '2019-06-15T12:58:15.000Z',
+        plannedDepartureTime: '2019-06-15T12:58:15.000Z',
         takeOffTime: '2019-06-15T12:51:03.000Z',
     },
     {
@@ -2012,7 +2012,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Vancouver',
         gate: 'D24',
         passengers: 139,
-        departureTime: '2019-06-15T13:55:00.000Z',
+        plannedDepartureTime: '2019-06-15T13:55:00.000Z',
         takeOffTime: '2019-06-15T13:30:00.000Z',
     },
     {
@@ -2021,7 +2021,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Thessaloniki',
         gate: 'H26',
         passengers: 85,
-        departureTime: '2019-06-16T10:25:00.000Z',
+        plannedDepartureTime: '2019-06-16T10:25:00.000Z',
         takeOffTime: '2019-06-16T10:56:00.000Z',
     },
     {
@@ -2030,7 +2030,7 @@ export const departures: DepartureFlight[] = [
         destination: 'Stockholm',
         gate: 'G4',
         passengers: 10,
-        departureTime: '2019-06-15T13:04:56.000Z',
+        plannedDepartureTime: '2019-06-15T13:04:56.000Z',
         takeOffTime: '2019-06-15T12:43:56.000Z',
     },
 ];
@@ -2042,7 +2042,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Casablanca',
         gate: 'F25',
         passengers: 199,
-        arrivalTime: '2019-06-16T08:25:00.000Z',
+        plannedArrivalTime: '2019-06-16T08:25:00.000Z',
         landingTime: '2019-06-16T06:04:00.000Z',
     },
     {
@@ -2051,7 +2051,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Nice',
         gate: 'B5',
         passengers: 96,
-        arrivalTime: '2019-06-15T12:18:12.000Z',
+        plannedArrivalTime: '2019-06-15T12:18:12.000Z',
         landingTime: '2019-06-15T09:23:12.000Z',
     },
     {
@@ -2060,7 +2060,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Warsaw',
         gate: 'F13',
         passengers: 325,
-        arrivalTime: '2019-06-16T06:45:00.000Z',
+        plannedArrivalTime: '2019-06-16T06:45:00.000Z',
         landingTime: '2019-06-16T05:00:00.000Z',
     },
     {
@@ -2069,7 +2069,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Enfidha',
         gate: 'A18',
         passengers: 2,
-        arrivalTime: '2019-06-15T12:25:34.000Z',
+        plannedArrivalTime: '2019-06-15T12:25:34.000Z',
         landingTime: '2019-06-15T11:31:34.000Z',
     },
     {
@@ -2078,7 +2078,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bristol',
         gate: 'H14',
         passengers: 375,
-        arrivalTime: '2019-06-15T12:03:51.000Z',
+        plannedArrivalTime: '2019-06-15T12:03:51.000Z',
         landingTime: '2019-06-15T11:29:51.000Z',
     },
     {
@@ -2087,7 +2087,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Enfidha',
         gate: 'A18',
         passengers: 2,
-        arrivalTime: '2019-06-15T12:25:34.000Z',
+        plannedArrivalTime: '2019-06-15T12:25:34.000Z',
         landingTime: '2019-06-15T11:21:34.000Z',
     },
     {
@@ -2096,7 +2096,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Luxembourg',
         gate: 'E16',
         passengers: 13,
-        arrivalTime: '2019-06-16T05:55:00.000Z',
+        plannedArrivalTime: '2019-06-16T05:55:00.000Z',
         landingTime: '2019-06-16T04:59:00.000Z',
     },
     {
@@ -2105,7 +2105,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Paris de Gaulle',
         gate: 'C22',
         passengers: 352,
-        arrivalTime: '2019-06-16T10:55:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:55:00.000Z',
         landingTime: '2019-06-16T10:20:00.000Z',
     },
     {
@@ -2114,7 +2114,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Mahon',
         gate: 'F1',
         passengers: 330,
-        arrivalTime: '2019-06-16T09:35:00.000Z',
+        plannedArrivalTime: '2019-06-16T09:35:00.000Z',
         landingTime: '2019-06-16T07:12:00.000Z',
     },
     {
@@ -2123,7 +2123,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'London Heathrow',
         gate: 'H0',
         passengers: 83,
-        arrivalTime: '2019-06-15T18:30:00.000Z',
+        plannedArrivalTime: '2019-06-15T18:30:00.000Z',
         landingTime: '2019-06-15T18:07:00.000Z',
     },
     {
@@ -2132,7 +2132,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Denpasar',
         gate: 'F10',
         passengers: 197,
-        arrivalTime: '2019-06-15T15:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T15:55:00.000Z',
         landingTime: '2019-06-15T13:04:00.000Z',
     },
     {
@@ -2141,7 +2141,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Durham Teesvalley',
         gate: 'B12',
         passengers: 339,
-        arrivalTime: '2019-06-15T17:50:00.000Z',
+        plannedArrivalTime: '2019-06-15T17:50:00.000Z',
         landingTime: '2019-06-15T17:54:00.000Z',
     },
     {
@@ -2150,7 +2150,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Hamburg',
         gate: 'G23',
         passengers: 14,
-        arrivalTime: '2019-06-16T10:45:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:45:00.000Z',
         landingTime: '2019-06-16T08:27:00.000Z',
     },
     {
@@ -2159,7 +2159,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Calgary',
         gate: 'E12',
         passengers: 29,
-        arrivalTime: '2019-06-15T14:40:00.000Z',
+        plannedArrivalTime: '2019-06-15T14:40:00.000Z',
         landingTime: '2019-06-15T12:08:00.000Z',
     },
     {
@@ -2168,7 +2168,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Casablanca',
         gate: 'F25',
         passengers: 199,
-        arrivalTime: '2019-06-16T08:25:00.000Z',
+        plannedArrivalTime: '2019-06-16T08:25:00.000Z',
         landingTime: '2019-06-16T08:32:00.000Z',
     },
     {
@@ -2177,7 +2177,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Zagreb',
         gate: 'E13',
         passengers: 123,
-        arrivalTime: '2019-06-15T12:39:58.000Z',
+        plannedArrivalTime: '2019-06-15T12:39:58.000Z',
         landingTime: '2019-06-15T11:00:58.000Z',
     },
     {
@@ -2186,7 +2186,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Moscow',
         gate: 'A14',
         passengers: 96,
-        arrivalTime: '2019-06-15T12:10:02.000Z',
+        plannedArrivalTime: '2019-06-15T12:10:02.000Z',
         landingTime: '2019-06-15T10:15:02.000Z',
     },
     {
@@ -2195,7 +2195,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Prague',
         gate: 'B13',
         passengers: 375,
-        arrivalTime: '2019-06-15T12:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T12:55:00.000Z',
         landingTime: '2019-06-15T11:50:00.000Z',
     },
     {
@@ -2204,7 +2204,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Paris de Gaulle',
         gate: 'A25',
         passengers: 131,
-        arrivalTime: '2019-06-15T13:50:00.000Z',
+        plannedArrivalTime: '2019-06-15T13:50:00.000Z',
         landingTime: '2019-06-15T14:03:00.000Z',
     },
     {
@@ -2213,7 +2213,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Strasbourg',
         gate: 'E0',
         passengers: 60,
-        arrivalTime: '2019-06-16T10:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:05:00.000Z',
         landingTime: '2019-06-16T08:35:00.000Z',
     },
     {
@@ -2222,7 +2222,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'London Luton',
         gate: 'A1',
         passengers: 64,
-        arrivalTime: '2019-06-16T07:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T07:05:00.000Z',
         landingTime: '2019-06-16T05:19:00.000Z',
     },
     {
@@ -2231,7 +2231,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Pisa',
         gate: 'F19',
         passengers: 209,
-        arrivalTime: '2019-06-16T11:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T11:05:00.000Z',
         landingTime: '2019-06-16T11:55:00.000Z',
     },
     {
@@ -2240,7 +2240,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Minsk National',
         gate: 'B10',
         passengers: 168,
-        arrivalTime: '2019-06-16T12:40:00.000Z',
+        plannedArrivalTime: '2019-06-16T12:40:00.000Z',
         landingTime: '2019-06-16T12:20:00.000Z',
     },
     {
@@ -2249,7 +2249,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Minsk National',
         gate: 'C27',
         passengers: 22,
-        arrivalTime: '2019-06-16T12:10:00.000Z',
+        plannedArrivalTime: '2019-06-16T12:10:00.000Z',
         landingTime: '2019-06-16T11:01:00.000Z',
     },
     {
@@ -2258,7 +2258,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'London Heathrow',
         gate: 'H0',
         passengers: 83,
-        arrivalTime: '2019-06-15T18:30:00.000Z',
+        plannedArrivalTime: '2019-06-15T18:30:00.000Z',
         landingTime: '2019-06-15T15:38:00.000Z',
     },
     {
@@ -2267,7 +2267,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Curacao',
         gate: 'G24',
         passengers: 196,
-        arrivalTime: '2019-06-15T17:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T17:55:00.000Z',
         landingTime: '2019-06-15T15:57:00.000Z',
     },
     {
@@ -2276,7 +2276,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Minsk National',
         gate: 'C27',
         passengers: 22,
-        arrivalTime: '2019-06-16T12:10:00.000Z',
+        plannedArrivalTime: '2019-06-16T12:10:00.000Z',
         landingTime: '2019-06-16T11:20:00.000Z',
     },
     {
@@ -2285,7 +2285,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Nice',
         gate: 'B5',
         passengers: 96,
-        arrivalTime: '2019-06-15T12:18:12.000Z',
+        plannedArrivalTime: '2019-06-15T12:18:12.000Z',
         landingTime: '2019-06-15T10:55:12.000Z',
     },
     {
@@ -2294,7 +2294,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Aalesund',
         gate: 'E25',
         passengers: 24,
-        arrivalTime: '2019-06-16T04:00:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:00:00.000Z',
         landingTime: '2019-06-16T04:17:00.000Z',
     },
     {
@@ -2303,7 +2303,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Clermont-Ferrand',
         gate: 'H23',
         passengers: 306,
-        arrivalTime: '2019-06-15T20:10:00.000Z',
+        plannedArrivalTime: '2019-06-15T20:10:00.000Z',
         landingTime: '2019-06-15T20:19:00.000Z',
     },
     {
@@ -2312,7 +2312,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Linkoping',
         gate: 'H22',
         passengers: 175,
-        arrivalTime: '2019-06-15T15:05:00.000Z',
+        plannedArrivalTime: '2019-06-15T15:05:00.000Z',
         landingTime: '2019-06-15T15:40:00.000Z',
     },
     {
@@ -2321,7 +2321,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Chengdu',
         gate: 'F6',
         passengers: 80,
-        arrivalTime: '2019-06-15T13:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T13:55:00.000Z',
         landingTime: '2019-06-15T12:54:00.000Z',
     },
     {
@@ -2330,7 +2330,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Sao Paulo',
         gate: 'H27',
         passengers: 29,
-        arrivalTime: '2019-06-15T19:35:00.000Z',
+        plannedArrivalTime: '2019-06-15T19:35:00.000Z',
         landingTime: '2019-06-15T19:39:00.000Z',
     },
     {
@@ -2339,7 +2339,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Lagos',
         gate: 'C21',
         passengers: 344,
-        arrivalTime: '2019-06-15T12:27:27.000Z',
+        plannedArrivalTime: '2019-06-15T12:27:27.000Z',
         landingTime: '2019-06-15T10:42:27.000Z',
     },
     {
@@ -2348,7 +2348,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Birmingham',
         gate: 'F27',
         passengers: 240,
-        arrivalTime: '2019-06-15T14:41:54.000Z',
+        plannedArrivalTime: '2019-06-15T14:41:54.000Z',
         landingTime: '2019-06-15T13:01:54.000Z',
     },
     {
@@ -2357,7 +2357,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Agadir',
         gate: 'A15',
         passengers: 55,
-        arrivalTime: '2019-06-15T12:48:31.000Z',
+        plannedArrivalTime: '2019-06-15T12:48:31.000Z',
         landingTime: '2019-06-15T12:12:31.000Z',
     },
     {
@@ -2366,7 +2366,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Exeter',
         gate: 'H8',
         passengers: 26,
-        arrivalTime: '2019-06-16T08:15:00.000Z',
+        plannedArrivalTime: '2019-06-16T08:15:00.000Z',
         landingTime: '2019-06-16T08:52:00.000Z',
     },
     {
@@ -2375,7 +2375,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Calgary',
         gate: 'D0',
         passengers: 65,
-        arrivalTime: '2019-06-16T04:40:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:40:00.000Z',
         landingTime: '2019-06-16T03:12:00.000Z',
     },
     {
@@ -2384,7 +2384,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Newcastle',
         gate: 'C27',
         passengers: 212,
-        arrivalTime: '2019-06-15T13:03:27.000Z',
+        plannedArrivalTime: '2019-06-15T13:03:27.000Z',
         landingTime: '2019-06-15T12:36:27.000Z',
     },
     {
@@ -2393,7 +2393,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Exeter',
         gate: 'H8',
         passengers: 26,
-        arrivalTime: '2019-06-16T08:15:00.000Z',
+        plannedArrivalTime: '2019-06-16T08:15:00.000Z',
         landingTime: '2019-06-16T05:50:00.000Z',
     },
     {
@@ -2402,7 +2402,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Warsaw',
         gate: 'A9',
         passengers: 180,
-        arrivalTime: '2019-06-15T15:35:00.000Z',
+        plannedArrivalTime: '2019-06-15T15:35:00.000Z',
         landingTime: '2019-06-15T15:59:00.000Z',
     },
     {
@@ -2411,7 +2411,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Cagliari',
         gate: 'E18',
         passengers: 369,
-        arrivalTime: '2019-06-16T12:45:00.000Z',
+        plannedArrivalTime: '2019-06-16T12:45:00.000Z',
         landingTime: '2019-06-16T12:49:00.000Z',
     },
     {
@@ -2420,7 +2420,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Cardiff',
         gate: 'H25',
         passengers: 318,
-        arrivalTime: '2019-06-16T13:10:00.000Z',
+        plannedArrivalTime: '2019-06-16T13:10:00.000Z',
         landingTime: '2019-06-16T13:00:00.000Z',
     },
     {
@@ -2429,7 +2429,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Tel Aviv',
         gate: 'D4',
         passengers: 9,
-        arrivalTime: '2019-06-15T14:30:00.000Z',
+        plannedArrivalTime: '2019-06-15T14:30:00.000Z',
         landingTime: '2019-06-15T13:35:00.000Z',
     },
     {
@@ -2438,7 +2438,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bremen',
         gate: 'C25',
         passengers: 128,
-        arrivalTime: '2019-06-15T13:03:27.000Z',
+        plannedArrivalTime: '2019-06-15T13:03:27.000Z',
         landingTime: '2019-06-15T10:54:27.000Z',
     },
     {
@@ -2447,7 +2447,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Lyon',
         gate: 'D21',
         passengers: 338,
-        arrivalTime: '2019-06-16T07:55:00.000Z',
+        plannedArrivalTime: '2019-06-16T07:55:00.000Z',
         landingTime: '2019-06-16T07:51:00.000Z',
     },
     {
@@ -2456,7 +2456,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Humberside',
         gate: 'B20',
         passengers: 365,
-        arrivalTime: '2019-06-15T20:25:00.000Z',
+        plannedArrivalTime: '2019-06-15T20:25:00.000Z',
         landingTime: '2019-06-15T17:58:00.000Z',
     },
     {
@@ -2465,7 +2465,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Mahon',
         gate: 'F1',
         passengers: 330,
-        arrivalTime: '2019-06-16T09:35:00.000Z',
+        plannedArrivalTime: '2019-06-16T09:35:00.000Z',
         landingTime: '2019-06-16T10:01:00.000Z',
     },
     {
@@ -2474,7 +2474,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Pisa',
         gate: 'F19',
         passengers: 209,
-        arrivalTime: '2019-06-16T11:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T11:05:00.000Z',
         landingTime: '2019-06-16T11:41:00.000Z',
     },
     {
@@ -2483,7 +2483,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Montpellier',
         gate: 'G1',
         passengers: 72,
-        arrivalTime: '2019-06-15T18:45:00.000Z',
+        plannedArrivalTime: '2019-06-15T18:45:00.000Z',
         landingTime: '2019-06-15T18:54:00.000Z',
     },
     {
@@ -2492,7 +2492,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Corfu',
         gate: 'E3',
         passengers: 187,
-        arrivalTime: '2019-06-16T06:35:00.000Z',
+        plannedArrivalTime: '2019-06-16T06:35:00.000Z',
         landingTime: '2019-06-16T03:38:00.000Z',
     },
     {
@@ -2501,7 +2501,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'New York JFK',
         gate: 'G8',
         passengers: 235,
-        arrivalTime: '2019-06-16T07:30:00.000Z',
+        plannedArrivalTime: '2019-06-16T07:30:00.000Z',
         landingTime: '2019-06-16T08:27:00.000Z',
     },
     {
@@ -2510,7 +2510,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Edinburgh',
         gate: 'A26',
         passengers: 374,
-        arrivalTime: '2019-06-15T12:19:11.000Z',
+        plannedArrivalTime: '2019-06-15T12:19:11.000Z',
         landingTime: '2019-06-15T10:53:11.000Z',
     },
     {
@@ -2519,7 +2519,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Moscow',
         gate: 'G9',
         passengers: 218,
-        arrivalTime: '2019-06-16T13:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T13:05:00.000Z',
         landingTime: '2019-06-16T13:51:00.000Z',
     },
     {
@@ -2528,7 +2528,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Zagreb',
         gate: 'E13',
         passengers: 123,
-        arrivalTime: '2019-06-15T12:39:58.000Z',
+        plannedArrivalTime: '2019-06-15T12:39:58.000Z',
         landingTime: '2019-06-15T10:31:58.000Z',
     },
     {
@@ -2537,7 +2537,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bremen',
         gate: 'C25',
         passengers: 128,
-        arrivalTime: '2019-06-15T13:03:27.000Z',
+        plannedArrivalTime: '2019-06-15T13:03:27.000Z',
         landingTime: '2019-06-15T14:01:27.000Z',
     },
     {
@@ -2546,7 +2546,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Gerona',
         gate: 'G6',
         passengers: 297,
-        arrivalTime: '2019-06-15T16:15:00.000Z',
+        plannedArrivalTime: '2019-06-15T16:15:00.000Z',
         landingTime: '2019-06-15T16:47:00.000Z',
     },
     {
@@ -2555,7 +2555,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Houston',
         gate: 'A14',
         passengers: 357,
-        arrivalTime: '2019-06-16T04:40:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:40:00.000Z',
         landingTime: '2019-06-16T02:17:00.000Z',
     },
     {
@@ -2564,7 +2564,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Zurich',
         gate: 'A4',
         passengers: 177,
-        arrivalTime: '2019-06-15T12:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T12:55:00.000Z',
         landingTime: '2019-06-15T13:50:00.000Z',
     },
     {
@@ -2573,7 +2573,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Lagos',
         gate: 'A21',
         passengers: 373,
-        arrivalTime: '2019-06-15T16:10:00.000Z',
+        plannedArrivalTime: '2019-06-15T16:10:00.000Z',
         landingTime: '2019-06-15T14:36:00.000Z',
     },
     {
@@ -2582,7 +2582,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Nice',
         gate: 'B5',
         passengers: 96,
-        arrivalTime: '2019-06-15T12:18:12.000Z',
+        plannedArrivalTime: '2019-06-15T12:18:12.000Z',
         landingTime: '2019-06-15T11:32:12.000Z',
     },
     {
@@ -2591,7 +2591,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Zakynthos',
         gate: 'C17',
         passengers: 3,
-        arrivalTime: '2019-06-15T12:27:47.000Z',
+        plannedArrivalTime: '2019-06-15T12:27:47.000Z',
         landingTime: '2019-06-15T13:18:47.000Z',
     },
     {
@@ -2600,7 +2600,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Istanbul Sabiha',
         gate: 'E2',
         passengers: 48,
-        arrivalTime: '2019-06-15T12:43:49.000Z',
+        plannedArrivalTime: '2019-06-15T12:43:49.000Z',
         landingTime: '2019-06-15T11:21:49.000Z',
     },
     {
@@ -2609,7 +2609,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Basel',
         gate: 'C3',
         passengers: 235,
-        arrivalTime: '2019-06-15T12:43:56.000Z',
+        plannedArrivalTime: '2019-06-15T12:43:56.000Z',
         landingTime: '2019-06-15T10:26:56.000Z',
     },
     {
@@ -2618,7 +2618,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Nice',
         gate: 'B5',
         passengers: 96,
-        arrivalTime: '2019-06-15T12:18:12.000Z',
+        plannedArrivalTime: '2019-06-15T12:18:12.000Z',
         landingTime: '2019-06-15T09:49:12.000Z',
     },
     {
@@ -2627,7 +2627,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Houston',
         gate: 'A14',
         passengers: 357,
-        arrivalTime: '2019-06-16T04:40:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:40:00.000Z',
         landingTime: '2019-06-16T01:51:00.000Z',
     },
     {
@@ -2636,7 +2636,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Guangzhou',
         gate: 'A7',
         passengers: 321,
-        arrivalTime: '2019-06-15T12:35:13.000Z',
+        plannedArrivalTime: '2019-06-15T12:35:13.000Z',
         landingTime: '2019-06-15T10:14:13.000Z',
     },
     {
@@ -2645,7 +2645,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'New York JFK',
         gate: 'G8',
         passengers: 235,
-        arrivalTime: '2019-06-16T07:30:00.000Z',
+        plannedArrivalTime: '2019-06-16T07:30:00.000Z',
         landingTime: '2019-06-16T07:25:00.000Z',
     },
     {
@@ -2654,7 +2654,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bilbao',
         gate: 'C18',
         passengers: 114,
-        arrivalTime: '2019-06-15T18:00:00.000Z',
+        plannedArrivalTime: '2019-06-15T18:00:00.000Z',
         landingTime: '2019-06-15T17:27:00.000Z',
     },
     {
@@ -2663,7 +2663,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Montpellier',
         gate: 'G1',
         passengers: 72,
-        arrivalTime: '2019-06-15T18:45:00.000Z',
+        plannedArrivalTime: '2019-06-15T18:45:00.000Z',
         landingTime: '2019-06-15T17:12:00.000Z',
     },
     {
@@ -2672,7 +2672,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bahrain',
         gate: 'A16',
         passengers: 360,
-        arrivalTime: '2019-06-16T10:50:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:50:00.000Z',
         landingTime: '2019-06-16T10:07:00.000Z',
     },
     {
@@ -2681,7 +2681,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Lagos',
         gate: 'C21',
         passengers: 344,
-        arrivalTime: '2019-06-15T12:27:27.000Z',
+        plannedArrivalTime: '2019-06-15T12:27:27.000Z',
         landingTime: '2019-06-15T12:58:27.000Z',
     },
     {
@@ -2690,7 +2690,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Stavanger',
         gate: 'H4',
         passengers: 101,
-        arrivalTime: '2019-06-16T10:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:05:00.000Z',
         landingTime: '2019-06-16T08:55:00.000Z',
     },
     {
@@ -2699,7 +2699,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bologna',
         gate: 'H2',
         passengers: 343,
-        arrivalTime: '2019-06-15T14:01:00.000Z',
+        plannedArrivalTime: '2019-06-15T14:01:00.000Z',
         landingTime: '2019-06-15T14:19:00.000Z',
     },
     {
@@ -2708,7 +2708,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Manchester',
         gate: 'H4',
         passengers: 290,
-        arrivalTime: '2019-06-15T19:25:00.000Z',
+        plannedArrivalTime: '2019-06-15T19:25:00.000Z',
         landingTime: '2019-06-15T19:31:00.000Z',
     },
     {
@@ -2717,7 +2717,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Edinburgh',
         gate: 'A26',
         passengers: 374,
-        arrivalTime: '2019-06-15T12:19:11.000Z',
+        plannedArrivalTime: '2019-06-15T12:19:11.000Z',
         landingTime: '2019-06-15T11:00:11.000Z',
     },
     {
@@ -2726,7 +2726,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Istanbul Sabiha',
         gate: 'E2',
         passengers: 48,
-        arrivalTime: '2019-06-15T12:43:49.000Z',
+        plannedArrivalTime: '2019-06-15T12:43:49.000Z',
         landingTime: '2019-06-15T13:16:49.000Z',
     },
     {
@@ -2735,7 +2735,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Zagreb',
         gate: 'E13',
         passengers: 123,
-        arrivalTime: '2019-06-15T12:39:58.000Z',
+        plannedArrivalTime: '2019-06-15T12:39:58.000Z',
         landingTime: '2019-06-15T10:03:58.000Z',
     },
     {
@@ -2744,7 +2744,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Calgary',
         gate: 'D0',
         passengers: 65,
-        arrivalTime: '2019-06-16T04:40:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:40:00.000Z',
         landingTime: '2019-06-16T05:36:00.000Z',
     },
     {
@@ -2753,7 +2753,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Stavanger',
         gate: 'F15',
         passengers: 189,
-        arrivalTime: '2019-06-15T14:25:00.000Z',
+        plannedArrivalTime: '2019-06-15T14:25:00.000Z',
         landingTime: '2019-06-15T14:52:00.000Z',
     },
     {
@@ -2762,7 +2762,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Dusseldorf',
         gate: 'A17',
         passengers: 114,
-        arrivalTime: '2019-06-15T13:14:18.000Z',
+        plannedArrivalTime: '2019-06-15T13:14:18.000Z',
         landingTime: '2019-06-15T13:46:18.000Z',
     },
     {
@@ -2771,7 +2771,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Mahon',
         gate: 'F1',
         passengers: 330,
-        arrivalTime: '2019-06-16T09:35:00.000Z',
+        plannedArrivalTime: '2019-06-16T09:35:00.000Z',
         landingTime: '2019-06-16T09:44:00.000Z',
     },
     {
@@ -2780,7 +2780,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Ibiza',
         gate: 'H26',
         passengers: 247,
-        arrivalTime: '2019-06-15T15:50:00.000Z',
+        plannedArrivalTime: '2019-06-15T15:50:00.000Z',
         landingTime: '2019-06-15T16:08:00.000Z',
     },
     {
@@ -2789,7 +2789,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Marseille',
         gate: 'B16',
         passengers: 310,
-        arrivalTime: '2019-06-16T11:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T11:05:00.000Z',
         landingTime: '2019-06-16T10:03:00.000Z',
     },
     {
@@ -2798,7 +2798,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Lyon',
         gate: 'D21',
         passengers: 338,
-        arrivalTime: '2019-06-16T07:55:00.000Z',
+        plannedArrivalTime: '2019-06-16T07:55:00.000Z',
         landingTime: '2019-06-16T06:54:00.000Z',
     },
     {
@@ -2807,7 +2807,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Dusseldorf',
         gate: 'A17',
         passengers: 114,
-        arrivalTime: '2019-06-15T13:14:18.000Z',
+        plannedArrivalTime: '2019-06-15T13:14:18.000Z',
         landingTime: '2019-06-15T12:29:18.000Z',
     },
     {
@@ -2816,7 +2816,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Edinburgh',
         gate: 'A26',
         passengers: 374,
-        arrivalTime: '2019-06-15T12:19:11.000Z',
+        plannedArrivalTime: '2019-06-15T12:19:11.000Z',
         landingTime: '2019-06-15T11:32:11.000Z',
     },
     {
@@ -2825,7 +2825,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Calgary',
         gate: 'D0',
         passengers: 65,
-        arrivalTime: '2019-06-16T04:40:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:40:00.000Z',
         landingTime: '2019-06-16T04:41:00.000Z',
     },
     {
@@ -2834,7 +2834,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Hurghada',
         gate: 'C16',
         passengers: 128,
-        arrivalTime: '2019-06-16T13:00:00.000Z',
+        plannedArrivalTime: '2019-06-16T13:00:00.000Z',
         landingTime: '2019-06-16T10:44:00.000Z',
     },
     {
@@ -2843,7 +2843,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Mahon',
         gate: 'D8',
         passengers: 115,
-        arrivalTime: '2019-06-15T14:20:50.000Z',
+        plannedArrivalTime: '2019-06-15T14:20:50.000Z',
         landingTime: '2019-06-15T14:55:50.000Z',
     },
     {
@@ -2852,7 +2852,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Lisbon',
         gate: 'H8',
         passengers: 12,
-        arrivalTime: '2019-06-16T06:10:00.000Z',
+        plannedArrivalTime: '2019-06-16T06:10:00.000Z',
         landingTime: '2019-06-16T04:00:00.000Z',
     },
     {
@@ -2861,7 +2861,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Athens',
         gate: 'B6',
         passengers: 130,
-        arrivalTime: '2019-06-16T06:30:00.000Z',
+        plannedArrivalTime: '2019-06-16T06:30:00.000Z',
         landingTime: '2019-06-16T04:45:00.000Z',
     },
     {
@@ -2870,7 +2870,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Aalborg',
         gate: 'D9',
         passengers: 107,
-        arrivalTime: '2019-06-16T10:55:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:55:00.000Z',
         landingTime: '2019-06-16T09:52:00.000Z',
     },
     {
@@ -2879,7 +2879,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Minsk National',
         gate: 'B10',
         passengers: 168,
-        arrivalTime: '2019-06-16T12:40:00.000Z',
+        plannedArrivalTime: '2019-06-16T12:40:00.000Z',
         landingTime: '2019-06-16T10:53:00.000Z',
     },
     {
@@ -2888,7 +2888,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Clermont-Ferrand',
         gate: 'H23',
         passengers: 306,
-        arrivalTime: '2019-06-15T20:10:00.000Z',
+        plannedArrivalTime: '2019-06-15T20:10:00.000Z',
         landingTime: '2019-06-15T19:38:00.000Z',
     },
     {
@@ -2897,7 +2897,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Zakynthos',
         gate: 'C17',
         passengers: 3,
-        arrivalTime: '2019-06-15T12:27:47.000Z',
+        plannedArrivalTime: '2019-06-15T12:27:47.000Z',
         landingTime: '2019-06-15T12:57:47.000Z',
     },
     {
@@ -2906,7 +2906,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Guangzhou',
         gate: 'C6',
         passengers: 67,
-        arrivalTime: '2019-06-15T13:09:12.000Z',
+        plannedArrivalTime: '2019-06-15T13:09:12.000Z',
         landingTime: '2019-06-15T10:34:12.000Z',
     },
     {
@@ -2915,7 +2915,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Exeter',
         gate: 'B10',
         passengers: 320,
-        arrivalTime: '2019-06-15T12:35:13.000Z',
+        plannedArrivalTime: '2019-06-15T12:35:13.000Z',
         landingTime: '2019-06-15T10:48:13.000Z',
     },
     {
@@ -2924,7 +2924,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Toulouse',
         gate: 'C21',
         passengers: 317,
-        arrivalTime: '2019-06-15T14:01:33.000Z',
+        plannedArrivalTime: '2019-06-15T14:01:33.000Z',
         landingTime: '2019-06-15T11:42:33.000Z',
     },
     {
@@ -2933,7 +2933,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Ibiza',
         gate: 'H26',
         passengers: 247,
-        arrivalTime: '2019-06-15T15:50:00.000Z',
+        plannedArrivalTime: '2019-06-15T15:50:00.000Z',
         landingTime: '2019-06-15T15:39:00.000Z',
     },
     {
@@ -2942,7 +2942,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Curacao',
         gate: 'G24',
         passengers: 196,
-        arrivalTime: '2019-06-15T17:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T17:55:00.000Z',
         landingTime: '2019-06-15T17:18:00.000Z',
     },
     {
@@ -2951,7 +2951,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Moscow',
         gate: 'A14',
         passengers: 96,
-        arrivalTime: '2019-06-15T12:10:02.000Z',
+        plannedArrivalTime: '2019-06-15T12:10:02.000Z',
         landingTime: '2019-06-15T10:15:02.000Z',
     },
     {
@@ -2960,7 +2960,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Gerona',
         gate: 'G6',
         passengers: 297,
-        arrivalTime: '2019-06-15T16:15:00.000Z',
+        plannedArrivalTime: '2019-06-15T16:15:00.000Z',
         landingTime: '2019-06-15T14:53:00.000Z',
     },
     {
@@ -2969,7 +2969,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Cardiff',
         gate: 'A2',
         passengers: 63,
-        arrivalTime: '2019-06-16T10:25:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:25:00.000Z',
         landingTime: '2019-06-16T11:24:00.000Z',
     },
     {
@@ -2978,7 +2978,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Cardiff',
         gate: 'H25',
         passengers: 318,
-        arrivalTime: '2019-06-16T13:10:00.000Z',
+        plannedArrivalTime: '2019-06-16T13:10:00.000Z',
         landingTime: '2019-06-16T12:18:00.000Z',
     },
     {
@@ -2987,7 +2987,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Zurich',
         gate: 'A4',
         passengers: 177,
-        arrivalTime: '2019-06-15T12:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T12:55:00.000Z',
         landingTime: '2019-06-15T12:30:00.000Z',
     },
     {
@@ -2996,7 +2996,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Dresden',
         gate: 'E10',
         passengers: 205,
-        arrivalTime: '2019-06-16T04:15:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:15:00.000Z',
         landingTime: '2019-06-16T04:36:00.000Z',
     },
     {
@@ -3005,7 +3005,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Cardiff',
         gate: 'H25',
         passengers: 318,
-        arrivalTime: '2019-06-16T13:10:00.000Z',
+        plannedArrivalTime: '2019-06-16T13:10:00.000Z',
         landingTime: '2019-06-16T13:07:00.000Z',
     },
     {
@@ -3014,7 +3014,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Tampa',
         gate: 'F9',
         passengers: 279,
-        arrivalTime: '2019-06-15T12:25:02.000Z',
+        plannedArrivalTime: '2019-06-15T12:25:02.000Z',
         landingTime: '2019-06-15T09:35:02.000Z',
     },
     {
@@ -3023,7 +3023,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Tel Aviv',
         gate: 'D4',
         passengers: 9,
-        arrivalTime: '2019-06-15T14:30:00.000Z',
+        plannedArrivalTime: '2019-06-15T14:30:00.000Z',
         landingTime: '2019-06-15T13:56:00.000Z',
     },
     {
@@ -3032,7 +3032,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Aalborg',
         gate: 'D9',
         passengers: 107,
-        arrivalTime: '2019-06-16T10:55:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:55:00.000Z',
         landingTime: '2019-06-16T10:25:00.000Z',
     },
     {
@@ -3041,7 +3041,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bahrain',
         gate: 'B2',
         passengers: 289,
-        arrivalTime: '2019-06-16T10:10:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:10:00.000Z',
         landingTime: '2019-06-16T08:24:00.000Z',
     },
     {
@@ -3050,7 +3050,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Moscow',
         gate: 'G9',
         passengers: 218,
-        arrivalTime: '2019-06-16T13:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T13:05:00.000Z',
         landingTime: '2019-06-16T12:50:00.000Z',
     },
     {
@@ -3059,7 +3059,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bahrain',
         gate: 'A16',
         passengers: 360,
-        arrivalTime: '2019-06-16T10:50:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:50:00.000Z',
         landingTime: '2019-06-16T07:57:00.000Z',
     },
     {
@@ -3068,7 +3068,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Strasbourg',
         gate: 'E0',
         passengers: 60,
-        arrivalTime: '2019-06-16T10:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:05:00.000Z',
         landingTime: '2019-06-16T11:04:00.000Z',
     },
     {
@@ -3077,7 +3077,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Aalesund',
         gate: 'E25',
         passengers: 24,
-        arrivalTime: '2019-06-16T04:00:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:00:00.000Z',
         landingTime: '2019-06-16T04:36:00.000Z',
     },
     {
@@ -3086,7 +3086,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Malaga',
         gate: 'D17',
         passengers: 81,
-        arrivalTime: '2019-06-15T12:53:59.000Z',
+        plannedArrivalTime: '2019-06-15T12:53:59.000Z',
         landingTime: '2019-06-15T10:26:59.000Z',
     },
     {
@@ -3095,7 +3095,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Jakarta',
         gate: 'H11',
         passengers: 98,
-        arrivalTime: '2019-06-16T05:15:00.000Z',
+        plannedArrivalTime: '2019-06-16T05:15:00.000Z',
         landingTime: '2019-06-16T05:02:00.000Z',
     },
     {
@@ -3104,7 +3104,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Linkoping',
         gate: 'H22',
         passengers: 175,
-        arrivalTime: '2019-06-15T15:05:00.000Z',
+        plannedArrivalTime: '2019-06-15T15:05:00.000Z',
         landingTime: '2019-06-15T15:53:00.000Z',
     },
     {
@@ -3113,7 +3113,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Paris de Gaulle',
         gate: 'A25',
         passengers: 131,
-        arrivalTime: '2019-06-15T13:50:00.000Z',
+        plannedArrivalTime: '2019-06-15T13:50:00.000Z',
         landingTime: '2019-06-15T13:31:00.000Z',
     },
     {
@@ -3122,7 +3122,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'London Heathrow',
         gate: 'H0',
         passengers: 83,
-        arrivalTime: '2019-06-15T18:30:00.000Z',
+        plannedArrivalTime: '2019-06-15T18:30:00.000Z',
         landingTime: '2019-06-15T16:36:00.000Z',
     },
     {
@@ -3131,7 +3131,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Casablanca',
         gate: 'A1',
         passengers: 252,
-        arrivalTime: '2019-06-15T12:33:42.000Z',
+        plannedArrivalTime: '2019-06-15T12:33:42.000Z',
         landingTime: '2019-06-15T11:36:42.000Z',
     },
     {
@@ -3140,7 +3140,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Cape Town',
         gate: 'E16',
         passengers: 14,
-        arrivalTime: '2019-06-15T12:18:12.000Z',
+        plannedArrivalTime: '2019-06-15T12:18:12.000Z',
         landingTime: '2019-06-15T13:07:12.000Z',
     },
     {
@@ -3149,7 +3149,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bilbao',
         gate: 'C18',
         passengers: 114,
-        arrivalTime: '2019-06-15T18:00:00.000Z',
+        plannedArrivalTime: '2019-06-15T18:00:00.000Z',
         landingTime: '2019-06-15T15:42:00.000Z',
     },
     {
@@ -3158,7 +3158,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Newcastle',
         gate: 'H14',
         passengers: 244,
-        arrivalTime: '2019-06-15T14:40:00.000Z',
+        plannedArrivalTime: '2019-06-15T14:40:00.000Z',
         landingTime: '2019-06-15T14:50:00.000Z',
     },
     {
@@ -3167,7 +3167,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'London Heathrow',
         gate: 'D2',
         passengers: 346,
-        arrivalTime: '2019-06-15T20:00:00.000Z',
+        plannedArrivalTime: '2019-06-15T20:00:00.000Z',
         landingTime: '2019-06-15T19:33:00.000Z',
     },
     {
@@ -3176,7 +3176,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Marseille',
         gate: 'B16',
         passengers: 310,
-        arrivalTime: '2019-06-16T11:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T11:05:00.000Z',
         landingTime: '2019-06-16T11:31:00.000Z',
     },
     {
@@ -3185,7 +3185,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Curacao',
         gate: 'C27',
         passengers: 222,
-        arrivalTime: '2019-06-16T06:50:00.000Z',
+        plannedArrivalTime: '2019-06-16T06:50:00.000Z',
         landingTime: '2019-06-16T06:31:00.000Z',
     },
     {
@@ -3194,7 +3194,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Tampa',
         gate: 'F9',
         passengers: 279,
-        arrivalTime: '2019-06-15T12:25:02.000Z',
+        plannedArrivalTime: '2019-06-15T12:25:02.000Z',
         landingTime: '2019-06-15T11:45:02.000Z',
     },
     {
@@ -3203,7 +3203,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Curacao',
         gate: 'A14',
         passengers: 92,
-        arrivalTime: '2019-06-15T12:49:59.000Z',
+        plannedArrivalTime: '2019-06-15T12:49:59.000Z',
         landingTime: '2019-06-15T12:04:59.000Z',
     },
     {
@@ -3212,7 +3212,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Aalborg',
         gate: 'H0',
         passengers: 27,
-        arrivalTime: '2019-06-15T17:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T17:55:00.000Z',
         landingTime: '2019-06-15T16:06:00.000Z',
     },
     {
@@ -3221,7 +3221,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Stuttgart',
         gate: 'F26',
         passengers: 289,
-        arrivalTime: '2019-06-16T11:00:00.000Z',
+        plannedArrivalTime: '2019-06-16T11:00:00.000Z',
         landingTime: '2019-06-16T11:40:00.000Z',
     },
     {
@@ -3230,7 +3230,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Johannesburg',
         gate: 'D4',
         passengers: 367,
-        arrivalTime: '2019-06-15T12:33:34.000Z',
+        plannedArrivalTime: '2019-06-15T12:33:34.000Z',
         landingTime: '2019-06-15T11:50:34.000Z',
     },
     {
@@ -3239,7 +3239,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Pisa',
         gate: 'F19',
         passengers: 209,
-        arrivalTime: '2019-06-16T11:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T11:05:00.000Z',
         landingTime: '2019-06-16T08:24:00.000Z',
     },
     {
@@ -3248,7 +3248,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Paris de Gaulle',
         gate: 'D7',
         passengers: 362,
-        arrivalTime: '2019-06-16T09:15:00.000Z',
+        plannedArrivalTime: '2019-06-16T09:15:00.000Z',
         landingTime: '2019-06-16T08:47:00.000Z',
     },
     {
@@ -3257,7 +3257,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Cartagena',
         gate: 'H8',
         passengers: 149,
-        arrivalTime: '2019-06-15T12:25:09.000Z',
+        plannedArrivalTime: '2019-06-15T12:25:09.000Z',
         landingTime: '2019-06-15T11:01:09.000Z',
     },
     {
@@ -3266,7 +3266,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Moscow',
         gate: 'A14',
         passengers: 96,
-        arrivalTime: '2019-06-15T12:10:02.000Z',
+        plannedArrivalTime: '2019-06-15T12:10:02.000Z',
         landingTime: '2019-06-15T11:18:02.000Z',
     },
     {
@@ -3275,7 +3275,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Dresden',
         gate: 'E10',
         passengers: 205,
-        arrivalTime: '2019-06-16T04:15:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:15:00.000Z',
         landingTime: '2019-06-16T02:11:00.000Z',
     },
     {
@@ -3284,7 +3284,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Palma',
         gate: 'C0',
         passengers: 35,
-        arrivalTime: '2019-06-15T13:25:00.000Z',
+        plannedArrivalTime: '2019-06-15T13:25:00.000Z',
         landingTime: '2019-06-15T11:50:00.000Z',
     },
     {
@@ -3293,7 +3293,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Warsaw',
         gate: 'F13',
         passengers: 325,
-        arrivalTime: '2019-06-16T06:45:00.000Z',
+        plannedArrivalTime: '2019-06-16T06:45:00.000Z',
         landingTime: '2019-06-16T05:13:00.000Z',
     },
     {
@@ -3302,7 +3302,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Edinburgh',
         gate: 'A26',
         passengers: 374,
-        arrivalTime: '2019-06-15T12:19:11.000Z',
+        plannedArrivalTime: '2019-06-15T12:19:11.000Z',
         landingTime: '2019-06-15T09:20:11.000Z',
     },
     {
@@ -3311,7 +3311,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Dusseldorf',
         gate: 'B11',
         passengers: 116,
-        arrivalTime: '2019-06-16T12:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T12:05:00.000Z',
         landingTime: '2019-06-16T12:14:00.000Z',
     },
     {
@@ -3320,7 +3320,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Malaga',
         gate: 'D17',
         passengers: 81,
-        arrivalTime: '2019-06-15T12:53:59.000Z',
+        plannedArrivalTime: '2019-06-15T12:53:59.000Z',
         landingTime: '2019-06-15T11:29:59.000Z',
     },
     {
@@ -3329,7 +3329,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Curacao',
         gate: 'C27',
         passengers: 222,
-        arrivalTime: '2019-06-16T06:50:00.000Z',
+        plannedArrivalTime: '2019-06-16T06:50:00.000Z',
         landingTime: '2019-06-16T07:11:00.000Z',
     },
     {
@@ -3338,7 +3338,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Newcastle',
         gate: 'C27',
         passengers: 212,
-        arrivalTime: '2019-06-15T13:03:27.000Z',
+        plannedArrivalTime: '2019-06-15T13:03:27.000Z',
         landingTime: '2019-06-15T12:40:27.000Z',
     },
     {
@@ -3347,7 +3347,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Prague',
         gate: 'B13',
         passengers: 375,
-        arrivalTime: '2019-06-15T12:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T12:55:00.000Z',
         landingTime: '2019-06-15T13:54:00.000Z',
     },
     {
@@ -3356,7 +3356,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Paris de Gaulle',
         gate: 'D7',
         passengers: 362,
-        arrivalTime: '2019-06-16T09:15:00.000Z',
+        plannedArrivalTime: '2019-06-16T09:15:00.000Z',
         landingTime: '2019-06-16T09:33:00.000Z',
     },
     {
@@ -3365,7 +3365,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Denpasar',
         gate: 'F10',
         passengers: 197,
-        arrivalTime: '2019-06-15T15:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T15:55:00.000Z',
         landingTime: '2019-06-15T14:55:00.000Z',
     },
     {
@@ -3374,7 +3374,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Aalesund',
         gate: 'C11',
         passengers: 61,
-        arrivalTime: '2019-06-16T07:50:00.000Z',
+        plannedArrivalTime: '2019-06-16T07:50:00.000Z',
         landingTime: '2019-06-16T08:31:00.000Z',
     },
     {
@@ -3383,7 +3383,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'London Heathrow',
         gate: 'D2',
         passengers: 346,
-        arrivalTime: '2019-06-15T20:00:00.000Z',
+        plannedArrivalTime: '2019-06-15T20:00:00.000Z',
         landingTime: '2019-06-15T17:55:00.000Z',
     },
     {
@@ -3392,7 +3392,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bremen',
         gate: 'C25',
         passengers: 128,
-        arrivalTime: '2019-06-15T13:03:27.000Z',
+        plannedArrivalTime: '2019-06-15T13:03:27.000Z',
         landingTime: '2019-06-15T12:15:27.000Z',
     },
     {
@@ -3401,7 +3401,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bristol',
         gate: 'H14',
         passengers: 375,
-        arrivalTime: '2019-06-15T12:03:51.000Z',
+        plannedArrivalTime: '2019-06-15T12:03:51.000Z',
         landingTime: '2019-06-15T12:43:51.000Z',
     },
     {
@@ -3410,7 +3410,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Cagliari',
         gate: 'E18',
         passengers: 369,
-        arrivalTime: '2019-06-16T12:45:00.000Z',
+        plannedArrivalTime: '2019-06-16T12:45:00.000Z',
         landingTime: '2019-06-16T09:52:00.000Z',
     },
     {
@@ -3419,7 +3419,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Newcastle',
         gate: 'H14',
         passengers: 244,
-        arrivalTime: '2019-06-15T14:40:00.000Z',
+        plannedArrivalTime: '2019-06-15T14:40:00.000Z',
         landingTime: '2019-06-15T13:01:00.000Z',
     },
     {
@@ -3428,7 +3428,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Hurghada',
         gate: 'C16',
         passengers: 128,
-        arrivalTime: '2019-06-16T13:00:00.000Z',
+        plannedArrivalTime: '2019-06-16T13:00:00.000Z',
         landingTime: '2019-06-16T12:13:00.000Z',
     },
     {
@@ -3437,7 +3437,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Athens',
         gate: 'B6',
         passengers: 130,
-        arrivalTime: '2019-06-16T06:30:00.000Z',
+        plannedArrivalTime: '2019-06-16T06:30:00.000Z',
         landingTime: '2019-06-16T04:05:00.000Z',
     },
     {
@@ -3446,7 +3446,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Dusseldorf',
         gate: 'G27',
         passengers: 105,
-        arrivalTime: '2019-06-16T07:40:00.000Z',
+        plannedArrivalTime: '2019-06-16T07:40:00.000Z',
         landingTime: '2019-06-16T07:51:00.000Z',
     },
     {
@@ -3455,7 +3455,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Mahon',
         gate: 'D8',
         passengers: 115,
-        arrivalTime: '2019-06-15T14:20:50.000Z',
+        plannedArrivalTime: '2019-06-15T14:20:50.000Z',
         landingTime: '2019-06-15T11:29:50.000Z',
     },
     {
@@ -3464,7 +3464,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Sao Paulo',
         gate: 'H27',
         passengers: 29,
-        arrivalTime: '2019-06-15T19:35:00.000Z',
+        plannedArrivalTime: '2019-06-15T19:35:00.000Z',
     },
     {
         flightNumber: 'RY820',
@@ -3472,7 +3472,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Guangzhou',
         gate: 'C6',
         passengers: 67,
-        arrivalTime: '2019-06-15T13:09:12.000Z',
+        plannedArrivalTime: '2019-06-15T13:09:12.000Z',
     },
     {
         flightNumber: 'RY1223',
@@ -3480,7 +3480,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Cartagena',
         gate: 'H8',
         passengers: 149,
-        arrivalTime: '2019-06-15T12:25:09.000Z',
+        plannedArrivalTime: '2019-06-15T12:25:09.000Z',
         landingTime: '2019-06-15T11:54:09.000Z',
     },
     {
@@ -3489,7 +3489,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Lyon',
         gate: 'D21',
         passengers: 338,
-        arrivalTime: '2019-06-16T07:55:00.000Z',
+        plannedArrivalTime: '2019-06-16T07:55:00.000Z',
         landingTime: '2019-06-16T06:45:00.000Z',
     },
     {
@@ -3498,7 +3498,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Beijing',
         gate: 'E5',
         passengers: 0,
-        arrivalTime: '2019-06-15T16:15:00.000Z',
+        plannedArrivalTime: '2019-06-15T16:15:00.000Z',
         landingTime: '2019-06-15T16:22:00.000Z',
     },
     {
@@ -3507,7 +3507,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Johannesburg',
         gate: 'C10',
         passengers: 5,
-        arrivalTime: '2019-06-15T13:45:00.000Z',
+        plannedArrivalTime: '2019-06-15T13:45:00.000Z',
         landingTime: '2019-06-15T11:36:00.000Z',
     },
     {
@@ -3516,7 +3516,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Helsinki',
         gate: 'C22',
         passengers: 366,
-        arrivalTime: '2019-06-15T14:03:00.000Z',
+        plannedArrivalTime: '2019-06-15T14:03:00.000Z',
         landingTime: '2019-06-15T13:54:00.000Z',
     },
     {
@@ -3525,7 +3525,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bilbao',
         gate: 'C18',
         passengers: 114,
-        arrivalTime: '2019-06-15T18:00:00.000Z',
+        plannedArrivalTime: '2019-06-15T18:00:00.000Z',
         landingTime: '2019-06-15T18:37:00.000Z',
     },
     {
@@ -3534,7 +3534,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Stuttgart',
         gate: 'F26',
         passengers: 289,
-        arrivalTime: '2019-06-16T11:00:00.000Z',
+        plannedArrivalTime: '2019-06-16T11:00:00.000Z',
         landingTime: '2019-06-16T09:24:00.000Z',
     },
     {
@@ -3543,7 +3543,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Enfidha',
         gate: 'A18',
         passengers: 2,
-        arrivalTime: '2019-06-15T12:25:34.000Z',
+        plannedArrivalTime: '2019-06-15T12:25:34.000Z',
         landingTime: '2019-06-15T09:31:34.000Z',
     },
     {
@@ -3552,7 +3552,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Birmingham',
         gate: 'F27',
         passengers: 240,
-        arrivalTime: '2019-06-15T14:41:54.000Z',
+        plannedArrivalTime: '2019-06-15T14:41:54.000Z',
         landingTime: '2019-06-15T14:14:54.000Z',
     },
     {
@@ -3561,7 +3561,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Paris de Gaulle',
         gate: 'C22',
         passengers: 352,
-        arrivalTime: '2019-06-16T10:55:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:55:00.000Z',
         landingTime: '2019-06-16T08:20:00.000Z',
     },
     {
@@ -3570,7 +3570,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Helsinki',
         gate: 'C22',
         passengers: 366,
-        arrivalTime: '2019-06-15T14:03:00.000Z',
+        plannedArrivalTime: '2019-06-15T14:03:00.000Z',
         landingTime: '2019-06-15T14:49:00.000Z',
     },
     {
@@ -3579,7 +3579,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Agadir',
         gate: 'A15',
         passengers: 55,
-        arrivalTime: '2019-06-15T12:48:31.000Z',
+        plannedArrivalTime: '2019-06-15T12:48:31.000Z',
         landingTime: '2019-06-15T12:47:31.000Z',
     },
     {
@@ -3588,7 +3588,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Guangzhou',
         gate: 'C6',
         passengers: 67,
-        arrivalTime: '2019-06-15T13:09:12.000Z',
+        plannedArrivalTime: '2019-06-15T13:09:12.000Z',
         landingTime: '2019-06-15T11:50:12.000Z',
     },
     {
@@ -3597,7 +3597,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Hurghada',
         gate: 'C16',
         passengers: 128,
-        arrivalTime: '2019-06-16T13:00:00.000Z',
+        plannedArrivalTime: '2019-06-16T13:00:00.000Z',
         landingTime: '2019-06-16T11:39:00.000Z',
     },
     {
@@ -3606,7 +3606,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'London Heathrow',
         gate: 'D2',
         passengers: 346,
-        arrivalTime: '2019-06-15T20:00:00.000Z',
+        plannedArrivalTime: '2019-06-15T20:00:00.000Z',
         landingTime: '2019-06-15T17:07:00.000Z',
     },
     {
@@ -3615,7 +3615,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Calgary',
         gate: 'D0',
         passengers: 65,
-        arrivalTime: '2019-06-16T04:40:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:40:00.000Z',
         landingTime: '2019-06-16T03:46:00.000Z',
     },
     {
@@ -3624,7 +3624,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Basel',
         gate: 'C3',
         passengers: 235,
-        arrivalTime: '2019-06-15T12:43:56.000Z',
+        plannedArrivalTime: '2019-06-15T12:43:56.000Z',
         landingTime: '2019-06-15T10:46:56.000Z',
     },
     {
@@ -3633,7 +3633,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Istanbul Sabiha',
         gate: 'E2',
         passengers: 48,
-        arrivalTime: '2019-06-15T12:43:49.000Z',
+        plannedArrivalTime: '2019-06-15T12:43:49.000Z',
         landingTime: '2019-06-15T12:27:49.000Z',
     },
     {
@@ -3642,7 +3642,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Edmonton',
         gate: 'G23',
         passengers: 45,
-        arrivalTime: '2019-06-15T12:25:02.000Z',
+        plannedArrivalTime: '2019-06-15T12:25:02.000Z',
         landingTime: '2019-06-15T09:36:02.000Z',
     },
     {
@@ -3651,7 +3651,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Beijing',
         gate: 'E5',
         passengers: 0,
-        arrivalTime: '2019-06-15T16:15:00.000Z',
+        plannedArrivalTime: '2019-06-15T16:15:00.000Z',
         landingTime: '2019-06-15T13:36:00.000Z',
     },
     {
@@ -3660,7 +3660,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Prague',
         gate: 'B13',
         passengers: 375,
-        arrivalTime: '2019-06-15T12:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T12:55:00.000Z',
         landingTime: '2019-06-15T11:37:00.000Z',
     },
     {
@@ -3669,7 +3669,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'London Luton',
         gate: 'A1',
         passengers: 64,
-        arrivalTime: '2019-06-16T07:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T07:05:00.000Z',
         landingTime: '2019-06-16T06:27:00.000Z',
     },
     {
@@ -3678,7 +3678,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bologna',
         gate: 'H2',
         passengers: 343,
-        arrivalTime: '2019-06-15T14:01:00.000Z',
+        plannedArrivalTime: '2019-06-15T14:01:00.000Z',
         landingTime: '2019-06-15T14:56:00.000Z',
     },
     {
@@ -3687,7 +3687,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Jakarta',
         gate: 'H11',
         passengers: 98,
-        arrivalTime: '2019-06-16T05:15:00.000Z',
+        plannedArrivalTime: '2019-06-16T05:15:00.000Z',
         landingTime: '2019-06-16T03:50:00.000Z',
     },
     {
@@ -3696,7 +3696,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Bahrain',
         gate: 'A16',
         passengers: 360,
-        arrivalTime: '2019-06-16T10:50:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:50:00.000Z',
         landingTime: '2019-06-16T10:22:00.000Z',
     },
     {
@@ -3705,7 +3705,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Mahon',
         gate: 'F1',
         passengers: 330,
-        arrivalTime: '2019-06-16T09:35:00.000Z',
+        plannedArrivalTime: '2019-06-16T09:35:00.000Z',
         landingTime: '2019-06-16T07:01:00.000Z',
     },
     {
@@ -3714,7 +3714,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Palma',
         gate: 'C0',
         passengers: 35,
-        arrivalTime: '2019-06-15T13:25:00.000Z',
+        plannedArrivalTime: '2019-06-15T13:25:00.000Z',
         landingTime: '2019-06-15T13:52:00.000Z',
     },
     {
@@ -3723,7 +3723,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Minsk National',
         gate: 'B10',
         passengers: 168,
-        arrivalTime: '2019-06-16T12:40:00.000Z',
+        plannedArrivalTime: '2019-06-16T12:40:00.000Z',
         landingTime: '2019-06-16T09:52:00.000Z',
     },
     {
@@ -3732,7 +3732,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Pisa',
         gate: 'F19',
         passengers: 209,
-        arrivalTime: '2019-06-16T11:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T11:05:00.000Z',
         landingTime: '2019-06-16T08:46:00.000Z',
     },
     {
@@ -3741,7 +3741,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Edmonton',
         gate: 'G23',
         passengers: 45,
-        arrivalTime: '2019-06-15T12:25:02.000Z',
+        plannedArrivalTime: '2019-06-15T12:25:02.000Z',
         landingTime: '2019-06-15T12:43:02.000Z',
     },
     {
@@ -3750,7 +3750,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'London Luton',
         gate: 'G5',
         passengers: 352,
-        arrivalTime: '2019-06-16T04:25:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:25:00.000Z',
         landingTime: '2019-06-16T03:45:00.000Z',
     },
     {
@@ -3759,7 +3759,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Houston',
         gate: 'A14',
         passengers: 357,
-        arrivalTime: '2019-06-16T04:40:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:40:00.000Z',
         landingTime: '2019-06-16T02:02:00.000Z',
     },
     {
@@ -3768,7 +3768,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Strasbourg',
         gate: 'E0',
         passengers: 60,
-        arrivalTime: '2019-06-16T10:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:05:00.000Z',
         landingTime: '2019-06-16T10:12:00.000Z',
     },
     {
@@ -3777,7 +3777,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Mahon',
         gate: 'D8',
         passengers: 115,
-        arrivalTime: '2019-06-15T14:20:50.000Z',
+        plannedArrivalTime: '2019-06-15T14:20:50.000Z',
         landingTime: '2019-06-15T12:43:50.000Z',
     },
     {
@@ -3786,7 +3786,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Chengdu',
         gate: 'F6',
         passengers: 80,
-        arrivalTime: '2019-06-15T13:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T13:55:00.000Z',
         landingTime: '2019-06-15T13:21:00.000Z',
     },
     {
@@ -3795,7 +3795,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Denpasar',
         gate: 'F10',
         passengers: 197,
-        arrivalTime: '2019-06-15T15:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T15:55:00.000Z',
         landingTime: '2019-06-15T15:42:00.000Z',
     },
     {
@@ -3804,7 +3804,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Jakarta',
         gate: 'H11',
         passengers: 98,
-        arrivalTime: '2019-06-16T05:15:00.000Z',
+        plannedArrivalTime: '2019-06-16T05:15:00.000Z',
         landingTime: '2019-06-16T03:40:00.000Z',
     },
     {
@@ -3813,7 +3813,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'London Luton',
         gate: 'A1',
         passengers: 64,
-        arrivalTime: '2019-06-16T07:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T07:05:00.000Z',
         landingTime: '2019-06-16T04:08:00.000Z',
     },
     {
@@ -3822,7 +3822,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Stavanger',
         gate: 'F15',
         passengers: 189,
-        arrivalTime: '2019-06-15T14:25:00.000Z',
+        plannedArrivalTime: '2019-06-15T14:25:00.000Z',
         landingTime: '2019-06-15T11:39:00.000Z',
     },
     {
@@ -3831,7 +3831,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Calgary',
         gate: 'E12',
         passengers: 29,
-        arrivalTime: '2019-06-15T14:40:00.000Z',
+        plannedArrivalTime: '2019-06-15T14:40:00.000Z',
         landingTime: '2019-06-15T12:44:00.000Z',
     },
     {
@@ -3840,7 +3840,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Nantes',
         gate: 'A16',
         passengers: 25,
-        arrivalTime: '2019-06-16T11:30:00.000Z',
+        plannedArrivalTime: '2019-06-16T11:30:00.000Z',
         landingTime: '2019-06-16T08:35:00.000Z',
     },
     {
@@ -3849,7 +3849,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Dusseldorf',
         gate: 'B11',
         passengers: 116,
-        arrivalTime: '2019-06-16T12:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T12:05:00.000Z',
         landingTime: '2019-06-16T09:20:00.000Z',
     },
     {
@@ -3858,7 +3858,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Zurich',
         gate: 'A4',
         passengers: 177,
-        arrivalTime: '2019-06-15T12:55:00.000Z',
+        plannedArrivalTime: '2019-06-15T12:55:00.000Z',
         landingTime: '2019-06-15T11:09:00.000Z',
     },
     {
@@ -3867,7 +3867,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'London Luton',
         gate: 'G5',
         passengers: 352,
-        arrivalTime: '2019-06-16T04:25:00.000Z',
+        plannedArrivalTime: '2019-06-16T04:25:00.000Z',
         landingTime: '2019-06-16T03:38:00.000Z',
     },
     {
@@ -3876,7 +3876,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Lagos',
         gate: 'A21',
         passengers: 373,
-        arrivalTime: '2019-06-15T16:10:00.000Z',
+        plannedArrivalTime: '2019-06-15T16:10:00.000Z',
         landingTime: '2019-06-15T13:36:00.000Z',
     },
     {
@@ -3885,7 +3885,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Mahon',
         gate: 'D8',
         passengers: 115,
-        arrivalTime: '2019-06-15T14:20:50.000Z',
+        plannedArrivalTime: '2019-06-15T14:20:50.000Z',
         landingTime: '2019-06-15T11:22:50.000Z',
     },
     {
@@ -3894,7 +3894,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Cardiff',
         gate: 'A2',
         passengers: 63,
-        arrivalTime: '2019-06-16T10:25:00.000Z',
+        plannedArrivalTime: '2019-06-16T10:25:00.000Z',
         landingTime: '2019-06-16T10:27:00.000Z',
     },
     {
@@ -3903,7 +3903,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Marseille',
         gate: 'B16',
         passengers: 310,
-        arrivalTime: '2019-06-16T11:05:00.000Z',
+        plannedArrivalTime: '2019-06-16T11:05:00.000Z',
         landingTime: '2019-06-16T10:26:00.000Z',
     },
     {
@@ -3912,7 +3912,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Minsk National',
         gate: 'B10',
         passengers: 168,
-        arrivalTime: '2019-06-16T12:40:00.000Z',
+        plannedArrivalTime: '2019-06-16T12:40:00.000Z',
         landingTime: '2019-06-16T11:03:00.000Z',
     },
     {
@@ -3921,7 +3921,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Humberside',
         gate: 'B20',
         passengers: 365,
-        arrivalTime: '2019-06-15T20:25:00.000Z',
+        plannedArrivalTime: '2019-06-15T20:25:00.000Z',
         landingTime: '2019-06-15T20:46:00.000Z',
     },
     {
@@ -3930,7 +3930,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Ponta Delgada',
         gate: 'G8',
         passengers: 58,
-        arrivalTime: '2019-06-15T12:53:49.000Z',
+        plannedArrivalTime: '2019-06-15T12:53:49.000Z',
         landingTime: '2019-06-15T13:30:49.000Z',
     },
     {
@@ -3939,7 +3939,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Moscow',
         gate: 'A14',
         passengers: 96,
-        arrivalTime: '2019-06-15T12:10:02.000Z',
+        plannedArrivalTime: '2019-06-15T12:10:02.000Z',
         landingTime: '2019-06-15T11:02:02.000Z',
     },
     {
@@ -3948,7 +3948,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Istanbul Sabiha',
         gate: 'E2',
         passengers: 48,
-        arrivalTime: '2019-06-15T12:43:49.000Z',
+        plannedArrivalTime: '2019-06-15T12:43:49.000Z',
         landingTime: '2019-06-15T10:44:49.000Z',
     },
     {
@@ -3957,7 +3957,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Jakarta',
         gate: 'H11',
         passengers: 98,
-        arrivalTime: '2019-06-16T05:15:00.000Z',
+        plannedArrivalTime: '2019-06-16T05:15:00.000Z',
         landingTime: '2019-06-16T05:55:00.000Z',
     },
     {
@@ -3966,7 +3966,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Gdansk',
         gate: 'F6',
         passengers: 136,
-        arrivalTime: '2019-06-16T06:50:00.000Z',
+        plannedArrivalTime: '2019-06-16T06:50:00.000Z',
         landingTime: '2019-06-16T06:16:00.000Z',
     },
     {
@@ -3975,7 +3975,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Cape Town',
         gate: 'E16',
         passengers: 14,
-        arrivalTime: '2019-06-15T12:18:12.000Z',
+        plannedArrivalTime: '2019-06-15T12:18:12.000Z',
         landingTime: '2019-06-15T09:25:12.000Z',
     },
     {
@@ -3984,7 +3984,7 @@ export const arrivals: ArrivalFlight[] = [
         origin: 'Gdansk',
         gate: 'F6',
         passengers: 136,
-        arrivalTime: '2019-06-16T06:50:00.000Z',
+        plannedArrivalTime: '2019-06-16T06:50:00.000Z',
         landingTime: '2019-06-16T06:05:00.000Z',
     },
 ];
