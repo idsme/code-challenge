@@ -1,5 +1,5 @@
 /**
- * Challenge 2
+ * Challenge 1
  *
  * You start with a string consisting of uppercase and lowercase letters (example: dabAcCaCBAcCcaDA.)
  * We want you to write a function that takes a string and removes all characters that are followed by the same character of the
