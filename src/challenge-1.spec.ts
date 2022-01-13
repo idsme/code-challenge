@@ -25,7 +25,7 @@ describe('Challenge 1 Tests', () => {
 // If equalCharactersButDifferentCase was complexer would mock method within this test.
     describe('removeOppositeChars', () => {
 
-        test('solution abBA => aA', () => {
+        test('solution aA => ""', () => {
             const result = removeOppositeChars('aA');
             expect(result).toBe('');
         });
@@ -40,15 +40,20 @@ describe('Challenge 1 Tests', () => {
             expect(result).toBe('aabAAB');
         });
 
-        //more complex tests..
-        test('solution baABc => c', () => {
+        test('solution dabAcCaCBAcCcaDA => dabCBAcaDA', () => {
+            const result = removeOppositeChars('dabAcCaCBAcCcaDA');
+            expect(result).toBe('dabCBAcaDA');
+        });
+
+        // my own extra tests for edge cases
+        test('solution baABc => c checks start over criteria', () => {
             const result = removeOppositeChars('baABc');
             expect(result).toBe('c');
         });
 
-        test('solution dabAcCaCBAcCcaDA => dabCBAcaDA', () => {
-            const result = removeOppositeChars('dabAcCaCBAcCcaDA');
-            expect(result).toBe('dabCBAcaDA');
+        test('solution cbaABc => "" checks start over criteria', () => {
+            const result = removeOppositeChars('cbaABC');
+            expect(result).toBe('');
         });
 
         // Test for question: What is the output for: VvbBfpPFrRyRrNpYyPDlLdVvNnMmnOCcosOoSoOfkKKkFJjyYjJWwHhnSstuBbdsSDqQUqQkKVvILlVvGgjJiVcCvvfBbvVoOGgFn ?
@@ -57,7 +62,6 @@ describe('Challenge 1 Tests', () => {
             expect(result).toBe('yntvn');
         });
     });
-
 
 });
 

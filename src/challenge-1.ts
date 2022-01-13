@@ -1,3 +1,5 @@
+
+
 /**
  * Challenge 1
  *
@@ -28,11 +30,9 @@ export const removeOppositeChars = (line: string): string => {
         let index = 0;
         const lengthOfSearchTerm = 2;
 
-        // If we have not checked everything yet... continue.
+        // If we have not checked complete line ... continue shifting postion to end of line.
         while (index + lengthOfSearchTerm <= line.length) {
-            console.log('current input:>', line, index);
 
-            // If match found..
             if (equalCharactersButDifferentCase(line.charAt(index), (line.charAt(index + 1)))) {
                 const searchTerm = line.charAt(index) + line.charAt(index + 1);
 
@@ -41,22 +41,12 @@ export const removeOppositeChars = (line: string): string => {
 
                 removedCharactersSoDoAgain = true;
                 index = 0;
-                console.info('Go though string again as we just removed characters, remainig input:', line);
                 break;
-            } else {
-                console.info('Match criteria not found next position. current position in input string:', index + 1);
             }
 
             index++;
         }
-        // Make exit function
-        // as input string gets smaller due to removals... else endless loop
-        if ((index + lengthOfSearchTerm) >= line.length) {
-            console.log('Outer Exit loop as length === 0 or we are end of string without removing something. Thus finished', line);
-            removedCharactersSoDoAgain = false;
-        } else {
-            console.log('Outer Continue as we have not reached end of spring length available', line.length, index);
-        }
+        removedCharactersSoDoAgain = checkExitCriteria(index, lengthOfSearchTerm, line.length );
     }
     return line;
 };
@@ -65,11 +55,16 @@ export const equalCharactersButDifferentCase = (a: string, b: string): boolean =
 
     let result = false;
     if (a !== b && a.toUpperCase() === b.toUpperCase()) {
-        console.log('found a match:>', a, b);
         result = true;
-    } else {
-        console.log('Not matching found', a, b);
     }
 
     return result;
+};
+
+export const checkExitCriteria = (index: number, lengthOfSearchTerm: number, lengthOfInput: number): boolean => {
+    let removedCharactersSoDoAgain = true;
+    if ((index + lengthOfSearchTerm) > lengthOfInput) {
+        removedCharactersSoDoAgain = false;
+    }
+    return removedCharactersSoDoAgain;
 };
