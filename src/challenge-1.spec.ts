@@ -40,6 +40,7 @@ describe('Challenge 1 Tests', () => {
             expect(result).toBe('aabAAB');
         });
 
+        //more complex tests..
         test('solution baABc => c', () => {
             const result = removeOppositeChars('baABc');
             expect(result).toBe('c');
@@ -53,7 +54,7 @@ describe('Challenge 1 Tests', () => {
         // Test for question: What is the output for: VvbBfpPFrRyRrNpYyPDlLdVvNnMmnOCcosOoSoOfkKKkFJjyYjJWwHhnSstuBbdsSDqQUqQkKVvILlVvGgjJiVcCvvfBbvVoOGgFn ?
         test('challenge-1 solution is clean code and tdd above.. ;)', () => {
             const result = removeOppositeChars('VvbBfpPFrRyRrNpYyPDlLdVvNnMmnOCcosOoSoOfkKKkFJjyYjJWwHhnSstuBbdsSDqQUqQkKVvILlVvGgjJiVcCvvfBbvVoOGgFn');
-            expect(result).toBe('yntvfFn');
+            expect(result).toBe('yntvn');
         });
     });
 

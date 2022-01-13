@@ -40,6 +40,7 @@ export const removeOppositeChars = (line: string): string => {
                 line = line.replaceAll(searchTerm, '');
 
                 removedCharactersSoDoAgain = true;
+                index = 0;
                 console.info('Go though string again as we just removed characters, remainig input:', line);
                 break;
             } else {
