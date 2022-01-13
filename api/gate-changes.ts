@@ -1,4 +1,4 @@
-interface GateChange {
+export interface GateChange {
     previousGate: string;
     currentGate: string;
     flightNumber: string;

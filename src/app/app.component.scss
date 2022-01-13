@@ -28,3 +28,12 @@ nav {
   width: 100%;
   padding: 12px 20px;
 }
+
+li:hover:nth-child( even ) {
+    background-color: yellow;
+
+}
+
+li:hover:nth-child( odd ) {
+    background-color: red;
+}

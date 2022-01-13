@@ -1,5 +1,46 @@
 <header><h1>Gate changes</h1></header>
 <main>
-  <input class="search" placeholder="Search gate changes..." type="text">
+  <input [(ngModel)]="searchTerm" (keyup)="this.searchForGateChanges$(this.searchTerm)" class="search" placeholder="Search gate changes..." type="text">
+    <ul>
+        <li *ngFor="let item of this.searchResults">{{item.currentGate}}, {{item.previousGate}}, {{item.flightNumber}}, {{item.direction}}</li>
+    </ul>
 </main>
-<router-outlet></router-outlet>
+<pre>
+
+<!--        {-->
+<!--    currentGate: 'H6',-->
+<!--    previousGate: 'H10',-->
+<!--    flightNumber: 'EZY907',-->
+<!--    direction: 'Departure',-->
+<!--    },-->
+
+/gate-changes/:search
+Acceptance criteria for the user story:
+
+Scenario: Searching for gate changes Given I am on the Code Challenge page
+DONE more than 1 character
+DONE maximum 5 results
+
+No Time
+include the destination / origin of the flight
+
+No Time.
+sorted on.
+And the list should be sorted based on arrival / departure time of the flight
+
+DONE
+Scenario: Clearing gate changes
+Then no gate changes should be shown
+
+DONE
+Scenario: Hovering effect on gate changes list items
+Given I am on the Code Challenge page, and have a list of gate changes.
+When I hover uneven times (1st time, 3rd time etc...) on a gate change item
+Then the background should have a yellow color
+When I hover even times (2nd time, 4th time etc...) on the same item
+Then the background should have a red color
+
+
+END TODO Lint & Format everything
+</pre>
+
