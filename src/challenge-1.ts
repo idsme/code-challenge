@@ -30,7 +30,7 @@ export const removeOppositeChars = (line: string): string => {
         let index = 0;
         const lengthOfSearchTerm = 2;
 
-        // If we have not checked complete line ... continue shifting postion to end of line.
+        // If we have not checked complete line ... continue shifting position to end of line.
         while (index + lengthOfSearchTerm <= line.length) {
 
             if (equalCharactersButDifferentCase(line.charAt(index), (line.charAt(index + 1)))) {
