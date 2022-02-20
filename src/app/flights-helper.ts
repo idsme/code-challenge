@@ -1,4 +1,6 @@
 import {SearchResult} from '../../api/gate-changes';
+import {ArrivalFlight} from '../../api/arrivals'
+import {DepartureFlight} from '../../api/departures'
 
 export class FlightsHelper {
 
@@ -54,5 +56,18 @@ export class FlightsHelper {
             }
             return -1;
         }
+    }
+
+    // TODO IDSME SOC Helper Method to Helper class
+    public static addFlightDataToSearchResult(searchResult: SearchResult, flight: ArrivalFlight[] | DepartureFlight[]) {
+        const index = this.getArrivalIndex(searchResult, flight);
+        console.log(`flight index found`, index);
+        return {...searchResult, ...flight[index]};
+    }
+
+    // TODO IDSME SOC Helper Method to Helper class
+    // If it is not a function testing becomes more difficult. As it is wrapped in another function
+    public static getArrivalIndex(searchResult: SearchResult, flights: ArrivalFlight[] | DepartureFlight[]) {
+        return flights.findIndex((flight => flight.flightNumber === searchResult.flightNumber));
     }
 }
