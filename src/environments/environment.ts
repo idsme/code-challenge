@@ -4,6 +4,9 @@
 
 export const environment = {
     production: false,
+    gateChangesUrl : 'http://localhost:3000/gate-changes/', // move urls to environment.ts
+    arrivalsUrl : 'http://localhost:3000/arrivals',
+    departuresUrl : 'http://localhost:3000/departures'
 };
 
 /*
