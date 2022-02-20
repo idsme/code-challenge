@@ -39,18 +39,7 @@ export class StraigtForwardSolutionChallengeComponent implements OnInit {
     constructor(private http: HttpClient) {
     }
 
-    // TODO IDSME SOC Helper Method to Helper class
-    private static addFlightDataToSearchResult(searchResult: SearchResult, flight: ArrivalFlight[] | DepartureFlight[]) {
-        const index = this.getArrivalIndex(searchResult, flight);
-        console.log(`flight index found`, index);
-        return {...searchResult, ...flight[index]};
-    }
 
-    // TODO IDSME SOC Helper Method to Helper class
-    // If it is not a function testing becomes more difficult. As it is wrapped in another function
-    private static getArrivalIndex(searchResult: SearchResult, flights: ArrivalFlight[] | DepartureFlight[]) {
-        return flights.findIndex((flight => flight.flightNumber === searchResult.flightNumber));
-    }
 
     ngOnInit(): void {
         // TODO IDSME SOC server call in service
@@ -76,9 +65,9 @@ export class StraigtForwardSolutionChallengeComponent implements OnInit {
                 // cleaning up readability, testability etc.
                 responseData.forEach((searchResult) => {
                     if ('Arrival' === searchResult.direction) {
-                        searchResult = StraigtForwardSolutionChallengeComponent.addFlightDataToSearchResult(searchResult, this.arrivalFlights);
+                        searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, this.arrivalFlights);
                     } else if ('Departure' === searchResult.direction) {
-                        searchResult = StraigtForwardSolutionChallengeComponent.addFlightDataToSearchResult(searchResult, this.departureFlights);
+                        searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, this.departureFlights);
                     } else {
                         // Purposeful>> Robust/Defensive programming by explicit else with comment..
                         // helps debug-ability when something goes wrong, actually saving more time then it costs to code as you would expect as systems/data/people are never perfect.

@@ -1,32 +1,39 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {fromEvent, Subscription} from 'rxjs';
-import {GateChange} from '../../../api/gate-changes';
-import {HttpClient} from '@angular/common/http';
+import {GateChange, SearchResult} from '../../../api/gate-changes'
 import {debounceTime, distinctUntilChanged, map, switchMap, tap} from 'rxjs/operators';
+import {ArrivalFlight} from '../../../api/arrivals'
+import {DepartureFlight} from '../../../api/departures'
+import {FlightsHelper} from '../flights-helper'
+import {GateService} from './gate.service'
 
 @Component({
   selector: 'app-rxjs-solution-advanced-challenge3',
   templateUrl: './rxjs-solution-advanced-challenge3.component.html',
   styleUrls: ['./rxjs-solution-advanced-challenge3.component.scss']
 })
-export class RxjsSolutionAdvancedChallenge3Component implements AfterViewInit {
+export class RxjsSolutionAdvancedChallenge3Component implements AfterViewInit, OnInit{
 
+    // Do this or... direct from input.
     mainForm = new FormGroup({ searchTerm: new FormControl('B3')});
     private searchTermSubscriptionAfter!: Subscription;
 
-
-    private url = 'http://localhost:3000/gate-changes/';
     private searchResults: GateChange[] = [];
 
-    constructor(private http: HttpClient) {
-        // Getting notified about changes
-        // Option 1 Tested oke
-        // this.mainForm.valueChanges.subscribe((formDataChange) => {
-        //     console.log('Listening to form group value change,', formDataChange);
-        // });
+    // Explanation: Purposeful initialization, leads to more robust app..
+    // Pre-initializing gives less null pointers errors in dev / test / prod on edge cases
+    // + less code. As constructor remains empty for now... ready for more complex inits of members if needed
+    // Also this way we can run component in a sand-box or even develop it in one like story-book.
+    // Actually a KLM Lean Maintenance rule.. in apps like CCI/FCM/CMO apps.
+    private searchTerm = '';
+    private arrivalFlights: ArrivalFlight[] = [];
+    private departureFlights: DepartureFlight[] = [];
 
+    constructor(public gateService: GateService) {
     }
+
+    // TODO IDSME IMPROVEMENT SOC move this to environment config. // Better move this to App config Backend, then you can configure without re-deploying.
 
     ngAfterViewInit(): void {
         this.searchTermSubscriptionAfter = fromEvent(document.getElementById('search-term'), 'keyup')
@@ -34,9 +41,67 @@ export class RxjsSolutionAdvancedChallenge3Component implements AfterViewInit {
                 debounceTime(200),
                 map((e: any) => e.target.value),
                 distinctUntilChanged(),
-                switchMap((searchTerm) =>  this.http.get(this.url + searchTerm)),
-                tap((c: string) => document.getElementById('output-search-term').innerText = JSON.stringify(c))
-            ).subscribe(data => console.log('Subscribe to searchTerm change event after_init', data));
+                switchMap((searchTerm) =>  this.gateService.getGateChanges$(searchTerm)),
+            ).subscribe(data => {
+                console.log('Blah Subscribe to searchTerm change event after_init', data)
+                this.searchResults = data;
+            });
     }
 
+    ngOnInit(): void {
+        this.gateService.getArrigvalFlights().subscribe((arrivalFlights) => this.arrivalFlights = arrivalFlights);
+        this.gateService.getDepartureFlights().subscribe((departureFlights) => this.departureFlights = departureFlights);
+
+        // TODO IDSME CLEAN JIRA-XXX1 when done developing.
+        //this.searchTerm = 'KL';
+        //this.searchForGateChanges(this.searchTerm);
+    }
+
+    // TODO IDSME Clarity > We search here but we do so much more... which is relatively undocumented as it is not in separate functions
+    searchForGateChanges(searchTerm: string) {
+        // As results in BE are only uppercase.
+        this.searchTerm = searchTerm.toUpperCase();
+        if (this.searchTerm.length > 1) {
+            return this.gateService.getGateChanges$(this.searchTerm).subscribe((responseData: SearchResult[]) => {
+                // clear previous search Results as new one where retrieved
+                this.searchResults = [];
+                // limit new results to five
+                responseData = responseData.splice(0, 5);
+                // TODO IDSME OO MAINTAINABILITY as separate function.
+                // cleaning up readability, testability etc.
+                responseData.forEach((searchResult) => {
+                    if ('Arrival' === searchResult.direction) {
+                        searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, this.arrivalFlights);
+                    } else if ('Departure' === searchResult.direction) {
+                        searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, this.departureFlights);
+                    } else {
+                        // Purposeful>> Robust/Defensive programming by explicit else with comment..
+                        // helps debug-ability when something goes wrong, actually saving more time then it costs to code as you would expect as systems/data/people are never perfect.
+                        console.error('Flight Direction missing from searchResult for:', searchResult);
+                    }
+                    this.searchResults.push(searchResult);
+                }); // forEach
+                // TODO IDSME TESTABILITY could be in separate method.. thus method name documents puprpose.
+                this.searchResults = this.searchResults.sort(FlightsHelper.sortFlightsArrayOnEventDates); // let's sort results on Flight event dates.
+            }); // http.get
+        } else if (this.searchTerm.length === 0) {
+            // We are typing so current results are considered old so.. remove
+            this.searchResults = [];
+        }
+    }
 }
+
+// Sustainability check!
+// Maintainability / Readability 4
+// Testability = 0 => No Tests...
+// Debugability = 0 => No Test... thus => Add console logs => Remove console logs.
+// Findability = 4 => Monolitic Component
+// Reusability = 0 => Component is not reusable for anything else
+// Deployability = 0 => As URL's are also in component
+// Upgradeability = 8 => Angular version lower then 9 = 4
+// Predicatability = 2 => Is solution easy to learn....  <<Recommened best-practices followed>>
+// Lean Enough = 2 => Generate API swagger services and Be models.
+
+// Advice more
+// Cleaner solution and more coverage
+

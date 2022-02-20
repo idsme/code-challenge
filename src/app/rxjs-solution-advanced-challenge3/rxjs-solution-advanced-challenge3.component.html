@@ -1,77 +1,120 @@
 <h3>RXJS solution advanced challenge</h3>
 
-<input id="search-term" class="search" placeholder="Search gate changes..." type="text">
+<p class="margin-xxxl-vertical">Demo inputs: KL, OR, AT, GB, EZ AY,TY, PC</p>
+
+<input id="search-term" [(ngModel)]="searchTerm" (keyup)="this.searchForGateChanges(searchTerm)" class="search" placeholder="Search gate changes..." type="text">
+
+<div class="results-overview-flex-container margin-xxl-vertical">
+    <div class="result-item-row-header">
+        <div class="result-item-column bgc-debug-blue">new Gate</div>
+        <div class="result-item-column bgc-debug-green">original Gate</div>
+        <div class="result-item-column bgc-debug-orange">Flight number</div>
+        <div class="result-item-column bgc-debug-red">flight direction</div>
+        <div class="result-item-column bgc-debug-yellow" >flight event</div>
+        <div class="result-item-column-width-xl bgc-debug-yellow" >flight info</div>
+    </div>
+    <div class="result-item-row" style="display: flex; justify-content: space-between; align-items: stretch; height: 40px" *ngFor="let item of this.searchResults">
+        <div style="" class="result-item-column bgc-debug-blue">{{item.currentGate}}</div>
+        <div style="" class="result-item-column bgc-debug-green">{{item.previousGate}}</div>
+        <div style="" class="result-item-column bgc-debug-orange">{{item.flightNumber}}</div>
+        <div style="" class="result-item-column bgc-debug-red">{{item.direction}}</div>
+        <div class="result-item-column">
+            <ng-container *ngIf="item?.arrivalTime" >
+                {{item.origin}} = >
+            </ng-container>
+            <ng-container *ngIf="item?.departureTime" >
+                {{item.destination}} = >
+            </ng-container>
+        </div>
+        <div class="result-item-column-width-xl">
+            <ng-container *ngIf="item?.arrivalTime" >
+                {{item.arrivalTime | date:'dd/MM/yy HH:mm:ss'}}
+            </ng-container>
+            <ng-container *ngIf="item?.departureTime" >
+                {{item.departureTime | date:'dd/MM/yy HH:mm:ss'}}
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+
+<p style="margin-bottom: 1200px">Results: {{this.searchResults.length}}</p>
+
+<h3>Acceptance criteria for story:</h3>
+
+<h4>Scenario: Searching for gate changes Given I am on the Code Challenge page</h4>
 <ul>
-    <li *ngFor="let item of this.searchResults">{{item.currentGate}}, {{item.previousGate}}, {{item.flightNumber}}, {{item.direction}}</li>
+    <li>DONE more than 1 character</li>
+    <li>Solution: check length of input.</li>
 </ul>
 
-<h3>SearchTerm mirror</h3>
-<div id="output-search-term"></div>
 
-<pre>
+<ul>
+    <li>DONE maximum 5 results</li>
+    <li>Solution: use slice on array to limit results.</li>
+</ul>
 
-    Blah result: {{this.mainForm.getRawValue() | json}}
+<ul>
+    <li>DONE include the destination / origin of the flight</li>
+    <li>Solution: get arrivals and destination on Init.. then find item for every result.</li>
+</ul>
 
-    <!--        {-->
-    <!--    currentGate: 'H6',-->
-    <!--    previousGate: 'H10',-->
-    <!--    flightNumber: 'EZY907',-->
-    <!--    direction: 'Departure',-->
-    <!--    },-->
-
-/gate-changes/:search
-Acceptance criteria for the user story:
-
-Scenario: Searching for gate changes Given I am on the Code Challenge page
-DONE more than 1 character
-DONE maximum 5 results
-
-No Time
-include the destination / origin of the flight
-
-No Time.
-sorted on.
-And the list should be sorted based on arrival / departure time of the flight
-
-DONE
-Scenario: Clearing gate changes
-Then no gate changes should be shown
-
-DONE
-Scenario: Hovering effect on gate changes list items
-Given I am on the Code Challenge page, and have a list of gate changes.
-When I hover uneven times (1st time, 3rd time etc...) on a gate change item
-Then the background should have a yellow color
-When I hover even times (2nd time, 4th time etc...) on the same item
-Then the background should have a red color
+<ul>
+    <li>DONE sorted on time</li>
+    <li>Solution: And the list should be sorted based on arrival / departure time of the flight</li>
+</ul>
 
 
-END TODO Lint & Format everything
-</pre>
+<ul>
+    <li>DONE Scenario: Clearing gate changes</li>
+    <li>Then no gate changes should be shown</li>
+</ul>
+
+<ul>
+    <li>DONE Scenario: Hovering effect on gate changes list items</li>
+    <ul>
+        <li>Given I am on the Code Challenge page, and have a list of gate changes.</li>
+        <li>When I hover uneven times (1st time, 3rd time etc...) on a gate change item</li>
+        <li>Then the background should have a yellow color</li>
+        <li>When I hover even times (2nd time, 4th time etc...) on the same item</li>
+        <li>Then the background should have a red color</li>
+    </ul>
+</ul>
 
 
-<!--<pre>-->
-<!--·         Challenge 1-->
+<h3>POST WORK ROUTINE...</h3>
+<p>TODO Lint & Format everything automatically on saves.</p>
+<p>TODO double check every git commit</p>
+<p>TODO double check pull request before</p>
+<p>TODO double contact reviewer personal</p>
 
-<!--·         We found the helper methods, while this is a good design choice, too superfluous-->
 
-<!--·         The nested while loops with a "should remain looping" boolean that is mutated in the loops makes the logic hard to follow-->
+<h2>Improvements which can be made to this solution</h2>
+<ul>
+    <li>Call on every letter even while fast typing >> debounce</li>
+    <li>Would this be cleaner using RXJS in anyway if use debounce already? (Merge two Streams results into map)</li>
+    <li>Should we merge these to streams of data in FE or BE...?</li>
+    <li>Validations are limited using template vs reactive forms</li>
+</ul>
 
-<!--·         The upper while loop could have been replaced by using recursion on line 49-->
+<!-- TODO IDSME JIRA-XXX1 remove extra debugging below when done with issue. -->
+<!--<h3>arrivalFlights</h3>
+<ul>
+    <li *ngFor="let item of this.arrivalFlights">{{item.flightNumber}}</li>
+</ul>
 
-<!--·         The unit tests are exhaustive, however we would have liked to specify what logic is tested instead of naming the test the same as the code that runs in the test-->
+<h3>departureFlights</h3>
+<ul>
+    <li *ngFor="let item of this.departureFlights">{{item.flightNumber}}</li>
+</ul>-->
 
-<!--·         Challenge 2-->
 
-<!--·         Calling searchForGateChanges with a component value as argument inside of the html feels unnecessary // IDSME creates a pure function with clear in and outputs.-->
+<!-- Results: /gate-changes/:search
+   {
+    currentGate: 'H6',
+    previousGate: 'H10',
+    flightNumber: 'EZY907',
+    direction: 'Departure',
+    },
+    -->
 
-<!--·         Would have been nice if ngForms was used in combination with an observable on the <input> value-->
-
-<!--·         The input changes were not debounced-->
-
-<!--·         Mutating the this.searchResults value in the searchForGateChanges$  function is a had to trace side effect, would have been solved better by using observables-->
-
-<!--·         There are no unit test for challenge-3-->
-
-<!--·         Not all requirements of challenge-3 were implemented-->
-<!--</pre>-->
