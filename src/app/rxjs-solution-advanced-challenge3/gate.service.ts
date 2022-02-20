@@ -23,11 +23,14 @@ export class GateService {
     }
 
     public getDepartureFlights(): Observable<DepartureFlight[]> {
-        return this.http.get<DepartureFlight[]>(environment.arrivalsUrl)
+        return this.http.get<DepartureFlight[]>(environment.departuresUrl)
 
     }
 
-    public getGateChanges$(searchTerm: string): Observable<GateChange[]> {
+    public getGateChanges$(searchTerm = ''): Observable<GateChange[]> {
+        if (searchTerm !== '') {
+            searchTerm = '/' + searchTerm;
+        }
         return this.http.get<GateChange[]>(environment.gateChangesUrl + searchTerm)
     }
 }
