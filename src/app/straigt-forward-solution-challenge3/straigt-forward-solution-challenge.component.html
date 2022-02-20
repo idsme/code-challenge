@@ -1,14 +1,14 @@
-<h3 class="margin-xxl-vertical" >Straight Forward solution basic challenge input using ng model => on keyUp search. No fancy stuff.</h3>
+<h3>Straight Forward solution basic challenge input using ng model => on keyUp search. No fancy stuff.</h3>
 
-<p>Demo inputs: KL, OR, AT, GB, EZ AY,TY, PC</p>
+<p class="margin-xxxl-vertical">Demo inputs: KL, OR, AT, GB, EZ AY,TY, PC</p>
 
 <!-- IDSME TODO has limited ux possibilities -->
 <!-- IDSME TODO over loades server with calls -->
 <!-- IDSME TODO CBD input could be in seperate component -->
-<input class="inputmargin-xxl-vertical" [(ngModel)]="searchTerm" (keyup)="this.searchForGateChanges(searchTerm)" class="search margin-l-vertical" placeholder="Search gate changes..." type="text">
+<input [(ngModel)]="searchTerm" (keyup)="this.searchForGateChanges(searchTerm)" class="search" placeholder="Search gate changes..." type="text">
 
-<div class="results-overview-flex-container">
-    <div class="result-item-row">
+<div class="results-overview-flex-container margin-xxl-vertical">
+    <div class="result-item-row-header">
         <div class="result-item-column bgc-debug-blue">new Gate</div>
         <div class="result-item-column bgc-debug-green">original Gate</div>
         <div class="result-item-column bgc-debug-orange">Flight number</div>
@@ -47,36 +47,52 @@
 
 <h4>Scenario: Searching for gate changes Given I am on the Code Challenge page</h4>
 <ul>
-DONE more than 1 character
-    Solution: check length of input.
+    <li>DONE more than 1 character</li>
+    <li>Solution: check length of input.</li>
 </ul>
 
-DONE maximum 5 results
-    Solution: use slice on array to limit results.
 
-DONE include the destination / origin of the flight
-Solution: get arrivals and destination on Init.. then find item for every result.
+<ul>
+    <li>DONE maximum 5 results</li>
+    <li>Solution: use slice on array to limit results.</li>
+</ul>
 
-DONE sorted on.
-Solution: And the list should be sorted based on arrival / departure time of the flight
+<ul>
+    <li>DONE include the destination / origin of the flight</li>
+    <li>Solution: get arrivals and destination on Init.. then find item for every result.</li>
+</ul>
 
-DONE
-Scenario: Clearing gate changes
-Then no gate changes should be shown
-
-DONE
-Scenario: Hovering effect on gate changes list items
-Given I am on the Code Challenge page, and have a list of gate changes.
-When I hover uneven times (1st time, 3rd time etc...) on a gate change item
-Then the background should have a yellow color
-When I hover even times (2nd time, 4th time etc...) on the same item
-Then the background should have a red color
-
-POST WORK ROUTINE...
-TODO Lint & Format everything automatically on saves.
+<ul>
+    <li>DONE sorted on time</li>
+    <li>Solution: And the list should be sorted based on arrival / departure time of the flight</li>
+</ul>
 
 
-<h2  class="margin-l-vertical">Improvements which can be made to this solution</h2>
+<ul>
+    <li>DONE Scenario: Clearing gate changes</li>
+    <li>Then no gate changes should be shown</li>
+</ul>
+
+<ul>
+    <li>DONE Scenario: Hovering effect on gate changes list items</li>
+        <ul>
+            <li>Given I am on the Code Challenge page, and have a list of gate changes.</li>
+            <li>When I hover uneven times (1st time, 3rd time etc...) on a gate change item</li>
+            <li>Then the background should have a yellow color</li>
+            <li>When I hover even times (2nd time, 4th time etc...) on the same item</li>
+            <li>Then the background should have a red color</li>
+        </ul>
+</ul>
+
+
+<h3>POST WORK ROUTINE...</h3>
+<p>TODO Lint & Format everything automatically on saves.</p>
+<p>TODO double check every git commit</p>
+<p>TODO double check pull request before</p>
+<p>TODO double contact reviewer personal</p>
+
+
+<h2>Improvements which can be made to this solution</h2>
 <ul>
     <li>Call on every letter even while fast typing >> debounce</li>
     <li>Would this be cleaner using RXJS in anyway if use debounce already? (Merge two Streams results into map)</li>
