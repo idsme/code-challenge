@@ -18,6 +18,7 @@ app.get('/departures', (req, res) => {
     res.json(departures);
 });
 
+// TODO IDSME create new api that merges data of gate-changes with arrivals and departures
 app.get('/gate-changes', (req, res) => {
     res.json(gateChanges);
 });
