@@ -1,93 +1,84 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
-import {fromEvent, Subscription} from 'rxjs';
+import {Component, OnDestroy, OnInit} from '@angular/core'
+import {fromEvent} from 'rxjs'
 import {GateChange, SearchResult} from '../../../api/gate-changes'
-import {debounceTime, distinctUntilChanged, map, switchMap, tap} from 'rxjs/operators';
+import {debounceTime, distinctUntilChanged, map, switchMap, tap} from 'rxjs/operators'
 import {ArrivalFlight} from '../../../api/arrivals'
 import {DepartureFlight} from '../../../api/departures'
 import {FlightsHelper} from '../flights-helper'
 import {GateService} from './gate.service'
 
 @Component({
-  selector: 'app-rxjs-solution-advanced-challenge3',
-  templateUrl: './rxjs-solution-advanced-challenge3.component.html',
-  styleUrls: ['./rxjs-solution-advanced-challenge3.component.scss']
+    selector: 'app-rxjs-solution-advanced-challenge3',
+    templateUrl: './rxjs-solution-advanced-challenge3.component.html',
+    styleUrls: ['./rxjs-solution-advanced-challenge3.component.scss']
 })
-export class RxjsSolutionAdvancedChallenge3Component implements AfterViewInit, OnInit{
+export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestroy {
 
-    // Do this or... direct from input.
-    mainForm = new FormGroup({ searchTerm: new FormControl('B3')});
-    private searchTermSubscriptionAfter!: Subscription;
-
-    private searchResults: GateChange[] = [];
-
-    // Explanation: Purposeful initialization, leads to more robust app..
-    // Pre-initializing gives less null pointers errors in dev / test / prod on edge cases
-    // + less code. As constructor remains empty for now... ready for more complex inits of members if needed
-    // Also this way we can run component in a sand-box or even develop it in one like story-book.
-    // Actually a KLM Lean Maintenance rule.. in apps like CCI/FCM/CMO apps.
-    private searchTerm = '';
-    private arrivalFlights: ArrivalFlight[] = [];
-    private departureFlights: DepartureFlight[] = [];
+    private searchInputSubscription
+    private searchResults: GateChange[] = []
+    private arrivalFlights: ArrivalFlight[] = []
+    private departureFlights: DepartureFlight[] = []
 
     constructor(public gateService: GateService) {
     }
 
-    // TODO IDSME IMPROVEMENT SOC move this to environment config. // Better move this to App config Backend, then you can configure without re-deploying.
+    ngOnInit(): void {
+        // TODO IDSME replace with forcJoin rxjs
+        this.getInitialData()
+        this.listenToSearhTermInput()
+        this.searchForGateChanges()
+    }
 
-    ngAfterViewInit(): void {
-        this.searchTermSubscriptionAfter = fromEvent(document.getElementById('search-term'), 'keyup')
+    private getInitialData() {
+        // TODO IDSME are we creating a business service in the frontend here that should be in the BE?
+        this.gateService.getArrigvalFlights().subscribe((arrivalFlights) => this.arrivalFlights = arrivalFlights)
+        this.gateService.getDepartureFlights().subscribe((departureFlights) => this.departureFlights = departureFlights)
+    }
+
+    private listenToSearhTermInput() {
+        this.searchInputSubscription = fromEvent(document.getElementById('search-term'), 'keyup')
+    }
+
+
+// TODO IDSME Clarity > We search here but we do so much more... which is relatively undocumented as it is not in separate functions
+    searchForGateChanges() {
+        this.searchInputSubscription
             .pipe(
                 debounceTime(200),
                 map((e: any) => e.target.value),
                 distinctUntilChanged(),
-                switchMap((searchTerm) =>  this.gateService.getGateChanges$(searchTerm)),
-            ).subscribe(data => {
-                console.log('Blah Subscribe to searchTerm change event after_init', data)
-                this.searchResults = data;
-            });
+                tap((data) => console.log('Search Term Found after debounce filtering:>', data)),
+                switchMap((searchTerm: string) => this.gateService.getGateChanges$(searchTerm))
+            ).subscribe((responseData: SearchResult[]) => {
+
+            // clear previous search Results as new one where retrieved
+            this.searchResults = []
+            // limit new results to five
+            responseData = responseData.splice(0, 5)
+            // TODO IDSME OO MAINTAINABILITY as separate function.
+            // cleaning up readability, testability etc.
+            responseData.forEach((searchResult: SearchResult) => {
+                if ('Arrival' === searchResult.direction) {
+                    console.log(`Arrival>>>${searchResult}`, searchResult)
+                    searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, this.arrivalFlights)
+                } else if ('Departure' === searchResult.direction) {
+                    console.log(`Departure>>>${searchResult}`, searchResult)
+                    searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, this.departureFlights)
+                } else {
+                    // Purposeful>> Robust/Defensive programming by explicit else with comment..
+                    // helps debug-ability when something goes wrong, actually saving more time then it costs to code as you would expect as systems/data/people are never perfect.
+                    console.error('Flight Direction missing from searchResult for:', searchResult)
+                }
+                this.searchResults.push(searchResult)
+            }) // forEach
+            // TODO IDSME TESTABILITY could be in separate method.. thus method name documents puprpose.
+            this.searchResults = this.searchResults.sort(FlightsHelper.sortFlightsArrayOnEventDates) // let's sort results on Flight event dates.
+        })
+
     }
 
-    ngOnInit(): void {
-        this.gateService.getArrigvalFlights().subscribe((arrivalFlights) => this.arrivalFlights = arrivalFlights);
-        this.gateService.getDepartureFlights().subscribe((departureFlights) => this.departureFlights = departureFlights);
-
-        // TODO IDSME CLEAN JIRA-XXX1 when done developing.
-        //this.searchTerm = 'KL';
-        //this.searchForGateChanges(this.searchTerm);
-    }
-
-    // TODO IDSME Clarity > We search here but we do so much more... which is relatively undocumented as it is not in separate functions
-    searchForGateChanges(searchTerm: string) {
-        // As results in BE are only uppercase.
-        this.searchTerm = searchTerm.toUpperCase();
-        if (this.searchTerm.length > 1) {
-            return this.gateService.getGateChanges$(this.searchTerm).subscribe((responseData: SearchResult[]) => {
-                // clear previous search Results as new one where retrieved
-                this.searchResults = [];
-                // limit new results to five
-                responseData = responseData.splice(0, 5);
-                // TODO IDSME OO MAINTAINABILITY as separate function.
-                // cleaning up readability, testability etc.
-                responseData.forEach((searchResult) => {
-                    if ('Arrival' === searchResult.direction) {
-                        searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, this.arrivalFlights);
-                    } else if ('Departure' === searchResult.direction) {
-                        searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, this.departureFlights);
-                    } else {
-                        // Purposeful>> Robust/Defensive programming by explicit else with comment..
-                        // helps debug-ability when something goes wrong, actually saving more time then it costs to code as you would expect as systems/data/people are never perfect.
-                        console.error('Flight Direction missing from searchResult for:', searchResult);
-                    }
-                    this.searchResults.push(searchResult);
-                }); // forEach
-                // TODO IDSME TESTABILITY could be in separate method.. thus method name documents puprpose.
-                this.searchResults = this.searchResults.sort(FlightsHelper.sortFlightsArrayOnEventDates); // let's sort results on Flight event dates.
-            }); // http.get
-        } else if (this.searchTerm.length === 0) {
-            // We are typing so current results are considered old so.. remove
-            this.searchResults = [];
-        }
+    ngOnDestroy(): void {
+        this.searchInputSubscription.unsubscribe()
     }
 }
 
@@ -103,5 +94,5 @@ export class RxjsSolutionAdvancedChallenge3Component implements AfterViewInit, O
 // Lean Enough = 2 => Generate API swagger services and Be models.
 
 // Advice more
-// Cleaner solution and more coverage
+// ??
 

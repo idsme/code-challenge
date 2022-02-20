@@ -2,7 +2,7 @@
 
 <p class="margin-xxxl-vertical">Demo inputs: KL, OR, AT, GB, EZ AY,TY, PC</p>
 
-<input id="search-term" [(ngModel)]="searchTerm" (keyup)="this.searchForGateChanges(searchTerm)" class="search" placeholder="Search gate changes..." type="text">
+<input id="search-term" class="search" placeholder="Search gate changes..." type="text">
 
 <div class="results-overview-flex-container margin-xxl-vertical">
     <div class="result-item-row-header">
@@ -19,10 +19,10 @@
         <div style="" class="result-item-column bgc-debug-orange">{{item.flightNumber}}</div>
         <div style="" class="result-item-column bgc-debug-red">{{item.direction}}</div>
         <div class="result-item-column">
-            <ng-container *ngIf="item?.arrivalTime" >
+            <ng-container *ngIf="item?.origin" >
                 {{item.origin}} = >
             </ng-container>
-            <ng-container *ngIf="item?.departureTime" >
+            <ng-container *ngIf="item?.destination" >
                 {{item.destination}} = >
             </ng-container>
         </div>
@@ -101,12 +101,12 @@
 <!--<h3>arrivalFlights</h3>
 <ul>
     <li *ngFor="let item of this.arrivalFlights">{{item.flightNumber}}</li>
-</ul>
+</ul>-->
 
 <h3>departureFlights</h3>
 <ul>
-    <li *ngFor="let item of this.departureFlights">{{item.flightNumber}}</li>
-</ul>-->
+    <li *ngFor="let item of this.departureFlights">{{item | json}}</li>
+</ul>
 
 
 <!-- Results: /gate-changes/:search
