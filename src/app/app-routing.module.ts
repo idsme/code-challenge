@@ -11,11 +11,11 @@ import {
 } from './rxjs-solution-advanced-challenge3/rxjs-solution-advanced-challenge3.component';
 
 const routes: Routes = [
-    {path: '', pathMatch: 'full', component: StraigtForwardSolutionChallengeComponent},
+    {path: '', pathMatch: 'full', component: RxjsSolutionAdvancedChallenge3Component},
     {path: 'sfsc', pathMatch: 'full', component: StraigtForwardSolutionChallengeComponent},
     {path: 'rsbc', pathMatch: 'full', component: RxjsSolutionBasicChallengeComponent},
     {path: 'rsac', pathMatch: 'full', component: RxjsSolutionAdvancedChallenge3Component},
-    {path: '**', pathMatch: 'full', component: RxjsSolutionAdvancedChallenge3Component},
+    {path: '**', pathMatch: 'full', component: StraigtForwardSolutionChallengeComponent},
 
 ];
 
