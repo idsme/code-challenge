@@ -12,7 +12,6 @@ results-overview-flex-container {
   justify-content: start;
 }
 
-
 // TODO IDSME Improvement move to result-item-row.scss
 div.result-item-row:hover:nth-child( even ) {
   background-color: dodgerblue;
@@ -21,6 +20,7 @@ div.result-item-row:hover:nth-child( even ) {
 // TODO IDSME Improvement generic move to result-item-row.scss
 div.result-item-row:hover:nth-child( odd ) {
   background-color: lightskyblue;
+
 }
 
 // TODO IDSME Improvement .. create generic global class for this.
@@ -35,6 +35,12 @@ div.result-item-row:hover:nth-child( odd ) {
   @extend .result-item-row;
   background-color: #1a0034;
   color:silver;
+}
+
+// TODO IDSME Improvement move to result-item-row.scss
+div.result-item-row:hover:first-child {
+  background-color: #1a0034;
+  color: silver;
 }
 
 // TODO IDSME Improvement.. create generic global class for this.
