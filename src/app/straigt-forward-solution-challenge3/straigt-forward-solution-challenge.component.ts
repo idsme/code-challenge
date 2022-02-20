@@ -98,6 +98,14 @@ export class StraigtForwardSolutionChallengeComponent implements OnInit {
 
 // Sustainability check!
 // Maintainability / Readability 4
-// Testability = 5
-// Debugability = 2
-//  = 2
+// Testability = 0 => No Tests...
+// Debugability = 0 => No Test... thus => Add console logs => Remove console logs.
+// Findability = 4 => Monolitic Component
+// Reusability = 0 => Component is not reusable for anything else
+// Deployability = 0 => As URL's are also in component
+// Upgradeability = 8 => Angular version lower then 9 = 4
+// Predicatability = 2 => Is solution easy to learn....  <<Recommened best-practices followed>>
+// Lean Enough = 2 => Generate API swagger services and Be models.
+
+// Advice more
+// Cleaner solution and more coverage
