@@ -22,10 +22,10 @@
         <div style="" class="result-item-column bgc-debug-orange">{{item.flightNumber}}</div>
         <div style="" class="result-item-column bgc-debug-red">{{item.direction}}</div>
         <div class="result-item-column">
-            <ng-container *ngIf="item?.arrivalTime" >
+            <ng-container *ngIf="item?.origin" >
                 {{item.origin}} = >
             </ng-container>
-            <ng-container *ngIf="item?.departureTime" >
+            <ng-container *ngIf="item?.destination" >
                 {{item.destination}} = >
             </ng-container>
         </div>
