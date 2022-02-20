@@ -52,12 +52,10 @@ export const removeOppositeChars = (line: string): string => {
 };
 
 export const equalCharactersButDifferentCase = (a: string, b: string): boolean => {
-
     let result = false;
     if (a !== b && a.toUpperCase() === b.toUpperCase()) {
         result = true;
     }
-
     return result;
 };
 

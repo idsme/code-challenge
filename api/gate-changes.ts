@@ -1,9 +1,14 @@
+import {ArrivalFlight} from './arrivals';
+import {DepartureFlight} from './departures';
+
 export interface GateChange {
     previousGate: string;
     currentGate: string;
     flightNumber: string;
     direction: 'Arrival' | 'Departure';
 }
+
+export interface SearchResult extends GateChange, ArrivalFlight, DepartureFlight {}
 
 export const gateChanges: GateChange[] = [
     {

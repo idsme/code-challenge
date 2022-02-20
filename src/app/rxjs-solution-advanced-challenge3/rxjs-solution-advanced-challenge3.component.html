@@ -1,0 +1,77 @@
+<h3>RXJS solution advanced challenge</h3>
+
+<input id="search-term" class="search" placeholder="Search gate changes..." type="text">
+<ul>
+    <li *ngFor="let item of this.searchResults">{{item.currentGate}}, {{item.previousGate}}, {{item.flightNumber}}, {{item.direction}}</li>
+</ul>
+
+<h3>SearchTerm mirror</h3>
+<div id="output-search-term"></div>
+
+<pre>
+
+    Blah result: {{this.mainForm.getRawValue() | json}}
+
+    <!--        {-->
+    <!--    currentGate: 'H6',-->
+    <!--    previousGate: 'H10',-->
+    <!--    flightNumber: 'EZY907',-->
+    <!--    direction: 'Departure',-->
+    <!--    },-->
+
+/gate-changes/:search
+Acceptance criteria for the user story:
+
+Scenario: Searching for gate changes Given I am on the Code Challenge page
+DONE more than 1 character
+DONE maximum 5 results
+
+No Time
+include the destination / origin of the flight
+
+No Time.
+sorted on.
+And the list should be sorted based on arrival / departure time of the flight
+
+DONE
+Scenario: Clearing gate changes
+Then no gate changes should be shown
+
+DONE
+Scenario: Hovering effect on gate changes list items
+Given I am on the Code Challenge page, and have a list of gate changes.
+When I hover uneven times (1st time, 3rd time etc...) on a gate change item
+Then the background should have a yellow color
+When I hover even times (2nd time, 4th time etc...) on the same item
+Then the background should have a red color
+
+
+END TODO Lint & Format everything
+</pre>
+
+
+<!--<pre>-->
+<!--·         Challenge 1-->
+
+<!--·         We found the helper methods, while this is a good design choice, too superfluous-->
+
+<!--·         The nested while loops with a "should remain looping" boolean that is mutated in the loops makes the logic hard to follow-->
+
+<!--·         The upper while loop could have been replaced by using recursion on line 49-->
+
+<!--·         The unit tests are exhaustive, however we would have liked to specify what logic is tested instead of naming the test the same as the code that runs in the test-->
+
+<!--·         Challenge 2-->
+
+<!--·         Calling searchForGateChanges with a component value as argument inside of the html feels unnecessary // IDSME creates a pure function with clear in and outputs.-->
+
+<!--·         Would have been nice if ngForms was used in combination with an observable on the <input> value-->
+
+<!--·         The input changes were not debounced-->
+
+<!--·         Mutating the this.searchResults value in the searchForGateChanges$  function is a had to trace side effect, would have been solved better by using observables-->
+
+<!--·         There are no unit test for challenge-3-->
+
+<!--·         Not all requirements of challenge-3 were implemented-->
+<!--</pre>-->

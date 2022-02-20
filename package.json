@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --watch",
     "start:api": "ts-node api/main.ts",
     "build": "ng build",
     "test": "jest --config jest.config.js",
@@ -45,6 +45,7 @@
     "codelyzer": "^6.0.1",
     "jest": "~26.6.3",
     "jest-preset-angular": "~8.4.0",
+    "ngx-spec": "^2.1.5",
     "prettier": "^1.18.2",
     "tslint": "^5.15.0"
   }
