@@ -6,10 +6,11 @@
 }
 
 // TODO IDSME Improvement .. create generic scss class that can be reused so we don't need to do this custom for every component.
-results-overview-flex-container {
+.results-overview-flex-container {
     display: flex;
     flex-direction: column;
     justify-content: start;
+
 }
 
 // TODO IDSME Improvement move to result-item-row.scss
@@ -29,13 +30,25 @@ div.result-item-row:hover:nth-child( odd ) {
     justify-content: space-between;
     align-items: stretch;
     height: 50px;
+    :last-child {
+        border-right: 0px dashed silver;
+    }
 }
 
 .result-item-row-header {
     @extend .result-item-row;
     background-color: #1a0034;
     color:silver;
+    :last-child {
+        border-right: 0px dashed silver;
+    }
 }
+
+//@media only screen and (max-width: 600px) {
+//    .result-item-row-header {
+//        flex-direction: column;
+//    }
+//}
 
 // TODO IDSME Improvement move to result-item-row.scss
 div.result-item-row:hover:first-child {
@@ -48,7 +61,7 @@ div.result-item-row:hover:first-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px dot-dash dodgerblue;
+    border-right: 2px dashed silver;
     width: 150px;
 }
 
