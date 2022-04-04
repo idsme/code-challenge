@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-
 }
 
 // TODO IDSME Improvement move to result-item-row.scss
@@ -21,7 +20,6 @@ div.result-item-row:hover:nth-child( even ) {
 // TODO IDSME Improvement generic move to result-item-row.scss
 div.result-item-row:hover:nth-child( odd ) {
     background-color: lightskyblue;
-
 }
 
 // TODO IDSME Improvement .. create generic global class for this.
