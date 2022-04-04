@@ -61,7 +61,7 @@ export class FlightsHelper {
     // TODO IDSME SOC Helper Method to Helper class
     public static addFlightDataToSearchResult(searchResult: SearchResult, flight: ArrivalFlight[] | DepartureFlight[]) {
         const index = this.getIndex(searchResult, flight);
-        console.log(`flight index found`, index);
+        console.log(`flight index found`, index, searchResult, flight[index]);
         return {...searchResult, ...flight[index]};
     }
 
