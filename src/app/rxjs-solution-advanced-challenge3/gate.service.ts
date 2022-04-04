@@ -24,7 +24,6 @@ export class GateService {
 
     public getDepartureFlights(): Observable<DepartureFlight[]> {
         return this.http.get<DepartureFlight[]>(environment.departuresUrl)
-
     }
 
     public getGateChanges$(searchTerm = ''): Observable<GateChange[]> {
