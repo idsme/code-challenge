@@ -39,8 +39,6 @@ export class StraigtForwardSolutionChallengeComponent implements OnInit {
     constructor(private http: HttpClient) {
     }
 
-
-
     ngOnInit(): void {
         // TODO IDSME SOC server call in service
         this.http.get<ArrivalFlight[]>(this.arrivalsUrl).subscribe((arrivalFlights) => this.arrivalFlights = arrivalFlights);
@@ -75,7 +73,7 @@ export class StraigtForwardSolutionChallengeComponent implements OnInit {
                     }
                     this.searchResults.push(searchResult);
                 }); // forEach
-                // TODO IDSME TESTABILITY could be in separate method.. thus method name documents puprpose.
+                // TODO IDSME TESTABILITY could be in separate method.. thus method name documents purpose.
                 this.searchResults = this.searchResults.sort(FlightsHelper.sortFlightsArrayOnEventDates); // let's sort results on Flight event dates.
             }); // http.get
         } else if (this.searchTerm.length === 0) {
