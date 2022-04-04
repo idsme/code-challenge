@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core'
-import {combineLatest, forkJoin, fromEvent} from 'rxjs'
+import {forkJoin, fromEvent} from 'rxjs'
 import {GateChange, SearchResult} from '../../../api/gate-changes'
 import {debounceTime, distinctUntilChanged, map, switchMap, tap} from 'rxjs/operators'
 import {ArrivalFlight} from '../../../api/arrivals'
@@ -23,16 +23,8 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
     }
 
     ngOnInit(): void {
-        // TODO IDSME replace with forcJoin rxjs
-        this.getInitialData()
         this.listenToSearhTermInput()
         this.searchForGateChanges()
-    }
-
-    private getInitialData() {
-        // TODO IDSME are we creating a business service in the frontend here that should be in the BE?
-        this.gateService.getArrivalFlights().subscribe((arrivalFlights) => this.arrivalFlights = arrivalFlights)
-        this.gateService.getDepartureFlights().subscribe((departureFlights) => this.departureFlights = departureFlights)
     }
 
     private listenToSearhTermInput() {
