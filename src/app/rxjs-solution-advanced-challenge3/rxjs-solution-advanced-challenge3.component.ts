@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core'
-import {fromEvent} from 'rxjs'
+import {combineLatest, forkJoin, fromEvent} from 'rxjs'
 import {GateChange, SearchResult} from '../../../api/gate-changes'
 import {debounceTime, distinctUntilChanged, map, switchMap, tap} from 'rxjs/operators'
 import {ArrivalFlight} from '../../../api/arrivals'
@@ -31,7 +31,7 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
 
     private getInitialData() {
         // TODO IDSME are we creating a business service in the frontend here that should be in the BE?
-        this.gateService.getArrigvalFlights().subscribe((arrivalFlights) => this.arrivalFlights = arrivalFlights)
+        this.gateService.getArrivalFlights().subscribe((arrivalFlights) => this.arrivalFlights = arrivalFlights)
         this.gateService.getDepartureFlights().subscribe((departureFlights) => this.departureFlights = departureFlights)
     }
 
@@ -48,8 +48,11 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
                 map((e: any) => e.target.value),
                 distinctUntilChanged(),
                 tap((data) => console.log('Search Term Found after debounce filtering:>', data)),
-                switchMap((searchTerm: string) => this.gateService.getGateChanges$(searchTerm))
-            ).subscribe((responseData: SearchResult[]) => {
+                switchMap((searchTerm: string) =>
+                {
+                    return forkJoin(this.gateService.getGateChanges$(searchTerm), this.gateService.getArrivalFlights(), this.gateService.getDepartureFlights());
+                })
+            ).subscribe(([responseData, resultDataArrivals, resultDataDepartures]) => {
 
             // clear previous search Results as new one where retrieved
             this.searchResults = []
@@ -60,10 +63,10 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
             responseData.forEach((searchResult: SearchResult) => {
                 if ('Arrival' === searchResult.direction) {
                     console.log(`Arrival>>>${searchResult}`, searchResult)
-                    searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, this.arrivalFlights)
+                    searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, resultDataArrivals)
                 } else if ('Departure' === searchResult.direction) {
                     console.log(`Departure>>>${searchResult}`, searchResult)
-                    searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, this.departureFlights)
+                    searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, resultDataDepartures)
                 } else {
                     // Purposeful>> Robust/Defensive programming by explicit else with comment..
                     // helps debug-ability when something goes wrong, actually saving more time then it costs to code as you would expect as systems/data/people are never perfect.

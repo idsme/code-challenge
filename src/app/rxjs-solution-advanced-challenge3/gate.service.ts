@@ -18,7 +18,7 @@ export class GateService {
         return this.http.get<ArrivalFlight>('')
     }
 
-    public getArrigvalFlights(): Observable<ArrivalFlight[]> {
+    public getArrivalFlights(): Observable<ArrivalFlight[]> {
         return this.http.get<ArrivalFlight[]>(environment.arrivalsUrl)
     }
 
