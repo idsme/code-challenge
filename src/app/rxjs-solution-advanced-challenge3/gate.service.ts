@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core'
 import {ArrivalFlight} from '../../../api/arrivals'
 import {environment} from '../../environments/environment'
 import {DepartureFlight} from '../../../api/departures'
-import {Observable, Subscription} from 'rxjs'
+import {Observable, of, Subscription} from 'rxjs'
 import {HttpClient} from '@angular/common/http'
 import {GateChange} from '../../../api/gate-changes'
 
@@ -12,10 +12,6 @@ import {GateChange} from '../../../api/gate-changes'
 export class GateService {
 
     constructor(private http: HttpClient) {
-    }
-
-    public getConfig(): Observable<ArrivalFlight> {
-        return this.http.get<ArrivalFlight>('')
     }
 
     public getArrivalFlights(): Observable<ArrivalFlight[]> {
