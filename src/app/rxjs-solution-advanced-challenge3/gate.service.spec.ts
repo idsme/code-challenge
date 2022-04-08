@@ -1,11 +1,14 @@
 import {TestBed} from '@angular/core/testing'
 
 import {GateService} from './gate.service'
-import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing'
+import {HttpClientTestingModule, HttpTestingController, RequestMatch} from '@angular/common/http/testing'
 
 describe('GateService', () => {
     let service: GateService
     let httpController: HttpTestingController
+
+    const baseUrl = 'http://localhost:3000/'
+
 
     // Arrange Globally
     const expected = [{
@@ -38,7 +41,7 @@ describe('GateService', () => {
 
         const req = httpController.expectOne({
             method: 'GET',
-            url: `http://localhost:3000/arrivals`
+            url: `${baseUrl}arrivals`
         })
 
         req.flush(expected)
@@ -52,13 +55,14 @@ describe('GateService', () => {
             done()
         })
 
-        const req = httpController.expectOne({
+        const request = httpController.expectOne({
             method: 'GET',
-            url: `http://localhost:3000/departures`
+            url: `${baseUrl}departures`
         })
 
-        req.flush(expected)
+        request.flush(expected)
     })
+
 
     it('should do a call to the backend /gate-changes and get an array of GateChange[]', done => {
         // act
@@ -69,30 +73,12 @@ describe('GateService', () => {
             done()
         })
 
-        const req = httpController.match({
-                method: 'GET',
-                url: `http://localhost:3000/gate-changes`
-            });
-        expect(req.length).toBe(1);
-
-       req.forEach(result => result.flush(expected))
-    })
-
-    it('should do a call to the backend /gate-changes and get an array of GateChange[]', done => {
-        // act
-        service.getGateChanges$('').subscribe((result) => {
-            // assert
-            expect(result).toEqual(expected)
-            expect(result).toHaveLength(2)
-            done()
-        })
-
-        const req = httpController.expectOne({
+        const request = httpController.expectOne({
             method: 'GET',
-            url: `http://localhost:3000/gate-changes`
+            url: `${baseUrl}gate-changes`
         })
 
-        req.flush(expected)
+        request.flush(expected)
     })
 
 })
