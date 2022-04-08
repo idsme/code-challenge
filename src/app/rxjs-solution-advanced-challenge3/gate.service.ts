@@ -22,7 +22,7 @@ export class GateService {
         return this.http.get<DepartureFlight[]>(environment.departuresUrl)
     }
 
-    public getGateChanges$(searchTerm = ''): Observable<GateChange[]> {
+    public getGateChanges(searchTerm = ''): Observable<GateChange[]> {
         if (searchTerm !== '') {
             searchTerm = '/' + searchTerm;
         }

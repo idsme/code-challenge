@@ -66,7 +66,7 @@ describe('GateService', () => {
 
     it('should do a call to the backend /gate-changes and get an array of GateChange[]', done => {
         // act
-        service.getGateChanges$('').subscribe((result) => {
+        service.getGateChanges('').subscribe((result) => {
             // assert
             expect(result).toEqual(expected)
             expect(result).toHaveLength(2)

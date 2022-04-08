@@ -42,7 +42,7 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
                 tap((data) => console.log('Search Term Found after debounce filtering:>', data)),
                 switchMap((searchTerm: string) =>
                 {
-                    return forkJoin(this.gateService.getGateChanges$(searchTerm), this.gateService.getArrivalFlights(), this.gateService.getDepartureFlights());
+                    return forkJoin(this.gateService.getGateChanges(searchTerm), this.gateService.getArrivalFlights(), this.gateService.getDepartureFlights());
                 })
             ).subscribe(([responseData, resultDataArrivals, resultDataDepartures]) => {
 
