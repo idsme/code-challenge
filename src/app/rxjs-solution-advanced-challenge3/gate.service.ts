@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core'
 import {ArrivalFlight} from '../../../api/arrivals'
 import {environment} from '../../environments/environment'
 import {DepartureFlight} from '../../../api/departures'
-import {Observable, of, Subscription} from 'rxjs'
+import {Observable, } from 'rxjs'
 import {HttpClient} from '@angular/common/http'
 import {GateChange} from '../../../api/gate-changes'
 

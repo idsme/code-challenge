@@ -1,11 +1,11 @@
 import {Component, OnDestroy, OnInit} from '@angular/core'
 import {forkJoin, fromEvent} from 'rxjs'
 import {GateChange, SearchResult} from '../../../api/gate-changes'
-import {debounceTime, distinctUntilChanged, map, switchMap, tap} from 'rxjs/operators'
-import {ArrivalFlight} from '../../../api/arrivals'
-import {DepartureFlight} from '../../../api/departures'
+import {debounceTime, distinctUntilChanged, map, skip, skipWhile, switchMap, tap} from 'rxjs/operators'
 import {FlightsHelper} from '../flights-helper'
 import {GateService} from './gate.service'
+import {ArrivalFlight} from '../../../api/arrivals'
+import {DepartureFlight} from '../../../api/departures'
 
 @Component({
     selector: 'app-rxjs-solution-advanced-challenge3',
@@ -16,8 +16,6 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
 
     private searchInputSubscription
     private searchResults: GateChange[] = []
-    private arrivalFlights: ArrivalFlight[] = []
-    private departureFlights: DepartureFlight[] = []
 
     constructor(public gateService: GateService) {
     }
@@ -33,43 +31,44 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
 
 
 // TODO IDSME Clarity > We search here but we do so much more... which is relatively undocumented as it is not in separate functions
+    // TODO IDSME good stuff to write an artical about... Before RxJS and After RxJS and should this have an integration test?
+    // Test 1 character no new data.
+    // Test 2 characters search backend. (Just one call if typed fast)
+    // Test 3 onclear after search no results should be on screen.
     searchForGateChanges() {
         this.searchInputSubscription
             .pipe(
+                tap(() => this.searchResults = []),
                 debounceTime(200),
                 map((e: any) => e.target.value),
+                skipWhile((data: string) => data.length < 2 ),
                 distinctUntilChanged(),
-                tap((data) => console.log('Search Term Found after debounce filtering:>', data)),
-                switchMap((searchTerm: string) =>
-                {
-                    return forkJoin(this.gateService.getGateChanges(searchTerm), this.gateService.getArrivalFlights(), this.gateService.getDepartureFlights());
-                })
+                map((data: string) => data.toUpperCase()),
+                switchMap((searchTerm: string) => forkJoin(this.gateService.getGateChanges(searchTerm), this.gateService.getArrivalFlights(), this.gateService.getDepartureFlights())),
+                map(([responseData, resultDataArrivals, resultDataDepartures]) => [responseData.splice(0, 5), resultDataArrivals, resultDataDepartures]),
             ).subscribe(([responseData, resultDataArrivals, resultDataDepartures]) => {
-
-            // clear previous search Results as new one where retrieved
-            this.searchResults = []
-            // limit new results to five
-            responseData = responseData.splice(0, 5)
-            // TODO IDSME OO MAINTAINABILITY as separate function.
-            // cleaning up readability, testability etc.
-            responseData.forEach((searchResult: SearchResult) => {
-                if ('Arrival' === searchResult.direction) {
-                    console.log(`Arrival>>>${searchResult}`, searchResult)
-                    searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, resultDataArrivals)
-                } else if ('Departure' === searchResult.direction) {
-                    console.log(`Departure>>>${searchResult}`, searchResult)
-                    searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, resultDataDepartures)
-                } else {
-                    // Purposeful>> Robust/Defensive programming by explicit else with comment..
-                    // helps debug-ability when something goes wrong, actually saving more time then it costs to code as you would expect as systems/data/people are never perfect.
-                    console.error('Flight Direction missing from searchResult for:', searchResult)
-                }
-                this.searchResults.push(searchResult)
-            }) // forEach
-            // TODO IDSME TESTABILITY could be in separate method.. thus method name documents puprpose.
+            this.searchResults = this.aggregateResponseDataToSearchResults(responseData, resultDataArrivals, resultDataDepartures)
+            // TODO IDSME TESTABILITY could be in separate method.. thus method name documents purpose.
             this.searchResults = this.searchResults.sort(FlightsHelper.sortFlightsArrayOnEventDates) // let's sort results on Flight event dates.
         })
 
+    }
+
+    private aggregateResponseDataToSearchResults(responseData: GateChange[], resultDataArrivals: ArrivalFlight[], resultDataDepartures: DepartureFlight[]): SearchResult[] {
+        const searchResults: SearchResult[] = [];
+        responseData.forEach((searchResult: SearchResult) => {
+            if ('Arrival' === searchResult.direction) {
+                console.log(`Arrival>>>${searchResult}`, searchResult)
+                searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, resultDataArrivals)
+            } else if ('Departure' === searchResult.direction) {
+                console.log(`Departure>>>${searchResult}`, searchResult)
+                searchResult = FlightsHelper.addFlightDataToSearchResult(searchResult, resultDataDepartures)
+            } else {
+                console.error('Flight Direction missing from searchResult for:', searchResult)
+            }
+            searchResults.push(searchResult)
+        }) // forEach
+        return searchResults;
     }
 
     ngOnDestroy(): void {

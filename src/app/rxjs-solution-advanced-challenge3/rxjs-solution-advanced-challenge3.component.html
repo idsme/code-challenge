@@ -40,10 +40,9 @@
 
 <h4>Scenario: Searching for gate changes Given I am on the Code Challenge page</h4>
 <ul>
-    <li>DONE more than 1 character</li>
+    <li>REMOVED more than 1 character</li>
     <li>Solution: check length of input.</li>
 </ul>
-
 
 <ul>
     <li>DONE maximum 5 results</li>
@@ -92,25 +91,4 @@
     <li>Should we merge these to streams of data in FE or BE...?</li>
     <li>Validations are limited using template vs reactive forms</li>
 </ul>
-
-<!-- TODO IDSME JIRA-XXX1 remove extra debugging below when done with issue. -->
-<!--<h3>arrivalFlights</h3>
-<ul>
-    <li *ngFor="let item of this.arrivalFlights">{{item.flightNumber}}</li>
-</ul>-->
-
-<h3>departureFlights</h3>
-<ul>
-    <li *ngFor="let item of this.departureFlights">{{item | json}}</li>
-</ul>
-
-
-<!-- Results: /gate-changes/:search
-   {
-    currentGate: 'H6',
-    previousGate: 'H10',
-    flightNumber: 'EZY907',
-    direction: 'Departure',
-    },
-    -->
 
