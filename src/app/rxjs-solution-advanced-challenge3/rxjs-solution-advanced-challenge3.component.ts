@@ -40,16 +40,16 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
             .pipe(
                 tap(() => this.searchResults = []),
                 debounceTime(200),
-                map((e: any) => e.target.value),
-                skipWhile((data: string) => data.length < 2 ),
+                map((e: any) => e.target.value), // Can we get rid of the any here?
+                skipWhile((data: string) => data.length < 2 ), // Not descriptive
                 distinctUntilChanged(),
                 map((data: string) => data.toUpperCase()),
                 switchMap((searchTerm: string) => forkJoin(this.gateService.getGateChanges(searchTerm), this.gateService.getArrivalFlights(), this.gateService.getDepartureFlights())),
-                map(([responseData, resultDataArrivals, resultDataDepartures]) => [responseData.splice(0, 5), resultDataArrivals, resultDataDepartures]),
-            ).subscribe(([responseData, resultDataArrivals, resultDataDepartures]) => {
-            this.searchResults = this.aggregateResponseDataToSearchResults(responseData, resultDataArrivals, resultDataDepartures)
-            // TODO IDSME TESTABILITY could be in separate method.. thus method name documents purpose.
-            this.searchResults = this.searchResults.sort(FlightsHelper.sortFlightsArrayOnEventDates) // let's sort results on Flight event dates.
+                map(([gateChanges, resultDataArrivals, resultDataDepartures]) => [gateChanges.splice(0, 5), resultDataArrivals, resultDataDepartures]),
+                map( ([gateChanges, resultDataArrivals, resultDataDepartures]) => this.aggregateResponseDataToSearchResults(gateChanges as GateChange[], resultDataArrivals as ArrivalFlight[], resultDataDepartures as DepartureFlight[])),
+                map((searchResults: SearchResult[]) => searchResults.sort(FlightsHelper.sortFlightsArrayOnEventDates))
+            ).subscribe((searchResults: SearchResult[]) => {
+            this.searchResults = searchResults
         })
 
     }
