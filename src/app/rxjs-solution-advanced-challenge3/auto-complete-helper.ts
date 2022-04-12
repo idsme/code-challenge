@@ -28,7 +28,7 @@ export class AutoCompleteHelper {
         return skipWhile((data: string) => data.length < length)
     }
 
-    public static waitForUserToStopTyping$(waitInMilliseconds = 200) {
+    public static waitForUserToStopTypingForXMilliseconds$(waitInMilliseconds = 200) {
         return debounceTime(waitInMilliseconds);
     }
 

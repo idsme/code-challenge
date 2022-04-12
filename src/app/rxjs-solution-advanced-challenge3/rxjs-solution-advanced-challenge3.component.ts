@@ -37,8 +37,8 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
     searchForGateChanges() {
         this.searchInputSubscription
             .pipe(
-                this.clearPreviouslyRetrievedResults(),
-                AutoCompleteHelper.waitForUserToStopTyping$(200),
+                this.clearPreviouslyRetrievedResults$(),
+                AutoCompleteHelper.waitForUserToStopTypingForXMilliseconds$(200),
                 AutoCompleteHelper.extractValueFromInput$(),
                 AutoCompleteHelper.skipIfLengthOfSearchTermIsShorterThen$(2),
                 distinctUntilChanged(),
@@ -52,7 +52,7 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
         })
     }
 
-    private clearPreviouslyRetrievedResults() {
+    private clearPreviouslyRetrievedResults$() {
         return tap(() => this.searchResults = [])
     }
 
