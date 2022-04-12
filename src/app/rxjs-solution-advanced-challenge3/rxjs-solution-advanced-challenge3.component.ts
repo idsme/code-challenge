@@ -28,9 +28,8 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
         this.searchInputSubscription = fromEvent(document.getElementById('search-term'), 'keyup')
     }
 
-
-// TODO IDSME Clarity > We search here but we do so much more... which is relatively undocumented as it is not in separate functions
-    // TODO IDSME good stuff to write an artical about... Before RxJS and After RxJS and should this have an integration test?
+    // TODO IDSME Clarity > we could just not wrap in helper methods but then intent of each line will be less clear.
+    // TODO IDSME good stuff to write an article about... Before RxJS and After RxJS and should this have an integration test?
     // Test 1 character no new data.
     // Test 2 characters search backend. (Just one call if typed fast)
     // Test 3 onClear after search no results should be on screen.
@@ -41,7 +40,7 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
                 AutoCompleteHelper.waitForUserToStopTypingForXMilliseconds$(200),
                 AutoCompleteHelper.extractValueFromInput$(),
                 AutoCompleteHelper.skipIfLengthOfSearchTermIsShorterThen$(2),
-                distinctUntilChanged(),
+                distinctUntilChanged(), // If value the same don't stop processing.
                 AutoCompleteHelper.mapValueToUpperCase$(),
                 switchMap((searchTerm: string) => forkJoin(this.gateService.getGateChanges(searchTerm), this.gateService.getArrivalFlights(), this.gateService.getDepartureFlights())),
                 AutoCompleteHelper.limitNumberOfResults$(),

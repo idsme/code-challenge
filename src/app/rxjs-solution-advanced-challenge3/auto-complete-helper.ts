@@ -1,6 +1,4 @@
 import {debounceTime, map, skipWhile} from 'rxjs/operators'
-import {SearchResult} from '../../../api/gate-changes'
-import {FlightsHelper} from '../flights-helper'
 
 export class AutoCompleteHelper {
     // TODO IDSME testing this out..to see how easily this is testable.
@@ -12,7 +10,7 @@ export class AutoCompleteHelper {
         return map(([gateChanges, resultDataArrivals, resultDataDepartures]) => [AutoCompleteHelper.limitNumberOfResults(gateChanges), resultDataArrivals, resultDataDepartures])
     }
 
-    public static limitNumberOfResults(items: any[], sizeLimit = 5) {
+    public static limitNumberOfResults(items: unknown[], sizeLimit = 5): unknown[] {
         return items.splice(0, sizeLimit)
     }
 
