@@ -1,5 +1,7 @@
 import {FlightsHelper} from './flights-helper';
-import {SearchResult} from '../../api/gate-changes';
+import {GateChange, SearchResult} from '../../api/gate-changes'
+import {of} from 'rxjs'
+import {tap} from 'rxjs/operators'
 
 describe('FlightsHelper', () => {
     const arrivalFlightA = {arrivalTime: '2019-01-01T00:00:00.000Z'} as SearchResult;
@@ -7,6 +9,9 @@ describe('FlightsHelper', () => {
 
     const departureFlightA = {departureTime: '2019-02-01T00:00:00.000Z'} as SearchResult;
     const departureFlightB = {departureTime: '2019-11-01T00:00:00.000Z'} as SearchResult;
+
+    const gateChange1: GateChange =     { currentGate: '1'} as GateChange;
+
 
     it('should create an instance', () => {
         expect(new FlightsHelper()).toBeTruthy();
@@ -57,5 +62,31 @@ describe('FlightsHelper', () => {
             expect((result)).toBe(1);
         });
 
+    });
+
+    describe('Testing rxjs autocomplete functions', () => {
+        it('should return limited nr of results (5) for first item in array', (done) => {
+            const gateChanges = [gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1]
+            const gateChangesArr = [gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1]
+            const gateChangesDep = [gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1]
+            const changedGates = of([gateChanges, gateChangesArr, gateChangesDep])
+            changedGates.pipe(
+                tap(console.log),
+                FlightsHelper.limitNumberOfResults$(),
+                tap(console.log),
+            ).subscribe(
+                ([currentGateChanges, arr, dep]) => {
+                    expect(currentGateChanges.length).toBe(5)
+                    expect(arr.length).toBe(7)
+                    expect(dep.length).toBe(7)
+                    done()
+                }
+            );
+        });
+
+        it('should limited nr of results to first (5) in supplied array ', () => {
+            const gateChanges = [gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1]
+            expect(FlightsHelper.limitNumberOfResults(gateChanges).length).toBe(5)
+        });
     });
 });
