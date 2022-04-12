@@ -84,6 +84,23 @@ describe('FlightsHelper', () => {
             );
         });
 
+        it('should return limited nr of results (5) for first item in array simple', (done) => {
+            const gateChanges = [gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1]
+            const gateChangesArr = [gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1]
+            const gateChangesDep = [gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1]
+            const changedGates = of([gateChanges, gateChangesArr, gateChangesDep])
+            changedGates.pipe(
+                tap(console.log),
+                FlightsHelper.limitNumberOfResultsSimple$(),
+                tap(console.log),
+            ).subscribe(
+                ([currentGateChanges]) => {
+                    expect(currentGateChanges.length).toBe(5)
+                    done()
+                }
+            );
+        });
+
         it('should limited nr of results to first (5) in supplied array ', () => {
             const gateChanges = [gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1]
             expect(FlightsHelper.limitNumberOfResults(gateChanges).length).toBe(5)

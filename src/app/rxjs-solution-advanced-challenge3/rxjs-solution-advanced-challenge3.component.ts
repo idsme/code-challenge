@@ -6,6 +6,7 @@ import {FlightsHelper} from '../flights-helper'
 import {GateService} from './gate.service'
 import {ArrivalFlight} from '../../../api/arrivals'
 import {DepartureFlight} from '../../../api/departures'
+import {AutoCompleteHelper} from './auto-complete-helper'
 
 @Component({
     selector: 'app-rxjs-solution-advanced-challenge3',
@@ -38,20 +39,23 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
     searchForGateChanges() {
         this.searchInputSubscription
             .pipe(
-                tap(() => this.searchResults = []),
-                debounceTime(200),
-                map((e: any) => e.target.value), // Can we get rid of the any here?
-                skipWhile((data: string) => data.length < 2 ), // Not descriptive
+                this.clearPreviouslyRetrievedResults(),
+                AutoCompleteHelper.waitForUserToStopTyping$(200),
+                AutoCompleteHelper.extractValueFromInput$(), // Can we get rid of the any here?
+                AutoCompleteHelper.skipIfLengthOfSearchTermIsShorterThen$(2),
                 distinctUntilChanged(),
-                map((data: string) => data.toUpperCase()),
+                AutoCompleteHelper.mapValueToUpperCase$(),
                 switchMap((searchTerm: string) => forkJoin(this.gateService.getGateChanges(searchTerm), this.gateService.getArrivalFlights(), this.gateService.getDepartureFlights())),
-                FlightsHelper.limitNumberOfResults$(),
-                map( ([gateChanges, resultDataArrivals, resultDataDepartures]) => FlightsHelper.aggregateResponseDataToSearchResultsViewModel(gateChanges as GateChange[], resultDataArrivals as ArrivalFlight[], resultDataDepartures as DepartureFlight[])),
-                map((searchResults: SearchResult[]) => searchResults.sort(FlightsHelper.sortFlightsArrayOnEventDates))
+                AutoCompleteHelper.limitNumberOfResults$(),
+                FlightsHelper.aggregateResponseDataToSearchResultsViewModel$(),
+                FlightsHelper.sortFlightsArrayOnEventDates$()
             ).subscribe((searchResults: SearchResult[]) => {
             this.searchResults = searchResults
         })
+    }
 
+    private clearPreviouslyRetrievedResults() {
+        return tap(() => this.searchResults = [])
     }
 
     ngOnDestroy(): void {
