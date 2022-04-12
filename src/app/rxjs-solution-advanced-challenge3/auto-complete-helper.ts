@@ -22,6 +22,7 @@ export class AutoCompleteHelper {
         return map((e: any) => e.target.value)
     }
 
+    // TODO IDSME only skip it the first time.
     public static skipIfLengthOfSearchTermIsShorterThen$(length: number = 1) {
         return skipWhile((data: string) => data.length < length)
     }

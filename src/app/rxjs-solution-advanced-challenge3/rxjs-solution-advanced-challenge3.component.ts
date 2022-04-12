@@ -1,6 +1,6 @@
-import {Component, OnDestroy, OnInit} from '@angular/core'
-import {forkJoin, fromEvent} from 'rxjs'
-import {GateChange, SearchResult} from '../../../api/gate-changes'
+import {Component, OnInit} from '@angular/core'
+import {forkJoin, fromEvent, Observable} from 'rxjs'
+import {SearchResult} from '../../../api/gate-changes'
 import {distinctUntilChanged, switchMap, tap} from 'rxjs/operators'
 import {FlightsHelper} from '../flights-helper'
 import {GateService} from './gate.service'
@@ -11,21 +11,21 @@ import {AutoCompleteHelper} from './auto-complete-helper'
     templateUrl: './rxjs-solution-advanced-challenge3.component.html',
     styleUrls: ['./rxjs-solution-advanced-challenge3.component.scss']
 })
-export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestroy {
+export class RxjsSolutionAdvancedChallenge3Component implements OnInit {
 
-    private searchInputSubscription
-    private searchResults: GateChange[] = []
+    private searchInputSubscription: Observable<Event>
+    private resultsSubscription: Observable<SearchResult[]>
 
     constructor(public gateService: GateService) {
     }
 
     ngOnInit(): void {
-        this.listenToSearhTermInput()
-        this.searchForGateChanges()
+        this.searchInputSubscription = this.listenToSearhTermInput()
+        this.resultsSubscription = this.searchForGateChanges(this.searchInputSubscription)
     }
 
     private listenToSearhTermInput() {
-        this.searchInputSubscription = fromEvent(document.getElementById('search-term'), 'keyup')
+        return fromEvent(document.getElementById('search-term'), 'keyup')
     }
 
     // TODO IDSME Clarity > we could just not wrap in helper methods but then intent of each line will be less clear.
@@ -33,10 +33,9 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
     // Test 1 character no new data.
     // Test 2 characters search backend. (Just one call if typed fast)
     // Test 3 onClear after search no results should be on screen.
-    searchForGateChanges() {
-        this.searchInputSubscription
+    public searchForGateChanges(searchInputSubscription: Observable<Event>) {
+        return searchInputSubscription
             .pipe(
-                this.clearPreviouslyRetrievedResults$(),
                 AutoCompleteHelper.waitForUserToStopTypingForXMilliseconds$(200),
                 AutoCompleteHelper.extractValueFromInput$(),
                 AutoCompleteHelper.skipIfLengthOfSearchTermIsShorterThen$(2),
@@ -46,17 +45,7 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
                 AutoCompleteHelper.limitNumberOfResults$(),
                 FlightsHelper.aggregateResponseDataToSearchResultsViewModel$(),
                 FlightsHelper.sortFlightsArrayOnEventDates$()
-            ).subscribe((searchResults: SearchResult[]) => {
-            this.searchResults = searchResults
-        })
-    }
-
-    private clearPreviouslyRetrievedResults$() {
-        return tap(() => this.searchResults = [])
-    }
-
-    ngOnDestroy(): void {
-        this.searchInputSubscription.unsubscribe()
+            )
     }
 }
 

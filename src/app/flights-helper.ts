@@ -2,6 +2,7 @@ import {GateChange, SearchResult} from '../../api/gate-changes'
 import {ArrivalFlight} from '../../api/arrivals'
 import {DepartureFlight} from '../../api/departures'
 import {debounceTime, map, skipWhile} from 'rxjs/operators'
+import {Observable} from 'rxjs'
 
 export class FlightsHelper {
 
