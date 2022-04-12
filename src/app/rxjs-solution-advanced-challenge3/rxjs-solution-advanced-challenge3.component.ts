@@ -1,11 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core'
 import {forkJoin, fromEvent} from 'rxjs'
 import {GateChange, SearchResult} from '../../../api/gate-changes'
-import {debounceTime, distinctUntilChanged, map, skipWhile, switchMap, tap} from 'rxjs/operators'
+import {distinctUntilChanged, switchMap, tap} from 'rxjs/operators'
 import {FlightsHelper} from '../flights-helper'
 import {GateService} from './gate.service'
-import {ArrivalFlight} from '../../../api/arrivals'
-import {DepartureFlight} from '../../../api/departures'
 import {AutoCompleteHelper} from './auto-complete-helper'
 
 @Component({
@@ -41,7 +39,7 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit, OnDestro
             .pipe(
                 this.clearPreviouslyRetrievedResults(),
                 AutoCompleteHelper.waitForUserToStopTyping$(200),
-                AutoCompleteHelper.extractValueFromInput$(), // Can we get rid of the any here?
+                AutoCompleteHelper.extractValueFromInput$(),
                 AutoCompleteHelper.skipIfLengthOfSearchTermIsShorterThen$(2),
                 distinctUntilChanged(),
                 AutoCompleteHelper.mapValueToUpperCase$(),
