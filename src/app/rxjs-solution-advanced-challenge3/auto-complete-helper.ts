@@ -1,4 +1,4 @@
-import {debounceTime, map, skipWhile} from 'rxjs/operators'
+import {debounceTime, filter, map, skipWhile} from 'rxjs/operators'
 
 export class AutoCompleteHelper {
     // TODO IDSME testing this out..to see how easily this is testable.
@@ -22,9 +22,8 @@ export class AutoCompleteHelper {
         return map((e: any) => e.target.value)
     }
 
-    // TODO IDSME only skip it the first time.
     public static skipIfLengthOfSearchTermIsShorterThen$(length: number = 1) {
-        return skipWhile((data: string) => data.length < length)
+        return filter((data: string) => data.length >= length)
     }
 
     public static waitForUserToStopTypingForXMilliseconds$(waitInMilliseconds = 200) {
