@@ -2,6 +2,7 @@ import {FlightsHelper} from './flights-helper';
 import {GateChange, SearchResult} from '../../api/gate-changes'
 import {of} from 'rxjs'
 import {tap} from 'rxjs/operators'
+import {AutoCompleteHelper} from './rxjs-solution-advanced-challenge3/auto-complete-helper'
 
 describe('FlightsHelper', () => {
     const arrivalFlightA = {arrivalTime: '2019-01-01T00:00:00.000Z'} as SearchResult;
@@ -72,7 +73,7 @@ describe('FlightsHelper', () => {
             const changedGates = of([gateChanges, gateChangesArr, gateChangesDep])
             changedGates.pipe(
                 tap(console.log),
-                FlightsHelper.limitNumberOfResults$(),
+                AutoCompleteHelper.limitNumberOfResults$(),
                 tap(console.log),
             ).subscribe(
                 ([currentGateChanges, arr, dep]) => {
@@ -91,7 +92,7 @@ describe('FlightsHelper', () => {
             const changedGates = of([gateChanges, gateChangesArr, gateChangesDep])
             changedGates.pipe(
                 tap(console.log),
-                FlightsHelper.limitNumberOfResultsSimple$(),
+                AutoCompleteHelper.limitNumberOfResults$(),
                 tap(console.log),
             ).subscribe(
                 ([currentGateChanges]) => {
@@ -103,7 +104,7 @@ describe('FlightsHelper', () => {
 
         it('should limited nr of results to first (5) in supplied array ', () => {
             const gateChanges = [gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1, gateChange1]
-            expect(FlightsHelper.limitNumberOfResults(gateChanges).length).toBe(5)
+            expect(AutoCompleteHelper.limitNumberOfResults(gateChanges).length).toBe(5)
         });
     });
 });
