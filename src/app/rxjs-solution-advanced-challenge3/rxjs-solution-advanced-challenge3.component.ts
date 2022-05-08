@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import {forkJoin, fromEvent, Observable} from 'rxjs'
 import {SearchResult} from '../../../api/gate-changes'
-import {distinctUntilChanged, switchMap, tap} from 'rxjs/operators'
+import {distinctUntilChanged, switchMap } from 'rxjs/operators'
 import {FlightsHelper} from '../flights-helper'
 import {GateService} from './gate.service'
 import {AutoCompleteHelper} from './auto-complete-helper'
@@ -40,6 +40,7 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit {
                 AutoCompleteHelper.extractValueFromInput$(),
                 AutoCompleteHelper.skipIfLengthOfSearchTermIsShorterThen$(2),
                 distinctUntilChanged(), // If value the same don't stop processing.
+            ).pipe(
                 AutoCompleteHelper.mapValueToUpperCase$(),
                 switchMap((searchTerm: string) => forkJoin(this.gateService.getGateChanges(searchTerm), this.gateService.getArrivalFlights(), this.gateService.getDepartureFlights())),
                 AutoCompleteHelper.limitNumberOfResults$(),
@@ -51,13 +52,13 @@ export class RxjsSolutionAdvancedChallenge3Component implements OnInit {
 
 // Sustainability check!
 // Maintainability / Readability 4
-// Testability = 0 => No Tests...
+// Testability = 8 => No Tests...
 // Debugability = 0 => No Test... thus => Add console logs => Remove console logs.
-// Findability = 4 => Monolitic Component
-// Reusability = 0 => Component is not reusable for anything else
-// Deployability = 0 => As URL's are also in component
-// Upgradeability = 8 => Angular version lower then 9 = 4
-// Predicatability = 2 => Is solution easy to learn....  <<Recommened best-practices followed>>
+// Findability = 9 => Is everything in the right location and has it got the best name I could think of?
+// Reusability = 9 => First 5 method within pipe function are same for all auto completes
+// Deployability = 10 => Url's are configurable via environment variables.
+// Upgradability = 8 => Have we got enough test to perform a regression test? After upgrading libs?
+// Predicatability = 7 => Is solution easy to learn....  <<Recommened best-practices followed>>
 // Lean Enough = 2 => Generate API swagger services and Be models.
 
 // Advice more
