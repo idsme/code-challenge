@@ -1,4 +1,5 @@
 import {debounceTime, filter, map, skipWhile} from 'rxjs/operators'
+import {OperatorFunction} from 'rxjs'
 
 export class AutoCompleteHelper {
     // TODO IDSME testing this out..to see how easily this is testable.
@@ -18,8 +19,8 @@ export class AutoCompleteHelper {
         return map((data: string) => data.toUpperCase())
     }
 
-    public static extractValueFromInput$() {
-        return map((e: any) => e.target.value)
+    public static extractValueFromInput$(): OperatorFunction<KeyboardEvent, string> {
+        return map((e: KeyboardEvent) => (e.target as HTMLInputElement).value)
     }
 
     public static skipIfLengthOfSearchTermIsShorterThen$(length: number = 1) {

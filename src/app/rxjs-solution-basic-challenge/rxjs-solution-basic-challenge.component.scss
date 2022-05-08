@@ -1,15 +1,76 @@
+// Yes, it works.. But should it be here or at a higher level?
 .search {
     font-size: 18px;
-    width: 100%;
     padding: 12px 20px;
+    width: 100%;
 }
 
-
-li:hover:nth-child( even ) {
-    background-color: yellow;
-
+// TODO IDSME Improvement .. create generic scss class that can be reused so we don't need to do this custom for every component.
+.results-overview-flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 
-li:hover:nth-child( odd ) {
-    background-color: red;
+// TODO IDSME Improvement move to result-item-row.scss
+div.result-item-row:hover:nth-child( even ) {
+    background-color: dodgerblue;
 }
+
+// TODO IDSME Improvement generic move to result-item-row.scss
+div.result-item-row:hover:nth-child( odd ) {
+    background-color: lightskyblue;
+}
+
+// TODO IDSME Improvement .. create generic global class for this.
+.result-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 50px;
+    :last-child {
+        border-right: 0px dashed silver;
+    }
+}
+
+.result-item-row-header {
+    @extend .result-item-row;
+    background-color: #1a0034;
+    color:silver;
+    :last-child {
+        border-right: 0px dashed silver;
+    }
+}
+
+//@media only screen and (max-width: 600px) {
+//    .result-item-row-header {
+//        flex-direction: column;
+//    }
+//}
+
+// TODO IDSME Improvement move to result-item-row.scss
+div.result-item-row:hover:first-child {
+    background-color: #1a0034;
+    color: silver;
+}
+
+// TODO IDSME Improvement.. create generic global class for this.
+.result-item-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px dashed silver;
+    width: 150px;
+}
+
+// TODO IDSME Improvement move width to widths.scss
+.result-item-column-width-xl {
+    @extend .result-item-column;
+    width: 300px;
+}
+
+// TODO IDSME Improvement move to themes.scss.
+.themes-primary-light-version {
+    background-color: lightblue;
+}
+
