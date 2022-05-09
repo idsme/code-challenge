@@ -12,7 +12,7 @@ import {GateService} from '../rxjs-solution-advanced-challenge3/gate.service'
   templateUrl: './rxjs-solution-basic-challenge.component.html',
   styleUrls: ['./rxjs-solution-basic-challenge.component.scss']
 })
-export class RxjsSolutionBasicChallengeComponent implements OnInit, OnDestroy {
+export class RxjsSolutionBasicChallengeComponent implements OnInit {
 
   private searchInputSubscription
   private searchResults: GateChange[] = []
@@ -74,9 +74,6 @@ export class RxjsSolutionBasicChallengeComponent implements OnInit, OnDestroy {
     return searchResults;
   }
 
-  ngOnDestroy(): void {
-    this.searchInputSubscription.unsubscribe()
-  }
 }
 
 // Sustainability check!
